@@ -22,7 +22,7 @@ import {
   Check,
 } from "lucide-react";
 
-import heroVideo from "@/assets/hero-vibes.mp4.asset.json";
+import heroImg from "@/assets/gym-building.jpg";
 import aboutImg from "@/assets/about.jpg";
 import ctaImg from "@/assets/cta.jpg";
 import svcBoxing from "@/assets/svc-boxing.jpg";
@@ -307,14 +307,12 @@ function Hero() {
         <div className="relative order-1 lg:order-2 lg:-mr-6">
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
           <div className="absolute -inset-10 rounded-[2.5rem] bg-cyan-500/10 blur-3xl" aria-hidden />
-          <video
-            src={heroVideo.url}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="relative aspect-video w-full mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10 bg-black"
+          <img
+            src={heroImg}
+            alt="Muscular athlete flexing in a dramatic gym setting at 24 FITNESS"
+            width={1024}
+            height={1600}
+            className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>
       </div>
