@@ -569,32 +569,70 @@ function Trainers() {
 
 function Gallery() {
   return (
-    <section id="gallery" className="relative py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <section id="gallery" className="relative overflow-hidden py-24">
+      <div className="pointer-events-none absolute inset-0 opacity-30">
+        <div className="absolute -top-24 left-1/2 h-72 w-[60%] -translate-x-1/2 rounded-full bg-[color:var(--color-brand)] blur-[140px]" />
+      </div>
+      <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Facility</p>
-            <h2 className="text-h2 font-black text-white">Inside 24 FITNESS</h2>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">
+              Real Members · Real Results
+            </p>
+            <h2 className="text-hero font-black leading-[0.9] text-white">
+              HAPPY <span className="text-[color:var(--color-brand)]">CLIENTS</span>
+              <br />
+              OF 24 FITNESS
+            </h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            A real look inside our triple-floor facility — heavy strength zones, cardio decks, class studios and everything in
-            between.
+            Hundreds of members from Kota trust 24 FITNESS with their transformation. From new joiners
+            picking up their welcome kit to community meet-ups on the terrace — this is our family.
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {GALLERY.map((g, i) => (
+
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {CLIENTS.map((c, i) => (
             <div
               key={i}
-              className={`overflow-hidden rounded-2xl border border-white/10 ${
-                i === 0 || i === 5 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
-              }`}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#141210] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.8)] transition hover:border-[color:var(--color-brand)]/60 hover:shadow-[0_20px_60px_-15px_rgba(245,115,14,0.4)]"
             >
-              <img
-                src={g}
-                alt={`Gym facility ${i + 1}`}
-                loading="lazy"
-                className="h-full w-full object-cover transition duration-700 hover:scale-105"
-              />
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={c.img}
+                  alt={`${c.name} — 24 FITNESS happy client`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[color:var(--color-brand)]">
+                  {c.tag}
+                </p>
+                <p className="mt-1 font-display text-2xl uppercase tracking-wide text-white">{c.name}</p>
+              </div>
+              <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--color-brand)] text-white shadow-lg">
+                <Star className="h-4 w-4 fill-white" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {[
+            { k: "2,500+", v: "Happy Members" },
+            { k: "4.9★", v: "Google Rating" },
+            { k: "500+", v: "Transformations" },
+            { k: "6 Yrs", v: "Serving Kota" },
+          ].map((s, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-white/10 bg-[#141210] p-6 text-center"
+            >
+              <p className="font-display text-4xl text-[color:var(--color-brand)]">{s.k}</p>
+              <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--color-body)]">
+                {s.v}
+              </p>
             </div>
           ))}
         </div>
