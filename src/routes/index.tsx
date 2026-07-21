@@ -31,12 +31,15 @@ import svcYoga from "@/assets/svc-yoga.jpg";
 import svcCardio from "@/assets/svc-cardio.jpg";
 import svcCrossfit from "@/assets/svc-crossfit.jpg";
 import svcPt from "@/assets/svc-pt.jpg";
-import gym1 from "@/assets/gym-1.jpg";
-import gym2 from "@/assets/gym-2.jpg";
-import gym3 from "@/assets/gym-3.jpg";
 import trainer1 from "@/assets/trainer-1.jpg";
 import trainer2 from "@/assets/trainer-2.jpg";
 import trainer3 from "@/assets/trainer-3.jpg";
+import client1 from "@/assets/client-1.jpg";
+import client2 from "@/assets/client-2.jpg";
+import client3 from "@/assets/client-3.jpg";
+import client4 from "@/assets/client-4.jpg";
+import client5 from "@/assets/client-5.jpg";
+import client6 from "@/assets/client-6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
