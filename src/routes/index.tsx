@@ -126,22 +126,58 @@ const CLIENTS: { img: string; name: string; tag: string }[] = [
 
 const TESTIMONIALS = [
   {
-    name: "Ankit R.",
+    name: "Chetan Yaduvanshi",
     quote:
-      "Dropped 12 kg in 5 months. The trainers actually push you and the equipment is next level compared to anywhere else in Kota.",
-    role: "Member since 2023",
+      "24 Fitness is hands down the best gym around. Spacious, well-ventilated, and the highest standards of hygiene. Top-tier Fitline machines, always perfectly maintained. A massive shoutout to Luv Sir — his elite coaching and personalized guidance have completely transformed my workouts.",
+    role: "Google Review",
   },
   {
-    name: "Priya S.",
+    name: "Aditya Sharma",
     quote:
-      "The women's zone and yoga floor are gorgeous. Coaches are respectful and know their stuff. Best decision I made this year.",
-    role: "Yoga & Strength member",
+      "One of the best gyms in the area. Equipment is modern and covers everything from heavy compound lifts to isolation workouts. Trainers are knowledgeable and supportive. Great atmosphere, disciplined crowd, and consistent results. The cafeteria serves healthy meals — a must try.",
+    role: "Google Review",
   },
   {
-    name: "Manav K.",
+    name: "Jasmeet Singh",
     quote:
-      "Three floors, zero waiting for equipment. Personal training completely rebuilt my form. Worth every rupee.",
-    role: "PT client",
+      "One of the best gyms in Kota 💪 Super clean, well-maintained, and full of positive energy. Trainers are supportive and the equipment is top-class. Big respect to the owner Jeet for such an amazing setup 🙌 Highly recommended!",
+    role: "Google Review",
+  },
+  {
+    name: "Aditya Jyoti",
+    quote:
+      "Triple floor gym. 7000+ sqft area and premium ambience. All certified trainers. The vibe and the ambience is perfect for workout. Every workout gives a new experience here.",
+    role: "Google Review",
+  },
+  {
+    name: "Himanshu Kapoor",
+    quote:
+      "Truly a great experience! The gym is very clean and well-maintained with a spacious layout. Best part is the variety of machines — all in excellent condition. The overall vibe is really motivating. Highly recommend it to anyone looking for a quality workout space!",
+    role: "Google Review",
+  },
+  {
+    name: "Nirlape Singh Bhambra",
+    quote:
+      "Equipped with every machine you can ever imagine. Every coach is like a friend who wants your best version to be revealed. I personally recommend the atmosphere — everyone is so friendly.",
+    role: "Local Guide · Google Review",
+  },
+  {
+    name: "Gaurav Gupta",
+    quote:
+      "One of the finest gyms in the city. It is spacious, multi-floor with new equipment. Staff is polite and other gym members are cooperative.",
+    role: "Local Guide · Google Review",
+  },
+  {
+    name: "Zaved Ansari",
+    quote:
+      "Amazing experience — advanced machines, hygienic environment, friendly staff, and good people to work out with. Learned a lot from this place.",
+    role: "Google Review",
+  },
+  {
+    name: "Manvi Sharma",
+    quote:
+      "I've had an incredible experience. The trainers are professional, the environment is welcoming, and the gym community is supportive. I encourage everyone to visit here.",
+    role: "Google Review",
   },
 ];
 
