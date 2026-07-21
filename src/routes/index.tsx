@@ -957,7 +957,7 @@ function HomePage() {
         <Services />
         <Features />
         <Pricing />
-        <Trainers />
+        
         <Gallery />
         <Testimonials />
         <BigCta />
