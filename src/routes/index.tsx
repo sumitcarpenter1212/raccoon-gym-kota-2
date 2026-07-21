@@ -895,8 +895,7 @@ function VideoHero() {
           muted
           playsInline
           preload="auto"
-          poster={heroImg}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover bg-black"
         />
         {/* Dark gradient overlays for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
