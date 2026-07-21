@@ -22,7 +22,7 @@ import {
   Check,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-athlete.jpg";
+import heroImg from "@/assets/gym-building.jpg";
 import aboutImg from "@/assets/about.jpg";
 import ctaImg from "@/assets/cta.jpg";
 import svcBoxing from "@/assets/svc-boxing.jpg";
