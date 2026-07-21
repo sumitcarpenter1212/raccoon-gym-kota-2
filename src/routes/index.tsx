@@ -41,6 +41,7 @@ import client3 from "@/assets/client-3.jpg";
 import client4 from "@/assets/client-4.jpg";
 import client5 from "@/assets/client-5.jpg";
 import client6 from "@/assets/client-6.jpg";
+import logo24 from "@/assets/logo-24fitness.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
