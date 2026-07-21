@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 
 import heroImg from "@/assets/gym-building.jpg";
+import heroShowreel from "@/assets/hero-showreel.mp4.asset.json";
 import aboutImg from "@/assets/about.jpg";
 import ctaImg from "@/assets/cta.jpg";
 import svcBoxing from "@/assets/svc-boxing.jpg";
@@ -883,11 +884,74 @@ function Footer() {
   );
 }
 
+function VideoHero() {
+  return (
+    <section id="showreel" className="relative w-full overflow-hidden">
+      <div className="relative h-[100svh] min-h-[560px] w-full">
+        <video
+          src={heroShowreel.url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={heroImg}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Dark gradient overlays for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
+        <div
+          className="absolute inset-0 opacity-70"
+          style={{
+            backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)`,
+          }}
+          aria-hidden
+        />
+
+        {/* Foreground content */}
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm">
+            <Sparkles size={14} className="text-[color:var(--color-brand)]" />
+            Welcome To 24 Fitness · Kota
+          </p>
+          <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
+            <span className="block">Sweat.</span>
+            <span className="block text-[color:var(--color-brand)]">Strength.</span>
+            <span className="block">Success.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
+            Kota's most premium fitness destination — world-class equipment, elite coaches, and the energy that turns
+            hard work into real transformation.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="#pricing" className="btn-primary btn-primary-hover">
+              Join 24 Fitness <ChevronRight size={18} />
+            </a>
+            <a href="#home" className="btn-ghost">
+              Explore More
+            </a>
+          </div>
+
+          {/* Bottom bold marquee-style badge row */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-6 flex items-center justify-center gap-6 px-4 text-[10px] font-bold uppercase tracking-[0.35em] text-white/70 md:text-xs">
+            <span>Train Hard</span>
+            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
+            <span>Live Strong</span>
+            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
+            <span>24 Fitness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white">
       <Header />
       <main>
+        <VideoHero />
         <Hero />
         <Marquee />
         <About />
