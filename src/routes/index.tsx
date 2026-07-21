@@ -220,9 +220,14 @@ function Embers() {
 
 function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-display text-2xl tracking-wide ${className}`}>
-      <span className="text-[color:var(--color-brand)]">24</span>
-      <span className="text-white">FITNESS</span>
+    <span className={`inline-flex items-center ${className}`}>
+      <img
+        src={logo24}
+        alt="24 FITNESS logo"
+        width={160}
+        height={160}
+        className="h-14 w-14 md:h-16 md:w-16 rounded-full object-contain drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
+      />
     </span>
   );
 }
