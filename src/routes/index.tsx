@@ -843,7 +843,7 @@ function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><a href="#about" className="hover:text-[color:var(--color-brand)]">About</a></li>
             <li><a href="#contact" className="hover:text-[color:var(--color-brand)]">Contact</a></li>
-            <li><a href="#gallery" className="hover:text-[color:var(--color-brand)]">Gallery</a></li>
+            <li><a href="#gallery" className="hover:text-[color:var(--color-brand)]">Clients</a></li>
           </ul>
         </div>
         <div>
