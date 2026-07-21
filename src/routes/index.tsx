@@ -22,7 +22,7 @@ import {
   Check,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero-athlete.jpg";
 import aboutImg from "@/assets/about.jpg";
 import ctaImg from "@/assets/cta.jpg";
 import svcBoxing from "@/assets/svc-boxing.jpg";
@@ -294,14 +294,15 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="relative order-1 lg:order-2">
-          <div className="absolute -inset-6 rounded-[2rem] bg-[color:var(--color-brand)]/20 blur-3xl" aria-hidden />
+        <div className="relative order-1 lg:order-2 lg:-mr-6">
+          <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
+          <div className="absolute -inset-10 rounded-[2.5rem] bg-cyan-500/10 blur-3xl" aria-hidden />
           <img
             src={heroImg}
-            alt="Two athletic trainers mid-workout at 24 FITNESS"
-            width={1600}
-            height={1100}
-            className="relative w-full rounded-3xl object-cover shadow-2xl"
+            alt="Muscular athlete flexing in a dramatic gym setting at 24 FITNESS"
+            width={1024}
+            height={1600}
+            className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>
       </div>
