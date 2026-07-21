@@ -865,7 +865,7 @@ function Contact() {
             <div className="overflow-hidden rounded-3xl border border-white/10">
               <iframe
                 title="24 FITNESS location"
-                src="https://www.google.com/maps?q=Ahinsa+Circle+Kota+Rajasthan&output=embed"
+                src="https://www.google.com/maps?q=24+FITNESS+Kota+Rajasthan&ll=25.1272557,75.8279202&z=17&output=embed"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
