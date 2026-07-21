@@ -114,7 +114,14 @@ const TRAINERS = [
   { name: "Vikram Singh", role: "Boxing Head Coach", img: trainer3 },
 ];
 
-const GALLERY = [gym1, gym2, gym3, svcMuscle, svcCrossfit, svcCardio, svcBoxing, svcPt];
+const CLIENTS: { img: string; name: string; tag: string }[] = [
+  { img: client1, name: "Rohit & Priya", tag: "New Member Kit" },
+  { img: client2, name: "Squad Goals", tag: "Team 24 Fitness" },
+  { img: client3, name: "Arjun & Neha", tag: "Couple Membership" },
+  { img: client4, name: "Independence Day Meet", tag: "Community Event" },
+  { img: client5, name: "Vikram & Sahil", tag: "Transformation Duo" },
+  { img: client6, name: "Karan & Aditya", tag: "Consistency Champs" },
+];
 
 const TESTIMONIALS = [
   {
