@@ -684,9 +684,12 @@ function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Testimonials</p>
-          <h2 className="text-h2 font-black text-white">What Our Members Say</h2>
+          <h2 className="text-h2 font-black text-white">Real Google Reviews</h2>
+          <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
+            Rated <span className="font-bold text-white">4.6★</span> from <span className="font-bold text-white">130+ verified reviews</span> on Google. Straight from our members.
+          </p>
         </div>
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div key={t.name} className="flex flex-col rounded-3xl border border-white/10 bg-[#121212] p-8">
               <div className="mb-4 flex gap-1 text-[color:var(--color-brand)]">
