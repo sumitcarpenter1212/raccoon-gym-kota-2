@@ -16,6 +16,7 @@ import { Route as PtContractRouteImport } from './routes/pt-contract'
 import { Route as ParQRouteImport } from './routes/par-q'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OffersRouteImport } from './routes/offers'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
@@ -58,6 +59,11 @@ const OffersRoute = OffersRouteImport.update({
   path: '/offers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -127,6 +135,7 @@ export interface FileRoutesById {
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/enquiry'
     | '/feedback'
     | '/gallery'
+    | '/login'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/enquiry'
     | '/feedback'
     | '/gallery'
+    | '/login'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/enquiry'
     | '/feedback'
     | '/gallery'
+    | '/login'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -190,6 +202,7 @@ export interface RootRouteChildren {
   EnquiryRoute: typeof EnquiryRoute
   FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
+  LoginRoute: typeof LoginRoute
   OffersRoute: typeof OffersRoute
   PackagesRoute: typeof PackagesRoute
   ParQRoute: typeof ParQRoute
@@ -250,6 +263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OffersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
@@ -302,6 +322,7 @@ const rootRouteChildren: RootRouteChildren = {
   EnquiryRoute: EnquiryRoute,
   FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
+  LoginRoute: LoginRoute,
   OffersRoute: OffersRoute,
   PackagesRoute: PackagesRoute,
   ParQRoute: ParQRoute,
