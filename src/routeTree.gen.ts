@@ -16,6 +16,7 @@ import { Route as OffersRouteImport } from './routes/offers'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
+import { Route as BookGroupClassRouteImport } from './routes/book-group-class'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TrainersRoute = TrainersRouteImport.update({
@@ -53,6 +54,11 @@ const EnquiryRoute = EnquiryRouteImport.update({
   path: '/enquiry',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookGroupClassRoute = BookGroupClassRouteImport.update({
+  id: '/book-group-class',
+  path: '/book-group-class',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,6 +67,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
@@ -82,6 +90,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
   '/enquiry': typeof EnquiryRoute
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
@@ -94,6 +103,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/book-group-class'
     | '/enquiry'
     | '/feedback'
     | '/gallery'
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/book-group-class'
     | '/enquiry'
     | '/feedback'
     | '/gallery'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/book-group-class'
     | '/enquiry'
     | '/feedback'
     | '/gallery'
@@ -125,6 +137,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookGroupClassRoute: typeof BookGroupClassRoute
   EnquiryRoute: typeof EnquiryRoute
   FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnquiryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book-group-class': {
+      id: '/book-group-class'
+      path: '/book-group-class'
+      fullPath: '/book-group-class'
+      preLoaderRoute: typeof BookGroupClassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -197,6 +217,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookGroupClassRoute: BookGroupClassRoute,
   EnquiryRoute: EnquiryRoute,
   FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
