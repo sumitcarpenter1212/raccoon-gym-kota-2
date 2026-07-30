@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrainersRouteImport } from './routes/trainers'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ParQRouteImport } from './routes/par-q'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OffersRouteImport } from './routes/offers'
 import { Route as GalleryRouteImport } from './routes/gallery'
@@ -28,6 +29,11 @@ const TrainersRoute = TrainersRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParQRoute = ParQRouteImport.update({
+  id: '/par-q',
+  path: '/par-q',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PackagesRoute = PackagesRouteImport.update({
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/offers'
     | '/packages'
+    | '/par-q'
     | '/reviews'
     | '/trainers'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/offers'
     | '/packages'
+    | '/par-q'
     | '/reviews'
     | '/trainers'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/offers'
     | '/packages'
+    | '/par-q'
     | '/reviews'
     | '/trainers'
   fileRoutesById: FileRoutesById
@@ -156,6 +168,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   OffersRoute: typeof OffersRoute
   PackagesRoute: typeof PackagesRoute
+  ParQRoute: typeof ParQRoute
   ReviewsRoute: typeof ReviewsRoute
   TrainersRoute: typeof TrainersRoute
 }
@@ -174,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/par-q': {
+      id: '/par-q'
+      path: '/par-q'
+      fullPath: '/par-q'
+      preLoaderRoute: typeof ParQRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/packages': {
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   OffersRoute: OffersRoute,
   PackagesRoute: PackagesRoute,
+  ParQRoute: ParQRoute,
   ReviewsRoute: ReviewsRoute,
   TrainersRoute: TrainersRoute,
 }
