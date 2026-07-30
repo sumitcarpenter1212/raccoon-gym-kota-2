@@ -13,181 +13,154 @@ import {
   Minus,
   MapPin,
   Phone,
-  Mail,
   Clock,
-  Facebook,
   Instagram,
-  Youtube,
   ChevronRight,
   Check,
+  ClipboardList,
+  LogIn,
+  CalendarDays,
+  UserCheck,
+  Tag,
+  Images,
+  MessageSquare,
+  FileText,
+  ShieldCheck,
+  Navigation,
 } from "lucide-react";
 
-import heroImg from "@/assets/gym-building.jpg";
 import heroShowreel from "@/assets/hero-showreel.mp4.asset.json";
-import aboutImg from "@/assets/about.jpg";
-import ctaImg from "@/assets/cta.jpg";
-import svcBoxing from "@/assets/svc-boxing.jpg";
 import svcMuscle from "@/assets/svc-muscle.jpg";
 import svcYoga from "@/assets/svc-yoga.jpg";
 import svcCardio from "@/assets/svc-cardio.jpg";
 import svcCrossfit from "@/assets/svc-crossfit.jpg";
 import svcPt from "@/assets/svc-pt.jpg";
-import trainer1 from "@/assets/trainer-1.jpg";
-import trainer2 from "@/assets/trainer-2.jpg";
-import trainer3 from "@/assets/trainer-3.jpg";
-import client1 from "@/assets/client-1.jpg";
-import client2 from "@/assets/client-2.jpg";
-import client3 from "@/assets/client-3.jpg";
-import client4 from "@/assets/client-4.jpg";
-import client5 from "@/assets/client-5.jpg";
-import client6 from "@/assets/client-6.jpg";
-import logo24 from "@/assets/logo-24fitness.png";
+import svcBoxing from "@/assets/svc-boxing.jpg";
+import logoFitsters from "@/assets/fitsters-logo.jpg";
+import g0 from "@/assets/fit-0.jpeg";
+import g1 from "@/assets/fit-1.jpeg";
+import g11 from "@/assets/fit-11.jpeg";
+import g12 from "@/assets/fit-12.jpeg";
+import g13 from "@/assets/fit-13.jpeg";
+import g14 from "@/assets/fit-14.jpeg";
+import g15 from "@/assets/fit-15.jpeg";
+import g16 from "@/assets/fit-16.jpeg";
+import g17 from "@/assets/fit-17.jpeg";
+import g18 from "@/assets/fit-18.jpeg";
+import g19 from "@/assets/fit-19.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "24 FITNESS — Premium Triple-Floor Gym in Kota, Rajasthan" },
+      { title: "Fitsters Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
       {
         name: "description",
         content:
-          "Train at Kota's premium 7000+ sq. ft. triple-floor gym. Boxing, strength, cardio, yoga, CrossFit & personal training with certified coaches.",
+          "Fitsters Club Jhalawar — premium gym at Raghuveer Plaza, Mama Bhanja Circle. Gym, yoga, dance & personal training. Open 5 AM–10 PM. Call 84419 84416.",
       },
+      { property: "og:title", content: "Fitsters Club Jhalawar — Best Gym in Jhalawar" },
+      {
+        property: "og:description",
+        content:
+          "Premium equipment, certified trainers and 5.0★ Google-rated service in the heart of Jhalawar. Memberships from ₹1,800/month.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,
 });
 
+const PHONE = "+918441984416";
+const PHONE_DISPLAY = "+91 84419 84416";
+const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
+const PORTAL = "https://gym.geteasysoftware.com/v3/fitsters_gym_1/webapp";
+const BID = "UzN4eE9JUEUzaUltOERvTTJKVVNGUT09";
+const link = (p: string, extra = "") => `${PORTAL}/${p}?branch_id=${BID}${extra}`;
+
 const NAV = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Clients", href: "#gallery" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Packages", href: "#pricing" },
+  { label: "Trainers", href: "#trainers" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Reviews", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
+const QUICK_ACTIONS = [
+  { icon: ClipboardList, title: "Enquiry", desc: "Get to know about our packages", href: link("enquiry.php") },
+  { icon: LogIn, title: "Client Login", desc: "Login to view billing details", href: link("login.php") },
+  { icon: CalendarDays, title: "Book Group Class", desc: "Book group class session", href: link("group-class.php") },
+  { icon: UserCheck, title: "Book PT Sessions", desc: "Book personal training session", href: link("book-pt.php") },
+  { icon: Tag, title: "Packages", desc: "Find packages that suit your need", href: link("packages.php") },
+  { icon: Flame, title: "Offers", desc: "Check out the latest offers", href: link("offers.php") },
+  { icon: Images, title: "Photo Gallery", desc: "Our facilities and latest work portfolio", href: link("gallery.php") },
+  { icon: Users, title: "Trainers", desc: "Achievements & qualifications of our trainers", href: link("trainers.php") },
+  { icon: Star, title: "Reviews", desc: "Check out our Google reviews", href: link("reviews.php") },
+  { icon: MessageSquare, title: "Feedback", desc: "Give us your genuine suggestions", href: link("feedback.php") },
+  { icon: FileText, title: "PAR-Q", desc: "Physical activity readiness questionnaire", href: link("sspar.php") },
+  { icon: FileText, title: "PT Contract", desc: "Personal training contract", href: link("personal-training.php") },
+  { icon: ShieldCheck, title: "Trial Waiver", desc: "Trial waiver and release form", href: link("trial_waiver.php") },
+];
+
 const SERVICES = [
-  { title: "Boxing Classes", img: svcBoxing, desc: "Bag work, footwork & combos with certified coaches." },
-  { title: "Strength & Muscle", img: svcMuscle, desc: "Progressive overload programs on pro-grade racks." },
-  { title: "Yoga & Pilates", img: svcYoga, desc: "Mobility, core control and mindful recovery." },
-  { title: "Cardio Training", img: svcCardio, desc: "HIIT, steady-state and conditioning circuits." },
-  { title: "CrossFit / Functional", img: svcCrossfit, desc: "WODs, kettlebells, ropes and Olympic lifts." },
-  { title: "Personal Training", img: svcPt, desc: "1-on-1 coaching built around your body and goals." },
+  { title: "Strength & Muscle", img: svcMuscle, desc: "Premium plate-loaded machines and a full free-weight zone." },
+  { title: "Personal Training", img: svcPt, desc: "1-on-1 coaching for fat loss, strength and body recomposition." },
+  { title: "Yoga Class", img: svcYoga, desc: "Daily yoga batches for mobility, flexibility and recovery." },
+  { title: "Dance Class", img: svcCrossfit, desc: "High-energy dance fitness sessions for all levels." },
+  { title: "Cardio Zone", img: svcCardio, desc: "Treadmills, cycles and conditioning circuits for endurance." },
+  { title: "Functional Training", img: svcBoxing, desc: "Kettlebells, ropes and athletic conditioning workouts." },
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "3 Full Training Floors", desc: "7000+ sq. ft. of dedicated strength, cardio & class space." },
-  { icon: Dumbbell, title: "Pro-Grade Equipment", desc: "Commercial racks, plate-loaded machines & full free-weight zone." },
-  { icon: Users, title: "Certified Coaches", desc: "Nationally certified trainers with 5+ years on the floor." },
-  { icon: Flame, title: "Flexible Memberships", desc: "Weekly, monthly and annual plans built around your routine." },
+  { icon: Building2, title: "Central Jhalawar Location", desc: "1st Floor, Raghuveer Plaza — right at Mama Bhanja Circle, Saket." },
+  { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
+  { icon: Users, title: "Qualified Trainers", desc: "A head trainer plus three dedicated personal trainers on the floor." },
+  { icon: Flame, title: "5.0★ Google Rated", desc: "Members consistently call us the best gym in Jhalawar." },
 ];
 
 const PRICING = [
-  {
-    n: "01",
-    name: "Weekly Pass",
-    price: "₹499",
-    period: "/week",
-    features: ["Full gym access", "Locker facility", "Access to all floors", "Trial-friendly"],
-    popular: false,
-  },
-  {
-    n: "02",
-    name: "Monthly Pass",
-    price: "₹1,499",
-    period: "/month",
-    features: ["Unlimited gym access", "Trainer guidance", "All group classes", "Locker & shower"],
-    popular: true,
-  },
-  {
-    n: "03",
-    name: "Annual Pass",
-    price: "₹11,999",
-    period: "/year",
-    features: ["Everything in Monthly", "Priority PT slots", "Free diet consult", "Guest passes ×4"],
-    popular: false,
-  },
+  { n: "01", name: "1 Month", price: "Rs.1,800", period: "/30 days", cat: "Gym Membership", features: ["Full gym access", "Floor guidance", "Flexible timings", "Great for starters"], popular: false },
+  { n: "02", name: "3 Months + 1 Month", price: "Rs.6,000", period: "/120 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Best short-term value"], popular: true },
+  { n: "03", name: "6 Months + 1 Month", price: "Rs.8,500", period: "/210 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Save more per month"], popular: false },
+  { n: "04", name: "12 Months", price: "Rs.12,000", period: "/365 days", cat: "Gym Membership", features: ["Full year access", "Lowest monthly cost", "Trainer guidance", "Priority support"], popular: false },
+];
+
+const GROUP_CLASSES = [
+  { name: "Yoga Class", price: "Rs.1,000", period: "/30 days", desc: "Daily guided yoga sessions." },
+  { name: "Dance Class", price: "Rs.1,500", period: "/30 days", desc: "Fun, high-energy dance fitness." },
+];
+
+const PT_PLANS = [
+  { name: "1 Month PT", price: "Rs.7,000", period: "/30 days", desc: "One-on-one personal training." },
+  { name: "3 Months PT", price: "Rs.18,000", period: "/90 days", desc: "Full transformation programme." },
 ];
 
 const TRAINERS = [
-  { name: "Rohan Sharma", role: "Strength & Conditioning", img: trainer1 },
-  { name: "Aditi Verma", role: "Yoga & Mobility Coach", img: trainer2 },
-  { name: "Vikram Singh", role: "Boxing Head Coach", img: trainer3 },
+  { name: "Arjan Singh", role: "Head Trainer", bio: "Specialises in fat loss, weight loss and body recomposition.", img: g13 },
+  { name: "Mahesh Verma", role: "Personal Trainer", bio: "Strength training and weight loss for all populations — athletes to seniors.", img: g15 },
+  { name: "Adnan", role: "Personal Trainer", bio: "A powerful role model demonstrating strength, discipline and resilience.", img: g17 },
+  { name: "Tanveer Singh", role: "Personal Trainer", bio: "Highly skilled professional dedicated to helping members reach their goals.", img: g19 },
 ];
 
-const CLIENTS: { img: string; name: string; tag: string }[] = [
-  { img: client1, name: "Rohit & Priya", tag: "New Member Kit" },
-  { img: client2, name: "Squad Goals", tag: "Team 24 Fitness" },
-  { img: client3, name: "Arjun & Neha", tag: "Couple Membership" },
-  { img: client4, name: "Independence Day Meet", tag: "Community Event" },
-  { img: client5, name: "Vikram & Sahil", tag: "Transformation Duo" },
-  { img: client6, name: "Karan & Aditya", tag: "Consistency Champs" },
-];
+const GALLERY = [g19, g18, g17, g16, g15, g14, g13, g12, g11, g1, g0];
 
 const TESTIMONIALS = [
-  {
-    name: "Chetan Yaduvanshi",
-    quote:
-      "24 Fitness is hands down the best gym around. Spacious, well-ventilated, and the highest standards of hygiene. Top-tier Fitline machines, always perfectly maintained. A massive shoutout to Luv Sir — his elite coaching and personalized guidance have completely transformed my workouts.",
-    role: "Google Review",
-  },
-  {
-    name: "Aditya Sharma",
-    quote:
-      "One of the best gyms in the area. Equipment is modern and covers everything from heavy compound lifts to isolation workouts. Trainers are knowledgeable and supportive. Great atmosphere, disciplined crowd, and consistent results. The cafeteria serves healthy meals — a must try.",
-    role: "Google Review",
-  },
-  {
-    name: "Jasmeet Singh",
-    quote:
-      "One of the best gyms in Kota 💪 Super clean, well-maintained, and full of positive energy. Trainers are supportive and the equipment is top-class. Big respect to the owner Jeet for such an amazing setup 🙌 Highly recommended!",
-    role: "Google Review",
-  },
-  {
-    name: "Aditya Jyoti",
-    quote:
-      "Triple floor gym. 7000+ sqft area and premium ambience. All certified trainers. The vibe and the ambience is perfect for workout. Every workout gives a new experience here.",
-    role: "Google Review",
-  },
-  {
-    name: "Himanshu Kapoor",
-    quote:
-      "Truly a great experience! The gym is very clean and well-maintained with a spacious layout. Best part is the variety of machines — all in excellent condition. The overall vibe is really motivating. Highly recommend it to anyone looking for a quality workout space!",
-    role: "Google Review",
-  },
-  {
-    name: "Nirlape Singh Bhambra",
-    quote:
-      "Equipped with every machine you can ever imagine. Every coach is like a friend who wants your best version to be revealed. I personally recommend the atmosphere — everyone is so friendly.",
-    role: "Local Guide · Google Review",
-  },
-  {
-    name: "Gaurav Gupta",
-    quote:
-      "One of the finest gyms in the city. It is spacious, multi-floor with new equipment. Staff is polite and other gym members are cooperative.",
-    role: "Local Guide · Google Review",
-  },
-  {
-    name: "Zaved Ansari",
-    quote:
-      "Amazing experience — advanced machines, hygienic environment, friendly staff, and good people to work out with. Learned a lot from this place.",
-    role: "Google Review",
-  },
-  {
-    name: "Manvi Sharma",
-    quote:
-      "I've had an incredible experience. The trainers are professional, the environment is welcoming, and the gym community is supportive. I encourage everyone to visit here.",
-    role: "Google Review",
-  },
+  { name: "Akshit Nagar", role: "Google Review", quote: "Best gym of Jhalawar. Most spacious, all new and premium quality equipments, reasonable prices and great ambience." },
+  { name: "Rahul Mittal", role: "Google Review", quote: "As a beginner I joined Fitsters gym last month — totally satisfied with trainers and quality equipment. Best gym of Jhalawar with a friendly atmosphere. In just one month this became my habit. Full 5 out of 5." },
+  { name: "Reshma Verma", role: "Google Review", quote: "I recently joined this newly opened gym and I'm super satisfied with the trainers and their services. They developed real consistency and dedication in me towards my fitness goal. I suggest everyone come and join this crowd." },
+  { name: "Shailly Singh", role: "Google Review", quote: "This is by far the greatest gym in Jhalawar. The staff is super amazing!! If you really feel like joining a gym, this should be it!!" },
+  { name: "Pooja Nayak", role: "Google Review", quote: "One of the finest gyms in Jhalawar. The knowledge and behaviour of the staff is impressive. Gym is fully equipped with high quality machines and great ambience." },
 ];
 
 const FAQS = [
-  { q: "Do you offer a trial pass?", a: "Yes. We offer a single-day and a 3-day trial pass so you can experience all three floors before joining." },
-  { q: "Can I freeze my membership?", a: "Monthly and annual members can freeze their plan for up to 15 and 30 days respectively per year." },
-  { q: "Are personal trainers included?", a: "Every plan includes floor guidance. Dedicated 1-on-1 PT packages can be added at member-only rates." },
-  { q: "What are your timings?", a: "We're open 5:00 AM to 10:00 PM, seven days a week. Please confirm current hours by phone." },
-  { q: "Do you have women-only sessions?", a: "Yes — dedicated women-only class slots run daily on the yoga and cardio floors." },
+  { q: "What are your timings?", a: "Fitsters Club Jhalawar is open daily from 5:00 AM to 10:00 PM." },
+  { q: "Where exactly are you located?", a: "1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001. Tap 'Get Directions' for the Google Maps route." },
+  { q: "How much is a monthly membership?", a: "Gym membership starts at Rs.1,800 for 30 days. Longer packages include bonus months — 3+1 months for Rs.6,000 and 6+1 months for Rs.8,500." },
+  { q: "Do you offer personal training?", a: "Yes. Personal training is Rs.7,000 for 1 month and Rs.18,000 for 3 months, with dedicated 1-on-1 coaching." },
+  { q: "Do you have group classes?", a: "Yes — Yoga at Rs.1,000/month and Dance Class at Rs.1,500/month. You can book a group class session online." },
+  { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
 ];
 
 function Embers() {
@@ -205,13 +178,7 @@ function Embers() {
         <span
           key={i}
           className="ember"
-          style={{
-            left: s.left,
-            animationDelay: s.delay,
-            animationDuration: s.duration,
-            width: s.size,
-            height: s.size,
-          }}
+          style={{ left: s.left, animationDelay: s.delay, animationDuration: s.duration, width: s.size, height: s.size }}
         />
       ))}
     </div>
@@ -222,15 +189,16 @@ function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
-        src={logo24}
-        alt="24 FITNESS logo"
+        src={logoFitsters}
+        alt="Fitsters Club Jhalawar logo"
         width={160}
         height={160}
-        className="h-14 w-14 md:h-16 md:w-16 rounded-full object-contain drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
+        className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
-      <span className="font-display text-2xl md:text-3xl font-bold tracking-wide leading-none">
-        <span className="text-[color:var(--color-brand)]">24</span>
-        <span className="text-white ml-1">FITNESS</span>
+      <span className="font-display text-xl md:text-2xl font-bold tracking-wide leading-none">
+        <span className="text-[color:var(--color-brand)]">FITSTERS</span>
+        <span className="text-white ml-1">CLUB</span>
+        <span className="block text-[10px] tracking-[0.35em] text-white/60 mt-1">JHALAWAR</span>
       </span>
     </span>
   );
@@ -255,19 +223,15 @@ function Header() {
         <a href="#home" className="flex items-center">
           <Wordmark />
         </a>
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className="text-[15px] font-medium text-white/80 transition hover:text-[color:var(--color-brand)]"
-            >
+            <a key={n.href} href={n.href} className="text-[15px] font-medium text-white/80 transition hover:text-[color:var(--color-brand)]">
               {n.label}
             </a>
           ))}
         </nav>
-        <a href="#contact" className="hidden btn-primary btn-primary-hover lg:inline-flex">
-          Contact Us
+        <a href={`tel:${PHONE}`} className="hidden btn-primary btn-primary-hover lg:inline-flex">
+          <Phone size={16} /> Call Now
         </a>
         <button
           onClick={() => setOpen((v) => !v)}
@@ -291,14 +255,68 @@ function Header() {
                   {n.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setOpen(false)} className="btn-primary btn-primary-hover mt-2">
-                Contact Us
+              <a href={`tel:${PHONE}`} className="btn-primary btn-primary-hover mt-2">
+                Call {PHONE_DISPLAY}
               </a>
             </div>
           </div>
         </div>
       )}
     </header>
+  );
+}
+
+function VideoHero() {
+  return (
+    <section id="showreel" className="relative w-full overflow-hidden">
+      <div className="relative h-[100svh] min-h-[560px] w-full">
+        <video
+          src={heroShowreel.url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover bg-black"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
+        <div
+          className="absolute inset-0 opacity-70"
+          style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
+          aria-hidden
+        />
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm">
+            <Sparkles size={14} className="text-[color:var(--color-brand)]" />
+            Fitsters Athletic Club · Jhalawar
+          </p>
+          <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
+            <span className="block">Sweat.</span>
+            <span className="block text-[color:var(--color-brand)]">Strength.</span>
+            <span className="block">Success.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
+            Jhalawar's most spacious fitness club — all-new premium equipment, qualified trainers and an atmosphere that
+            keeps you coming back.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover">
+              Enquire Now <ChevronRight size={18} />
+            </a>
+            <a href="#pricing" className="btn-ghost">
+              View Packages
+            </a>
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-6 flex items-center justify-center gap-6 px-4 text-[10px] font-bold uppercase tracking-[0.35em] text-white/70 md:text-xs">
+            <span>Train Hard</span>
+            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
+            <span>Live Strong</span>
+            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
+            <span>Fitsters</span>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -309,9 +327,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A] to-[#121212]" />
         <div
           className="absolute inset-0 opacity-60"
-          style={{
-            backgroundImage: `radial-gradient(circle at 70% 30%, rgba(245,115,14,0.25), transparent 55%)`,
-          }}
+          style={{ backgroundImage: `radial-gradient(circle at 70% 30%, rgba(245,115,14,0.25), transparent 55%)` }}
         />
       </div>
       <Embers />
@@ -319,7 +335,7 @@ function Hero() {
         <div className="relative z-10 order-2 lg:order-1">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
             <Sparkles size={14} className="text-[color:var(--color-brand)]" />
-            Premium Gym · Kota, Rajasthan
+            Fitness Centre · Jhalawar, Rajasthan
           </p>
           <h1 className="text-hero font-black text-white">
             <span className="block text-[color:var(--color-brand)]">Train Your</span>
@@ -327,25 +343,25 @@ function Hero() {
             <span className="block text-[color:var(--color-brand)]">Your Life!</span>
           </h1>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Step into 24 FITNESS — Kota's premium triple-floor, 7000+ sq. ft. training facility. Certified coaches, world-class
-            equipment and a community that pushes you every single session.
+            Welcome to Fitsters Club Jhalawar — 1st Floor, Raghuveer Plaza, near Mama Bhanja Circle. Premium machines,
+            qualified trainers, yoga & dance classes and personal training, all under one roof.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#pricing" className="btn-primary btn-primary-hover">
               Join Now <ChevronRight size={18} />
             </a>
-            <a href="#services" className="btn-ghost">
-              View Services
+            <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <Navigation size={16} /> Get Directions
             </a>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
-              ["7000+", "Sq. Ft. Facility"],
-              ["3", "Training Floors"],
-              ["15+", "Certified Coaches"],
+              ["5.0★", "Google Rating"],
+              ["4", "Expert Trainers"],
+              ["5AM–10PM", "Open Daily"],
             ].map(([n, l]) => (
               <div key={l}>
-                <div className="font-display text-3xl text-white md:text-4xl">{n}</div>
+                <div className="font-display text-2xl text-white md:text-3xl">{n}</div>
                 <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{l}</div>
               </div>
             ))}
@@ -353,12 +369,11 @@ function Hero() {
         </div>
         <div className="relative order-1 lg:order-2 lg:-mr-6">
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
-          <div className="absolute -inset-10 rounded-[2.5rem] bg-cyan-500/10 blur-3xl" aria-hidden />
           <img
-            src={heroImg}
-            alt="Muscular athlete flexing in a dramatic gym setting at 24 FITNESS"
+            src={g19}
+            alt="Training floor at Fitsters Club Jhalawar"
             width={1024}
-            height={1600}
+            height={1280}
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>
@@ -367,8 +382,44 @@ function Hero() {
   );
 }
 
+function QuickActions() {
+  return (
+    <section id="members" className="relative bg-[#0d0d0d] py-20">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Member Services</p>
+          <h2 className="text-h2 font-black text-white">Everything In One Tap</h2>
+          <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
+            Enquiries, bookings, billing and forms — all handled through our member portal.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {QUICK_ACTIONS.map((a) => (
+            <a
+              key={a.title}
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-[#121212] p-5 transition hover:border-[color:var(--color-brand)]/60 hover:bg-[#161310]"
+            >
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-brand)]/15 text-[color:var(--color-brand)]">
+                <a.icon size={20} />
+              </span>
+              <span className="flex-1">
+                <span className="block font-display text-lg uppercase text-white">{a.title}</span>
+                <span className="mt-1 block text-sm leading-[1.5] text-[color:var(--color-body)]">{a.desc}</span>
+              </span>
+              <ChevronRight size={18} className="mt-3 text-white/30 transition group-hover:translate-x-1 group-hover:text-[color:var(--color-brand)]" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Marquee() {
-  const items = ["Pilates", "Cardio", "Plank", "Deadlift", "Boxing", "Yoga", "CrossFit", "Muscle Building"];
+  const items = ["Yoga", "Dance", "Cardio", "Deadlift", "Strength", "Personal Training", "Fat Loss", "Muscle Building"];
   const Row = ({ items, cls, reverse }: { items: string[]; cls: string; reverse?: boolean }) => (
     <div className={`overflow-hidden py-4 ${cls}`}>
       <div className={reverse ? "marquee-track-reverse" : "marquee-track"}>
@@ -405,42 +456,24 @@ function About() {
             <span className="block text-[color:var(--color-brand)]">Further.</span>
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-[color:var(--color-body)]">
-            24 FITNESS is Kota's most complete premium gym — three dedicated floors of strength, cardio and studio training
-            packed into 7000+ sq. ft. Every rack, every class and every coach is built around one goal: helping you become the
-            strongest version of yourself.
+            Fitsters Club is Jhalawar's premium fitness destination — a spacious, well-ventilated floor packed with all-new
+            commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our head trainer and
+            personal training team build the plan around you.
           </p>
           <a href="#contact" className="btn-primary btn-primary-hover mt-8">
-            About Us <ChevronRight size={18} />
+            Visit Us <ChevronRight size={18} />
           </a>
         </div>
         <div className="relative">
           <div className="absolute -inset-6 rounded-[2rem] bg-[color:var(--color-brand-glow)]/20 blur-3xl" aria-hidden />
           <img
-            src={aboutImg}
-            alt="Muscular trainer at 24 FITNESS"
+            src={g14}
+            alt="Inside Fitsters Club Jhalawar"
             width={1000}
             height={1200}
             loading="lazy"
             className="relative w-full rounded-3xl object-cover"
           />
-          <div className="absolute right-0 top-8 hidden w-64 space-y-3 md:block">
-            {[
-              ["15+", "Certified Trainers"],
-              ["2000+", "Happy Members"],
-              ["7000+", "Sq. Ft. Facility"],
-            ].map(([n, l]) => (
-              <div
-                key={l}
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#121212]/90 px-5 py-4 backdrop-blur"
-              >
-                <div className="h-1 flex-1 rounded-full bg-[color:var(--color-brand)]/80" />
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-white/60">{l}</div>
-                  <div className="font-display text-3xl text-white">{n}</div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
@@ -457,38 +490,25 @@ function Services() {
           </p>
           <h2 className="text-h2 font-black text-white">Discover Our Fitness Programs</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            From heavy strength floors to calming yoga studios — every program is coached, structured and built for real results.
+            Gym training, group classes and personal coaching — structured, guided and built for real results.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
             <div key={s.title} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img
-                src={s.img}
-                alt={s.title}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
+              <img src={s.img} alt={s.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <h3 className="font-display text-2xl uppercase text-white md:text-[26px]">{s.title}</h3>
                 <div>
                   <p className="mb-4 max-w-xs text-sm text-[color:var(--color-body)]">{s.desc}</p>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[color:var(--color-brand)]"
-                  >
-                    Learn more <ChevronRight size={16} />
+                  <a href="#pricing" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[color:var(--color-brand)]">
+                    See pricing <ChevronRight size={16} />
                   </a>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a href="#contact" className="btn-primary btn-primary-hover">
-            View All Services
-          </a>
         </div>
       </div>
     </section>
@@ -521,52 +541,101 @@ function Pricing() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Membership</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Packages</p>
             <h2 className="text-h2 font-black text-white">Membership Rates</h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Explore our flexible plans built for consistency and results. Every plan gives you full access to all three floors
-            and professional coaching.
+            Official Fitsters Club packages. Longer plans include bonus months — pick the one that fits your goal and enquire
+            online in seconds.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PRICING.map((p) => (
             <div
               key={p.n}
-              className={`relative flex flex-col rounded-3xl border p-8 ${
+              className={`relative flex flex-col rounded-3xl border p-7 ${
                 p.popular
-                  ? "border-[color:var(--color-brand)] bg-[#121212] shadow-[0_0_60px_-20px_rgba(245,115,14,0.5)] md:-translate-y-4"
+                  ? "border-[color:var(--color-brand)] bg-[#121212] shadow-[0_0_60px_-20px_rgba(245,115,14,0.5)] lg:-translate-y-4"
                   : "border-white/10 bg-[#121212]"
               }`}
             >
               {p.popular && (
-                <span className="absolute -top-3 left-8 rounded-full bg-[color:var(--color-brand)] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
+                <span className="absolute -top-3 left-7 rounded-full bg-[color:var(--color-brand)] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
                   Most Popular
                 </span>
               )}
               <div className="font-display text-5xl text-white/20">{p.n}</div>
-              <h3 className="mt-2 font-display text-2xl uppercase text-white">{p.name}</h3>
+              <h3 className="mt-2 font-display text-xl uppercase text-white">{p.name}</h3>
+              <p className="text-xs uppercase tracking-widest text-white/40">{p.cat}</p>
               <ul className="mt-6 flex-1 space-y-3 text-[15px] text-[color:var(--color-body)]">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-center gap-3">
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[color:var(--color-brand)]/20 text-[color:var(--color-brand)]">
+                    <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-brand)]/20 text-[color:var(--color-brand)]">
                       <Check size={12} strokeWidth={3} />
                     </span>
                     {f}
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 flex items-end justify-between border-t border-white/10 pt-6">
-                <div>
-                  <div className="font-display text-4xl text-white">{p.price}</div>
-                  <div className="text-xs uppercase tracking-widest text-white/50">{p.period}</div>
-                </div>
-                <a href="#contact" className="btn-primary btn-primary-hover !px-5 !py-3">
-                  Join
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <div className="font-display text-3xl text-white">{p.price}</div>
+                <div className="text-xs uppercase tracking-widest text-white/50">{p.period}</div>
+                <a
+                  href={link("enquiry.php", `&package=GYM,${encodeURIComponent(p.name)}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary btn-primary-hover mt-4 w-full justify-center !px-5 !py-3"
+                >
+                  Enquire Now
                 </a>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
+            <h3 className="font-display text-2xl uppercase text-white">Group Classes</h3>
+            <div className="mt-6 space-y-4">
+              {GROUP_CLASSES.map((c) => (
+                <div key={c.name} className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/30 p-5">
+                  <div>
+                    <div className="font-display text-lg uppercase text-white">{c.name}</div>
+                    <div className="text-sm text-[color:var(--color-body)]">{c.desc}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-display text-2xl text-[color:var(--color-brand)]">{c.price}</div>
+                    <div className="text-[11px] uppercase tracking-widest text-white/50">{c.period}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <a href={link("group-class.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover mt-6">
+              Book Group Class
+            </a>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
+            <h3 className="font-display text-2xl uppercase text-white">Personal Training</h3>
+            <div className="mt-6 space-y-4">
+              {PT_PLANS.map((c) => (
+                <div key={c.name} className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/30 p-5">
+                  <div>
+                    <div className="font-display text-lg uppercase text-white">{c.name}</div>
+                    <div className="text-sm text-[color:var(--color-body)]">{c.desc}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-display text-2xl text-[color:var(--color-brand)]">{c.price}</div>
+                    <div className="text-[11px] uppercase tracking-widest text-white/50">{c.period}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <a href={link("book-pt.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover mt-6">
+              Book PT Session
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -575,36 +644,24 @@ function Pricing() {
 
 function Trainers() {
   return (
-    <section className="relative bg-[#0d0d0d] py-24">
+    <section id="trainers" className="relative bg-[#0d0d0d] py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Our Team</p>
-          <h2 className="text-h2 font-black text-white">Meet Our Certified Trainers</h2>
+          <h2 className="text-h2 font-black text-white">Meet Our Trainers</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            The team behind every transformation at 24 FITNESS — nationally certified, deeply experienced and always on the floor.
+            The team behind every transformation at Fitsters Club Jhalawar.
           </p>
         </div>
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TRAINERS.map((t) => (
             <div key={t.name} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img
-                src={t.img}
-                alt={t.name}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="font-display text-2xl uppercase text-white">{t.name}</h3>
+              <img src={t.img} alt={`${t.name} — ${t.role}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <h3 className="font-display text-xl uppercase text-white">{t.name}</h3>
                 <p className="text-sm text-[color:var(--color-brand)]">{t.role}</p>
-                <div className="mt-4 flex gap-2">
-                  <a href="#" aria-label="Instagram" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]">
-                    <Instagram size={15} />
-                  </a>
-                  <a href="#" aria-label="Facebook" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]">
-                    <Facebook size={15} />
-                  </a>
-                </div>
+                <p className="mt-2 text-[13px] leading-[1.5] text-white/70">{t.bio}</p>
               </div>
             </div>
           ))}
@@ -623,63 +680,42 @@ function Gallery() {
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">
-              Real Members · Real Results
-            </p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Photo Gallery</p>
             <h2 className="text-hero font-black leading-[0.9] text-white">
-              HAPPY <span className="text-[color:var(--color-brand)]">CLIENTS</span>
+              INSIDE <span className="text-[color:var(--color-brand)]">FITSTERS</span>
               <br />
-              OF 24 FITNESS
+              CLUB JHALAWAR
             </h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Hundreds of members from Kota trust 24 FITNESS with their transformation. From new joiners
-            picking up their welcome kit to community meet-ups on the terrace — this is our family.
+            A look at our facilities — the spacious training floor, premium machines and the community that makes Fitsters
+            the best gym in Jhalawar.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {CLIENTS.map((c, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#141210] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.8)] transition hover:border-[color:var(--color-brand)]/60 hover:shadow-[0_20px_60px_-15px_rgba(245,115,14,0.4)]"
-            >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={c.img}
-                  alt={`${c.name} — 24 FITNESS happy client`}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[color:var(--color-brand)]">
-                  {c.tag}
-                </p>
-                <p className="mt-1 font-display text-2xl uppercase tracking-wide text-white">{c.name}</p>
-              </div>
-              <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--color-brand)] text-white shadow-lg">
-                <Star className="h-4 w-4 fill-white" />
-              </div>
+        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {GALLERY.map((src, i) => (
+            <div key={i} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#141210]">
+              <img
+                src={src}
+                alt={`Fitsters Club Jhalawar facility photo ${i + 1}`}
+                loading="lazy"
+                className="aspect-square h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
 
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { k: "2,500+", v: "Happy Members" },
-            { k: "4.9★", v: "Google Rating" },
-            { k: "500+", v: "Transformations" },
-            { k: "6 Yrs", v: "Serving Kota" },
+            { k: "5.0★", v: "Google Rating" },
+            { k: "4", v: "Trainers" },
+            { k: "17h", v: "Open Daily" },
+            { k: "Rs.1,800", v: "From / Month" },
           ].map((s, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-white/10 bg-[#141210] p-6 text-center"
-            >
-              <p className="font-display text-4xl text-[color:var(--color-brand)]">{s.k}</p>
-              <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--color-body)]">
-                {s.v}
-              </p>
+            <div key={i} className="rounded-2xl border border-white/10 bg-[#141210] p-6 text-center">
+              <p className="font-display text-3xl text-[color:var(--color-brand)]">{s.k}</p>
+              <p className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--color-body)]">{s.v}</p>
             </div>
           ))}
         </div>
@@ -696,7 +732,7 @@ function Testimonials() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Testimonials</p>
           <h2 className="text-h2 font-black text-white">Real Google Reviews</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Rated <span className="font-bold text-white">4.6★</span> from <span className="font-bold text-white">130+ verified reviews</span> on Google. Straight from our members.
+            Rated <span className="font-bold text-white">5.0★</span> on Google by members of Fitsters Club Jhalawar.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -715,6 +751,11 @@ function Testimonials() {
             </div>
           ))}
         </div>
+        <div className="mt-10 text-center">
+          <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            View More Reviews on Google
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -723,24 +764,24 @@ function Testimonials() {
 function BigCta() {
   return (
     <section className="relative overflow-hidden">
-      <img src={ctaImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+      <img src={g16} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
       <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-36">
         <div className="max-w-2xl">
           <h2 className="text-hero font-black uppercase text-white">
             Ready to Join <br />
-            <span className="text-[color:var(--color-brand)]">The 24 FITNESS</span> Family?
+            <span className="text-[color:var(--color-brand)]">Fitsters Club</span> Jhalawar?
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Walk in for a trial session today. Meet the coaches, tour all three floors and see why 24 FITNESS is Kota's premium
-            training home.
+            Walk in for a trial session today. Meet the trainers, tour the floor and see why Fitsters is Jhalawar's
+            highest-rated fitness club.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" className="btn-primary btn-primary-hover">
-              Contact Us
+            <a href={`tel:${PHONE}`} className="btn-primary btn-primary-hover">
+              <Phone size={16} /> Call {PHONE_DISPLAY}
             </a>
-            <a href="#pricing" className="btn-ghost">
-              View Plans
+            <a href={link("trial_waiver.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              Trial Waiver Form
             </a>
           </div>
         </div>
@@ -763,18 +804,13 @@ function Faqs() {
             const active = open === i;
             return (
               <div key={f.q} className="rounded-2xl border border-white/10 bg-[#121212]">
-                <button
-                  onClick={() => setOpen(active ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 p-6 text-left"
-                >
+                <button onClick={() => setOpen(active ? null : i)} className="flex w-full items-center justify-between gap-4 p-6 text-left">
                   <span className="font-display text-lg uppercase text-white md:text-xl">{f.q}</span>
                   <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-brand)]/15 text-[color:var(--color-brand)]">
                     {active ? <Minus size={16} /> : <Plus size={16} />}
                   </span>
                 </button>
-                {active && (
-                  <div className="px-6 pb-6 text-[16px] leading-[1.7] text-[color:var(--color-body)]">{f.a}</div>
-                )}
+                {active && <div className="px-6 pb-6 text-[16px] leading-[1.7] text-[color:var(--color-body)]">{f.a}</div>}
               </div>
             );
           })}
@@ -792,85 +828,59 @@ function Contact() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Contact</p>
           <h2 className="text-h2 font-black text-white">Get In Touch</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Drop us a message or visit our facility in Rama Krishna Puram, Kota — we're on the floor daily.
+            Visit us at Raghuveer Plaza, Mama Bhanja Circle, Jhalawar — or send an enquiry and we'll call you back.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks — we'll be in touch shortly.");
-            }}
-            className="rounded-3xl border border-white/10 bg-[#121212] p-8"
-          >
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <label className="flex flex-col gap-2 text-sm text-white/70">
-                Name
-                <input
-                  required
-                  className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none focus:border-[color:var(--color-brand)]"
-                  placeholder="Your name"
-                />
-              </label>
-              <label className="flex flex-col gap-2 text-sm text-white/70">
-                Phone
-                <input
-                  required
-                  className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none focus:border-[color:var(--color-brand)]"
-                  placeholder="Phone number"
-                />
-              </label>
-            </div>
-            <label className="mt-4 flex flex-col gap-2 text-sm text-white/70">
-              Email
-              <input
-                type="email"
-                required
-                className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none focus:border-[color:var(--color-brand)]"
-                placeholder="you@email.com"
-              />
-            </label>
-            <label className="mt-4 flex flex-col gap-2 text-sm text-white/70">
-              Message
-              <textarea
-                required
-                rows={4}
-                className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none focus:border-[color:var(--color-brand)]"
-                placeholder="Tell us about your goals..."
-              />
-            </label>
-            <button type="submit" className="btn-primary btn-primary-hover mt-6 w-full">
-              Send Message
-            </button>
-          </form>
           <div className="flex flex-col gap-4">
             <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
-              <h3 className="font-display text-2xl uppercase text-white">Visit The Facility</h3>
+              <h3 className="font-display text-2xl uppercase text-white">Visit The Club</h3>
               <ul className="mt-6 space-y-4 text-[15px] text-[color:var(--color-body)]">
                 <li className="flex items-start gap-3">
-                  <MapPin size={18} className="mt-1 text-[color:var(--color-brand)]" />
-                  Rama Krishna Puram, near Ahinsa Circle, Kota, Rajasthan, India
+                  <MapPin size={18} className="mt-1 shrink-0 text-[color:var(--color-brand)]" />
+                  1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone size={18} className="text-[color:var(--color-brand)]" /> [Add phone number]
+                  <Phone size={18} className="text-[color:var(--color-brand)]" />
+                  <a href={`tel:${PHONE}`} className="hover:text-white">{PHONE_DISPLAY}</a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail size={18} className="text-[color:var(--color-brand)]" /> hello@24fitness.in
+                  <Clock size={18} className="text-[color:var(--color-brand)]" /> Open daily · 5:00 AM – 10:00 PM
                 </li>
                 <li className="flex items-center gap-3">
-                  <Clock size={18} className="text-[color:var(--color-brand)]" /> Mon–Sun · 5:00 AM – 10:00 PM
+                  <Instagram size={18} className="text-[color:var(--color-brand)]" />
+                  <a href="https://www.instagram.com/fitsters_jwr/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    @fitsters_jwr
+                  </a>
                 </li>
               </ul>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover">
+                  Send Enquiry
+                </a>
+                <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                  <Navigation size={16} /> Google Directions
+                </a>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-3xl border border-white/10">
-              <iframe
-                title="24 FITNESS location"
-                src="https://www.google.com/maps?q=24+FITNESS+Kota+Rajasthan&ll=25.1272557,75.8279202&z=17&output=embed"
-                className="h-64 w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
+              <h3 className="font-display text-xl uppercase text-white">Member Forms</h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a href={link("sspar.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">PAR-Q</a>
+                <a href={link("personal-training.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">PT Contract</a>
+                <a href={link("trial_waiver.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">Trial Waiver</a>
+                <a href={link("feedback.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">Feedback</a>
+              </div>
             </div>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-white/10">
+            <iframe
+              title="Fitsters Club Jhalawar location"
+              src="https://www.google.com/maps?q=Fitsters+Club+Jhalawar&ll=24.591914,76.1563261&z=17&output=embed"
+              className="h-full min-h-[420px] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>
@@ -885,112 +895,65 @@ function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-[1.7] text-[color:var(--color-body)]">
-            Premium triple-floor gym in Kota, Rajasthan. Train harder. Transform faster.
+            Fitsters Athletic Club — Jhalawar's premium gym at Mama Bhanja Circle. Train hard. Live strong.
           </p>
         </div>
         <div>
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Quick Links</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><a href="#about" className="hover:text-[color:var(--color-brand)]">About</a></li>
+            <li><a href="#pricing" className="hover:text-[color:var(--color-brand)]">Packages</a></li>
+            <li><a href="#gallery" className="hover:text-[color:var(--color-brand)]">Gallery</a></li>
             <li><a href="#contact" className="hover:text-[color:var(--color-brand)]">Contact</a></li>
-            <li><a href="#gallery" className="hover:text-[color:var(--color-brand)]">Clients</a></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-display text-sm uppercase tracking-widest text-white">Services</h4>
+          <h4 className="font-display text-sm uppercase tracking-widest text-white">Members</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
-            <li>Yoga & Pilates</li>
-            <li>Muscle Building</li>
-            <li>Boxing Classes</li>
-            <li>Personal Training</li>
+            <li><a href={link("login.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Client Login</a></li>
+            <li><a href={link("group-class.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Book Group Class</a></li>
+            <li><a href={link("book-pt.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Book PT Session</a></li>
+            <li><a href={link("offers.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Offers</a></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-display text-sm uppercase tracking-widest text-white">Follow</h4>
+          <h4 className="font-display text-sm uppercase tracking-widest text-white">Reach Us</h4>
+          <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
+            <li><a href={`tel:${PHONE}`} className="hover:text-[color:var(--color-brand)]">{PHONE_DISPLAY}</a></li>
+            <li>5:00 AM – 10:00 PM daily</li>
+          </ul>
           <div className="mt-4 flex gap-2">
-            <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]">
-              <Facebook size={16} />
-            </a>
-            <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]">
+            <a
+              href="https://www.instagram.com/fitsters_jwr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]"
+            >
               <Instagram size={16} />
             </a>
-            <a href="#" aria-label="YouTube" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]">
-              <Youtube size={16} />
+            <a
+              href={MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Maps"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]"
+            >
+              <MapPin size={16} />
             </a>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-white/50 md:flex-row md:px-8">
-          <div>© {new Date().getFullYear()} 24 FITNESS — All Rights Reserved.</div>
+          <div>© {new Date().getFullYear()} Fitsters Club Jhalawar — All Rights Reserved.</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Terms & Conditions</a>
-            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <a href={link("feedback.php")} target="_blank" rel="noopener noreferrer" className="hover:text-white">Feedback</a>
+            <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="hover:text-white">Enquiry</a>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-function VideoHero() {
-  return (
-    <section id="showreel" className="relative w-full overflow-hidden">
-      <div className="relative h-[100svh] min-h-[560px] w-full">
-        <video
-          src={heroShowreel.url}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover bg-black"
-        />
-        {/* Dark gradient overlays for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
-        <div
-          className="absolute inset-0 opacity-70"
-          style={{
-            backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)`,
-          }}
-          aria-hidden
-        />
-
-        {/* Foreground content */}
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm">
-            <Sparkles size={14} className="text-[color:var(--color-brand)]" />
-            Welcome To 24 Fitness · Kota
-          </p>
-          <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
-            <span className="block">Sweat.</span>
-            <span className="block text-[color:var(--color-brand)]">Strength.</span>
-            <span className="block">Success.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
-            Kota's most premium fitness destination — world-class equipment, elite coaches, and the energy that turns
-            hard work into real transformation.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a href="#pricing" className="btn-primary btn-primary-hover">
-              Join 24 Fitness <ChevronRight size={18} />
-            </a>
-            <a href="#home" className="btn-ghost">
-              Explore More
-            </a>
-          </div>
-
-          {/* Bottom bold marquee-style badge row */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-6 flex items-center justify-center gap-6 px-4 text-[10px] font-bold uppercase tracking-[0.35em] text-white/70 md:text-xs">
-            <span>Train Hard</span>
-            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
-            <span>Live Strong</span>
-            <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
-            <span>24 Fitness</span>
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -1001,12 +964,13 @@ function HomePage() {
       <main>
         <VideoHero />
         <Hero />
+        <QuickActions />
         <Marquee />
         <About />
         <Services />
         <Features />
         <Pricing />
-        
+        <Trainers />
         <Gallery />
         <Testimonials />
         <BigCta />
