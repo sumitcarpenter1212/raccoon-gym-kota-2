@@ -14,6 +14,7 @@ import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OffersRouteImport } from './routes/offers'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as EnquiryRouteImport } from './routes/enquiry'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TrainersRoute = TrainersRouteImport.update({
@@ -41,6 +42,11 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnquiryRoute = EnquiryRouteImport.update({
+  id: '/enquiry',
+  path: '/enquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,6 +55,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/enquiry': typeof EnquiryRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/enquiry': typeof EnquiryRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/enquiry': typeof EnquiryRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -76,16 +85,25 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/enquiry'
     | '/gallery'
     | '/offers'
     | '/packages'
     | '/reviews'
     | '/trainers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/gallery' | '/offers' | '/packages' | '/reviews' | '/trainers'
+  to:
+    | '/'
+    | '/enquiry'
+    | '/gallery'
+    | '/offers'
+    | '/packages'
+    | '/reviews'
+    | '/trainers'
   id:
     | '__root__'
     | '/'
+    | '/enquiry'
     | '/gallery'
     | '/offers'
     | '/packages'
@@ -95,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EnquiryRoute: typeof EnquiryRoute
   GalleryRoute: typeof GalleryRoute
   OffersRoute: typeof OffersRoute
   PackagesRoute: typeof PackagesRoute
@@ -139,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enquiry': {
+      id: '/enquiry'
+      path: '/enquiry'
+      fullPath: '/enquiry'
+      preLoaderRoute: typeof EnquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -151,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EnquiryRoute: EnquiryRoute,
   GalleryRoute: GalleryRoute,
   OffersRoute: OffersRoute,
   PackagesRoute: PackagesRoute,
