@@ -385,7 +385,7 @@ function Hero() {
         <div className="relative order-1 lg:order-2 lg:-mr-6">
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
           <img
-            src={g19}
+            src={imgFloorWide}
             alt="Training floor at Fitsters Club Jhalawar"
             width={1024}
             height={1280}
@@ -482,7 +482,7 @@ function About() {
         <div className="relative">
           <div className="absolute -inset-6 rounded-[2rem] bg-[color:var(--color-brand-glow)]/20 blur-3xl" aria-hidden />
           <img
-            src={g14}
+            src={imgFloorMachines}
             alt="Inside Fitsters Club Jhalawar"
             width={1000}
             height={1200}
@@ -779,7 +779,7 @@ function Testimonials() {
 function BigCta() {
   return (
     <section className="relative overflow-hidden">
-      <img src={g16} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={imgCardioTreadmills} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
       <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-36">
         <div className="max-w-2xl">
