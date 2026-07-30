@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "24 FITNESS — Premium Triple-Floor Gym in Kota, Rajasthan" },
+      { title: "Fitsters Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
       {
         name: "description",
         content:
-          "24 FITNESS is a premium triple-floor, 7000+ sq. ft. gym in Rama Krishna Puram, Kota. Certified trainers, strength, cardio, boxing, yoga & personal training.",
+          "Fitsters Club Jhalawar is a premium gym at Raghuveer Plaza, Mama Bhanja Circle, Saket. Gym, yoga, dance classes & personal training. Open 5 AM–10 PM.",
       },
-      { name: "author", content: "24 FITNESS" },
-      { property: "og:title", content: "24 FITNESS — Train Harder. Transform Faster." },
+      { name: "author", content: "Fitsters Club Jhalawar" },
+      { property: "og:title", content: "Fitsters Club Jhalawar — Train Hard. Live Strong." },
       {
         property: "og:description",
         content:
-          "Premium triple-floor, 7000+ sq. ft. gym in Kota, Rajasthan. Certified trainers, boxing, strength, cardio, yoga and personal training.",
+          "Jhalawar's 5.0★ rated fitness club — premium equipment, qualified trainers, yoga & dance classes. Memberships from Rs.1,800/month.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
