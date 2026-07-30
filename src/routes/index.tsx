@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   Menu,
@@ -17,17 +17,9 @@ import {
   Instagram,
   ChevronRight,
   Check,
-  ClipboardList,
-  LogIn,
-  CalendarDays,
-  UserCheck,
-  Tag,
-  Images,
-  MessageSquare,
-  FileText,
-  ShieldCheck,
   Navigation,
 } from "lucide-react";
+import { MEMBER_LINKS } from "@/data/member-links";
 
 import logoFitsters from "@/assets/fitsters-logo.jpg";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
@@ -72,10 +64,6 @@ export const Route = createFileRoute("/")({
 const PHONE = "+918441984416";
 const PHONE_DISPLAY = "+91 84419 84416";
 const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
-const PORTAL = "https://gym.geteasysoftware.com/v3/fitsters_gym_1/webapp";
-const BID = "UzN4eE9JUEUzaUltOERvTTJKVVNGUT09";
-const link = (p: string, extra = "") => `${PORTAL}/${p}?branch_id=${BID}${extra}`;
-
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
@@ -84,22 +72,6 @@ const NAV = [
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
-];
-
-const QUICK_ACTIONS = [
-  { icon: ClipboardList, title: "Enquiry", desc: "Get to know about our packages", href: link("enquiry.php") },
-  { icon: LogIn, title: "Client Login", desc: "Login to view billing details", href: link("login.php") },
-  { icon: CalendarDays, title: "Book Group Class", desc: "Book group class session", href: link("group-class.php") },
-  { icon: UserCheck, title: "Book PT Sessions", desc: "Book personal training session", href: link("book-pt.php") },
-  { icon: Tag, title: "Packages", desc: "Find packages that suit your need", href: link("packages.php") },
-  { icon: Flame, title: "Offers", desc: "Check out the latest offers", href: link("offers.php") },
-  { icon: Images, title: "Photo Gallery", desc: "Our facilities and latest work portfolio", href: link("gallery.php") },
-  { icon: Users, title: "Trainers", desc: "Achievements & qualifications of our trainers", href: link("trainers.php") },
-  { icon: Star, title: "Reviews", desc: "Check out our Google reviews", href: link("reviews.php") },
-  { icon: MessageSquare, title: "Feedback", desc: "Give us your genuine suggestions", href: link("feedback.php") },
-  { icon: FileText, title: "PAR-Q", desc: "Physical activity readiness questionnaire", href: link("sspar.php") },
-  { icon: FileText, title: "PT Contract", desc: "Personal training contract", href: link("personal-training.php") },
-  { icon: ShieldCheck, title: "Trial Waiver", desc: "Trial waiver and release form", href: link("trial_waiver.php") },
 ];
 
 const SERVICES = [
