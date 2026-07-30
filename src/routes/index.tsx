@@ -45,7 +45,7 @@ import imgTransformation from "@/assets/gm-transformation.jpg";
 import imgFlex1 from "@/assets/gm-flex-1.jpg";
 import imgFlex2 from "@/assets/gm-flex-2.jpg";
 import imgDanceClass from "@/assets/gm-dance-class.jpg";
-import imgFunctional from "@/assets/gm-functional.jpg";
+import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -108,7 +108,7 @@ const SERVICES = [
   { title: "Yoga Class", img: imgYogaClass, desc: "Daily yoga batches for mobility, flexibility and recovery." },
   { title: "Dance Class", img: imgDanceClass, desc: "High-energy dance fitness sessions for all levels." },
   { title: "Cardio Zone", img: imgCardioBikes, desc: "Treadmills, cycles and conditioning circuits for endurance." },
-  { title: "Functional Training", img: imgFunctional, desc: "Kettlebells, ropes and athletic conditioning workouts." },
+  { title: "Functional Training", img: imgFloorWide, desc: "Kettlebells, ropes, turf sprint track and athletic conditioning." },
 ];
 
 const FEATURES = [
@@ -150,7 +150,7 @@ const GALLERY = [
   imgFloorOpen,
   imgDumbbells,
   imgPtSession,
-  imgFunctional,
+  imgHeroBranded,
   imgDanceClass,
   imgYogaClass,
   imgLegPress,
@@ -383,8 +383,8 @@ function Hero() {
         <div className="relative order-1 lg:order-2 lg:-mr-6">
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
           <img
-            src={imgFloorWide}
-            alt="Training floor at Fitsters Club Jhalawar"
+            src={imgHeroBranded}
+            alt="Fitsters Club Jhalawar branded training floor with kettlebells, battle ropes and power racks"
             width={1024}
             height={1280}
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
