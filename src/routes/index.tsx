@@ -285,9 +285,9 @@ function VideoHero() {
             keeps you coming back.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover">
+            <Link to="/enquiry" className="btn-primary btn-primary-hover">
               Enquire Now <ChevronRight size={18} />
-            </a>
+            </Link>
             <a href="#pricing" className="btn-ghost">
               View Packages
             </a>
@@ -375,16 +375,14 @@ function QuickActions() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Member Services</p>
           <h2 className="text-h2 font-black text-white">Everything In One Tap</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Enquiries, bookings, billing and forms — all handled through our member portal.
+            Enquiries, bookings, class slots and forms — all handled right here on this site.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {QUICK_ACTIONS.map((a) => (
-            <a
+          {MEMBER_LINKS.map((a) => (
+            <Link
               key={a.title}
-              href={a.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={a.to}
               className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-[#121212] p-5 transition hover:border-[color:var(--color-brand)]/60 hover:bg-[#161310]"
             >
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-brand)]/15 text-[color:var(--color-brand)]">
@@ -395,7 +393,7 @@ function QuickActions() {
                 <span className="mt-1 block text-sm leading-[1.5] text-[color:var(--color-body)]">{a.desc}</span>
               </span>
               <ChevronRight size={18} className="mt-3 text-white/30 transition group-hover:translate-x-1 group-hover:text-[color:var(--color-brand)]" />
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -566,14 +564,13 @@ function Pricing() {
               <div className="mt-8 border-t border-white/10 pt-6">
                 <div className="font-display text-3xl text-white">{p.price}</div>
                 <div className="text-xs uppercase tracking-widest text-white/50">{p.period}</div>
-                <a
-                  href={link("enquiry.php", `&package=GYM,${encodeURIComponent(p.name)}`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/enquiry"
+                  search={{ package: `Gym — ${p.name}` }}
                   className="btn-primary btn-primary-hover mt-4 w-full justify-center !px-5 !py-3"
                 >
                   Enquire Now
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -596,9 +593,9 @@ function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={link("group-class.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover mt-6">
+            <Link to="/book-group-class" className="btn-primary btn-primary-hover mt-6">
               Book Group Class
-            </a>
+            </Link>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
@@ -617,9 +614,9 @@ function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={link("book-pt.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover mt-6">
+            <Link to="/book-pt" className="btn-primary btn-primary-hover mt-6">
               Book PT Session
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -765,9 +762,9 @@ function BigCta() {
             <a href={`tel:${PHONE}`} className="btn-primary btn-primary-hover">
               <Phone size={16} /> Call {PHONE_DISPLAY}
             </a>
-            <a href={link("trial_waiver.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <Link to="/trial-waiver" className="btn-ghost">
               Trial Waiver Form
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -840,9 +837,9 @@ function Contact() {
                 </li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="btn-primary btn-primary-hover">
+                <Link to="/enquiry" className="btn-primary btn-primary-hover">
                   Send Enquiry
-                </a>
+                </Link>
                 <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   <Navigation size={16} /> Google Directions
                 </a>
@@ -851,10 +848,10 @@ function Contact() {
             <div className="rounded-3xl border border-white/10 bg-[#121212] p-8">
               <h3 className="font-display text-xl uppercase text-white">Member Forms</h3>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href={link("sspar.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">PAR-Q</a>
-                <a href={link("personal-training.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">PT Contract</a>
-                <a href={link("trial_waiver.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">Trial Waiver</a>
-                <a href={link("feedback.php")} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-sm">Feedback</a>
+                <Link to="/par-q" className="btn-ghost !px-4 !py-2 text-sm">PAR-Q</Link>
+                <Link to="/pt-contract" className="btn-ghost !px-4 !py-2 text-sm">PT Contract</Link>
+                <Link to="/trial-waiver" className="btn-ghost !px-4 !py-2 text-sm">Trial Waiver</Link>
+                <Link to="/feedback" className="btn-ghost !px-4 !py-2 text-sm">Feedback</Link>
               </div>
             </div>
           </div>
@@ -895,10 +892,10 @@ function Footer() {
         <div>
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Members</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
-            <li><a href={link("login.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Client Login</a></li>
-            <li><a href={link("group-class.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Book Group Class</a></li>
-            <li><a href={link("book-pt.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Book PT Session</a></li>
-            <li><a href={link("offers.php")} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--color-brand)]">Offers</a></li>
+            <li><Link to="/login" className="hover:text-[color:var(--color-brand)]">Client Login</Link></li>
+            <li><Link to="/book-group-class" className="hover:text-[color:var(--color-brand)]">Book Group Class</Link></li>
+            <li><Link to="/book-pt" className="hover:text-[color:var(--color-brand)]">Book PT Session</Link></li>
+            <li><Link to="/offers" className="hover:text-[color:var(--color-brand)]">Offers</Link></li>
           </ul>
         </div>
         <div>
@@ -933,8 +930,8 @@ function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-white/50 md:flex-row md:px-8">
           <div>© {new Date().getFullYear()} Fitsters Club Jhalawar — All Rights Reserved.</div>
           <div className="flex gap-6">
-            <a href={link("feedback.php")} target="_blank" rel="noopener noreferrer" className="hover:text-white">Feedback</a>
-            <a href={link("enquiry.php")} target="_blank" rel="noopener noreferrer" className="hover:text-white">Enquiry</a>
+            <Link to="/feedback" className="hover:text-white">Feedback</Link>
+            <Link to="/enquiry" className="hover:text-white">Enquiry</Link>
           </div>
         </div>
       </div>
