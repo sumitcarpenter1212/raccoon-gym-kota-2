@@ -14,7 +14,288 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      class_bookings: {
+        Row: {
+          class_type: string
+          created_at: string
+          id: string
+          name: string
+          notes: string | null
+          phone: string
+          preferred_date: string | null
+          preferred_time: string | null
+          status: string
+          user_id: string | null
+        }
+        Insert: {
+          class_type: string
+          created_at?: string
+          id?: string
+          name: string
+          notes?: string | null
+          phone: string
+          preferred_date?: string | null
+          preferred_time?: string | null
+          status?: string
+          user_id?: string | null
+        }
+        Update: {
+          class_type?: string
+          created_at?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string
+          preferred_date?: string | null
+          preferred_time?: string | null
+          status?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      enquiries: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: string
+          message: string | null
+          name: string
+          package_interest: string | null
+          phone: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          message?: string | null
+          name: string
+          package_interest?: string | null
+          phone: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: string
+          message?: string | null
+          name?: string
+          package_interest?: string | null
+          phone?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      feedback: {
+        Row: {
+          created_at: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          rating: number | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          rating?: number | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          rating?: number | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      parq_forms: {
+        Row: {
+          answers: Json
+          created_at: string
+          date_of_birth: string | null
+          declaration: boolean
+          id: string
+          name: string
+          phone: string
+          signature: string | null
+          user_id: string | null
+        }
+        Insert: {
+          answers?: Json
+          created_at?: string
+          date_of_birth?: string | null
+          declaration?: boolean
+          id?: string
+          name: string
+          phone: string
+          signature?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          answers?: Json
+          created_at?: string
+          date_of_birth?: string | null
+          declaration?: boolean
+          id?: string
+          name?: string
+          phone?: string
+          signature?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          full_name: string | null
+          id: string
+          phone: string | null
+        }
+        Insert: {
+          created_at?: string
+          full_name?: string | null
+          id: string
+          phone?: string | null
+        }
+        Update: {
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      pt_bookings: {
+        Row: {
+          created_at: string
+          goal: string | null
+          id: string
+          name: string
+          notes: string | null
+          phone: string
+          plan: string | null
+          preferred_date: string | null
+          preferred_time: string | null
+          status: string
+          trainer: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          goal?: string | null
+          id?: string
+          name: string
+          notes?: string | null
+          phone: string
+          plan?: string | null
+          preferred_date?: string | null
+          preferred_time?: string | null
+          status?: string
+          trainer?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          goal?: string | null
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string
+          plan?: string | null
+          preferred_date?: string | null
+          preferred_time?: string | null
+          status?: string
+          trainer?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      pt_contracts: {
+        Row: {
+          agreed: boolean
+          created_at: string
+          id: string
+          name: string
+          phone: string
+          plan: string | null
+          sessions: string | null
+          signature: string
+          start_date: string | null
+          user_id: string | null
+        }
+        Insert: {
+          agreed?: boolean
+          created_at?: string
+          id?: string
+          name: string
+          phone: string
+          plan?: string | null
+          sessions?: string | null
+          signature: string
+          start_date?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          agreed?: boolean
+          created_at?: string
+          id?: string
+          name?: string
+          phone?: string
+          plan?: string | null
+          sessions?: string | null
+          signature?: string
+          start_date?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      trial_waivers: {
+        Row: {
+          age: number | null
+          agreed: boolean
+          created_at: string
+          emergency_contact: string | null
+          id: string
+          name: string
+          phone: string
+          signature: string
+          trial_date: string | null
+          user_id: string | null
+        }
+        Insert: {
+          age?: number | null
+          agreed?: boolean
+          created_at?: string
+          emergency_contact?: string | null
+          id?: string
+          name: string
+          phone: string
+          signature: string
+          trial_date?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          age?: number | null
+          agreed?: boolean
+          created_at?: string
+          emergency_contact?: string | null
+          id?: string
+          name?: string
+          phone?: string
+          signature?: string
+          trial_date?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
