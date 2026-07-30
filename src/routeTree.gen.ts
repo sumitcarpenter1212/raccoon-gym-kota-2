@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TrialWaiverRouteImport } from './routes/trial-waiver'
 import { Route as TrainersRouteImport } from './routes/trainers'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as PtContractRouteImport } from './routes/pt-contract'
@@ -22,6 +23,11 @@ import { Route as BookPtRouteImport } from './routes/book-pt'
 import { Route as BookGroupClassRouteImport } from './routes/book-group-class'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TrialWaiverRoute = TrialWaiverRouteImport.update({
+  id: '/trial-waiver',
+  path: '/trial-waiver',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TrainersRoute = TrainersRouteImport.update({
   id: '/trainers',
   path: '/trainers',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/pt-contract': typeof PtContractRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/pt-contract': typeof PtContractRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/pt-contract': typeof PtContractRoute
   '/reviews': typeof ReviewsRoute
   '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/pt-contract'
     | '/reviews'
     | '/trainers'
+    | '/trial-waiver'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/pt-contract'
     | '/reviews'
     | '/trainers'
+    | '/trial-waiver'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/pt-contract'
     | '/reviews'
     | '/trainers'
+    | '/trial-waiver'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,10 +196,18 @@ export interface RootRouteChildren {
   PtContractRoute: typeof PtContractRoute
   ReviewsRoute: typeof ReviewsRoute
   TrainersRoute: typeof TrainersRoute
+  TrialWaiverRoute: typeof TrialWaiverRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trial-waiver': {
+      id: '/trial-waiver'
+      path: '/trial-waiver'
+      fullPath: '/trial-waiver'
+      preLoaderRoute: typeof TrialWaiverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/trainers': {
       id: '/trainers'
       path: '/trainers'
@@ -288,6 +308,7 @@ const rootRouteChildren: RootRouteChildren = {
   PtContractRoute: PtContractRoute,
   ReviewsRoute: ReviewsRoute,
   TrainersRoute: TrainersRoute,
+  TrialWaiverRoute: TrialWaiverRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
