@@ -9,8 +9,92 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TrialWaiverRouteImport } from './routes/trial-waiver'
+import { Route as TrainersRouteImport } from './routes/trainers'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as PtContractRouteImport } from './routes/pt-contract'
+import { Route as ParQRouteImport } from './routes/par-q'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as OffersRouteImport } from './routes/offers'
+import { Route as MyAccountRouteImport } from './routes/my-account'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FeedbackRouteImport } from './routes/feedback'
+import { Route as EnquiryRouteImport } from './routes/enquiry'
+import { Route as BookPtRouteImport } from './routes/book-pt'
+import { Route as BookGroupClassRouteImport } from './routes/book-group-class'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TrialWaiverRoute = TrialWaiverRouteImport.update({
+  id: '/trial-waiver',
+  path: '/trial-waiver',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainersRoute = TrainersRouteImport.update({
+  id: '/trainers',
+  path: '/trainers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtContractRoute = PtContractRouteImport.update({
+  id: '/pt-contract',
+  path: '/pt-contract',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParQRoute = ParQRouteImport.update({
+  id: '/par-q',
+  path: '/par-q',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OffersRoute = OffersRouteImport.update({
+  id: '/offers',
+  path: '/offers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyAccountRoute = MyAccountRouteImport.update({
+  id: '/my-account',
+  path: '/my-account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedbackRoute = FeedbackRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnquiryRoute = EnquiryRouteImport.update({
+  id: '/enquiry',
+  path: '/enquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookPtRoute = BookPtRouteImport.update({
+  id: '/book-pt',
+  path: '/book-pt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookGroupClassRoute = BookGroupClassRouteImport.update({
+  id: '/book-group-class',
+  path: '/book-group-class',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +103,228 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
+  '/book-pt': typeof BookPtRoute
+  '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
+  '/offers': typeof OffersRoute
+  '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
+  '/pt-contract': typeof PtContractRoute
+  '/reviews': typeof ReviewsRoute
+  '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
+  '/book-pt': typeof BookPtRoute
+  '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
+  '/offers': typeof OffersRoute
+  '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
+  '/pt-contract': typeof PtContractRoute
+  '/reviews': typeof ReviewsRoute
+  '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/book-group-class': typeof BookGroupClassRoute
+  '/book-pt': typeof BookPtRoute
+  '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
+  '/offers': typeof OffersRoute
+  '/packages': typeof PackagesRoute
+  '/par-q': typeof ParQRoute
+  '/pt-contract': typeof PtContractRoute
+  '/reviews': typeof ReviewsRoute
+  '/trainers': typeof TrainersRoute
+  '/trial-waiver': typeof TrialWaiverRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/book-group-class'
+    | '/book-pt'
+    | '/enquiry'
+    | '/feedback'
+    | '/gallery'
+    | '/login'
+    | '/my-account'
+    | '/offers'
+    | '/packages'
+    | '/par-q'
+    | '/pt-contract'
+    | '/reviews'
+    | '/trainers'
+    | '/trial-waiver'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/book-group-class'
+    | '/book-pt'
+    | '/enquiry'
+    | '/feedback'
+    | '/gallery'
+    | '/login'
+    | '/my-account'
+    | '/offers'
+    | '/packages'
+    | '/par-q'
+    | '/pt-contract'
+    | '/reviews'
+    | '/trainers'
+    | '/trial-waiver'
+  id:
+    | '__root__'
+    | '/'
+    | '/book-group-class'
+    | '/book-pt'
+    | '/enquiry'
+    | '/feedback'
+    | '/gallery'
+    | '/login'
+    | '/my-account'
+    | '/offers'
+    | '/packages'
+    | '/par-q'
+    | '/pt-contract'
+    | '/reviews'
+    | '/trainers'
+    | '/trial-waiver'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookGroupClassRoute: typeof BookGroupClassRoute
+  BookPtRoute: typeof BookPtRoute
+  EnquiryRoute: typeof EnquiryRoute
+  FeedbackRoute: typeof FeedbackRoute
+  GalleryRoute: typeof GalleryRoute
+  LoginRoute: typeof LoginRoute
+  MyAccountRoute: typeof MyAccountRoute
+  OffersRoute: typeof OffersRoute
+  PackagesRoute: typeof PackagesRoute
+  ParQRoute: typeof ParQRoute
+  PtContractRoute: typeof PtContractRoute
+  ReviewsRoute: typeof ReviewsRoute
+  TrainersRoute: typeof TrainersRoute
+  TrialWaiverRoute: typeof TrialWaiverRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trial-waiver': {
+      id: '/trial-waiver'
+      path: '/trial-waiver'
+      fullPath: '/trial-waiver'
+      preLoaderRoute: typeof TrialWaiverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trainers': {
+      id: '/trainers'
+      path: '/trainers'
+      fullPath: '/trainers'
+      preLoaderRoute: typeof TrainersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt-contract': {
+      id: '/pt-contract'
+      path: '/pt-contract'
+      fullPath: '/pt-contract'
+      preLoaderRoute: typeof PtContractRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/par-q': {
+      id: '/par-q'
+      path: '/par-q'
+      fullPath: '/par-q'
+      preLoaderRoute: typeof ParQRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/offers': {
+      id: '/offers'
+      path: '/offers'
+      fullPath: '/offers'
+      preLoaderRoute: typeof OffersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-account': {
+      id: '/my-account'
+      path: '/my-account'
+      fullPath: '/my-account'
+      preLoaderRoute: typeof MyAccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feedback': {
+      id: '/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof FeedbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enquiry': {
+      id: '/enquiry'
+      path: '/enquiry'
+      fullPath: '/enquiry'
+      preLoaderRoute: typeof EnquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-pt': {
+      id: '/book-pt'
+      path: '/book-pt'
+      fullPath: '/book-pt'
+      preLoaderRoute: typeof BookPtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-group-class': {
+      id: '/book-group-class'
+      path: '/book-group-class'
+      fullPath: '/book-group-class'
+      preLoaderRoute: typeof BookGroupClassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +337,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookGroupClassRoute: BookGroupClassRoute,
+  BookPtRoute: BookPtRoute,
+  EnquiryRoute: EnquiryRoute,
+  FeedbackRoute: FeedbackRoute,
+  GalleryRoute: GalleryRoute,
+  LoginRoute: LoginRoute,
+  MyAccountRoute: MyAccountRoute,
+  OffersRoute: OffersRoute,
+  PackagesRoute: PackagesRoute,
+  ParQRoute: ParQRoute,
+  PtContractRoute: PtContractRoute,
+  ReviewsRoute: ReviewsRoute,
+  TrainersRoute: TrainersRoute,
+  TrialWaiverRoute: TrialWaiverRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
