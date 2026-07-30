@@ -1,0 +1,30 @@
+import {
+  ClipboardList,
+  LogIn,
+  CalendarDays,
+  UserCheck,
+  Tag,
+  Flame,
+  Images,
+  Users,
+  Star,
+  MessageSquare,
+  FileText,
+  ShieldCheck,
+} from "lucide-react";
+
+export const MEMBER_LINKS = [
+  { icon: ClipboardList, title: "Enquiry", desc: "Get to know about our packages", to: "/enquiry" },
+  { icon: LogIn, title: "Client Login", desc: "Login to view your membership details", to: "/login" },
+  { icon: CalendarDays, title: "Book Group Class", desc: "Book a yoga or dance class session", to: "/book-group-class" },
+  { icon: UserCheck, title: "Book PT Session", desc: "Book a personal training session", to: "/book-pt" },
+  { icon: Tag, title: "Packages", desc: "Find packages that suit your need", to: "/packages" },
+  { icon: Flame, title: "Offers", desc: "Check out the latest offers", to: "/offers" },
+  { icon: Images, title: "Photo Gallery", desc: "Our facilities and latest work portfolio", to: "/gallery" },
+  { icon: Users, title: "Trainers", desc: "Achievements & qualifications of our trainers", to: "/trainers" },
+  { icon: Star, title: "Reviews", desc: "Read what our members say about us", to: "/reviews" },
+  { icon: MessageSquare, title: "Feedback", desc: "Give us your genuine suggestions", to: "/feedback" },
+  { icon: FileText, title: "PAR-Q", desc: "Physical activity readiness questionnaire", to: "/par-q" },
+  { icon: FileText, title: "PT Contract", desc: "Personal training contract", to: "/pt-contract" },
+  { icon: ShieldCheck, title: "Trial Waiver", desc: "Trial waiver and release form", to: "/trial-waiver" },
+] as const;
