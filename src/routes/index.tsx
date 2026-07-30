@@ -29,25 +29,23 @@ import {
   Navigation,
 } from "lucide-react";
 
-import heroShowreel from "@/assets/hero-showreel.mp4.asset.json";
-import svcMuscle from "@/assets/svc-muscle.jpg";
-import svcYoga from "@/assets/svc-yoga.jpg";
-import svcCardio from "@/assets/svc-cardio.jpg";
-import svcCrossfit from "@/assets/svc-crossfit.jpg";
-import svcPt from "@/assets/svc-pt.jpg";
-import svcBoxing from "@/assets/svc-boxing.jpg";
 import logoFitsters from "@/assets/fitsters-logo.jpg";
-import g0 from "@/assets/fit-0.jpeg";
-import g1 from "@/assets/fit-1.jpeg";
-import g11 from "@/assets/fit-11.jpeg";
-import g12 from "@/assets/fit-12.jpeg";
-import g13 from "@/assets/fit-13.jpeg";
-import g14 from "@/assets/fit-14.jpeg";
-import g15 from "@/assets/fit-15.jpeg";
-import g16 from "@/assets/fit-16.jpeg";
-import g17 from "@/assets/fit-17.jpeg";
-import g18 from "@/assets/fit-18.jpeg";
-import g19 from "@/assets/fit-19.jpeg";
+import imgFloorWide from "@/assets/gm-floor-wide.jpg";
+import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
+import imgFloorOpen from "@/assets/gm-floor-open.jpg";
+import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
+import imgCardioTreadmills from "@/assets/gm-cardio-treadmills.jpg";
+import imgCardioWindow from "@/assets/gm-cardio-window.jpg";
+import imgDumbbells from "@/assets/gm-dumbbells.jpg";
+import imgPtSession from "@/assets/gm-pt-session.jpg";
+import imgLegPress from "@/assets/gm-legpress.jpg";
+import imgCableMember from "@/assets/gm-cable-member.jpg";
+import imgYogaClass from "@/assets/gm-yoga-class.jpg";
+import imgTransformation from "@/assets/gm-transformation.jpg";
+import imgFlex1 from "@/assets/gm-flex-1.jpg";
+import imgFlex2 from "@/assets/gm-flex-2.jpg";
+import imgDanceClass from "@/assets/gm-dance-class.jpg";
+import imgFunctional from "@/assets/gm-functional.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -105,12 +103,12 @@ const QUICK_ACTIONS = [
 ];
 
 const SERVICES = [
-  { title: "Strength & Muscle", img: svcMuscle, desc: "Premium plate-loaded machines and a full free-weight zone." },
-  { title: "Personal Training", img: svcPt, desc: "1-on-1 coaching for fat loss, strength and body recomposition." },
-  { title: "Yoga Class", img: svcYoga, desc: "Daily yoga batches for mobility, flexibility and recovery." },
-  { title: "Dance Class", img: svcCrossfit, desc: "High-energy dance fitness sessions for all levels." },
-  { title: "Cardio Zone", img: svcCardio, desc: "Treadmills, cycles and conditioning circuits for endurance." },
-  { title: "Functional Training", img: svcBoxing, desc: "Kettlebells, ropes and athletic conditioning workouts." },
+  { title: "Strength & Muscle", img: imgDumbbells, desc: "Premium plate-loaded machines and a full free-weight zone." },
+  { title: "Personal Training", img: imgPtSession, desc: "1-on-1 coaching for fat loss, strength and body recomposition." },
+  { title: "Yoga Class", img: imgYogaClass, desc: "Daily yoga batches for mobility, flexibility and recovery." },
+  { title: "Dance Class", img: imgDanceClass, desc: "High-energy dance fitness sessions for all levels." },
+  { title: "Cardio Zone", img: imgCardioBikes, desc: "Treadmills, cycles and conditioning circuits for endurance." },
+  { title: "Functional Training", img: imgFunctional, desc: "Kettlebells, ropes and athletic conditioning workouts." },
 ];
 
 const FEATURES = [
@@ -138,13 +136,30 @@ const PT_PLANS = [
 ];
 
 const TRAINERS = [
-  { name: "Arjan Singh", role: "Head Trainer", bio: "Specialises in fat loss, weight loss and body recomposition.", img: g13 },
-  { name: "Mahesh Verma", role: "Personal Trainer", bio: "Strength training and weight loss for all populations — athletes to seniors.", img: g15 },
-  { name: "Adnan", role: "Personal Trainer", bio: "A powerful role model demonstrating strength, discipline and resilience.", img: g17 },
-  { name: "Tanveer Singh", role: "Personal Trainer", bio: "Highly skilled professional dedicated to helping members reach their goals.", img: g19 },
+  { name: "Arjan Singh", role: "Head Trainer", bio: "Specialises in fat loss, weight loss and body recomposition.", img: imgPtSession },
+  { name: "Mahesh Verma", role: "Personal Trainer", bio: "Strength training and weight loss for all populations — athletes to seniors.", img: imgCableMember },
+  { name: "Adnan", role: "Personal Trainer", bio: "A powerful role model demonstrating strength, discipline and resilience.", img: imgLegPress },
+  { name: "Tanveer Singh", role: "Personal Trainer", bio: "Highly skilled professional dedicated to helping members reach their goals.", img: imgFlex1 },
 ];
 
-const GALLERY = [g19, g18, g17, g16, g15, g14, g13, g12, g11, g1, g0];
+const GALLERY = [
+  imgFloorWide,
+  imgFloorMachines,
+  imgCardioBikes,
+  imgCardioTreadmills,
+  imgFloorOpen,
+  imgDumbbells,
+  imgPtSession,
+  imgFunctional,
+  imgDanceClass,
+  imgYogaClass,
+  imgLegPress,
+  imgCardioWindow,
+  imgFlex1,
+  imgFlex2,
+  imgCableMember,
+  imgTransformation,
+];
 
 const TESTIMONIALS = [
   { name: "Akshit Nagar", role: "Google Review", quote: "Best gym of Jhalawar. Most spacious, all new and premium quality equipments, reasonable prices and great ambience." },
