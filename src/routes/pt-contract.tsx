@@ -59,8 +59,8 @@ function PtContractPage() {
     <PageShell
       eyebrow="PT Contract"
       title="Personal Training Agreement"
-      intro="Please read the terms below carefully before signing. For any clarification call us on ${PHONE_DISPLAY}."
-      image={IMAGES.strengthRack}
+      intro={`Please read the terms below carefully before signing. For any clarification call us on ${PHONE_DISPLAY}.`}
+      image={IMAGES.dumbbells}
     >
       <div className="mx-auto mb-8 max-w-2xl rounded-3xl border border-white/10 bg-[#121212] p-6 md:p-8">
         <h2 className="font-display text-xl uppercase text-white">Terms & Conditions</h2>
