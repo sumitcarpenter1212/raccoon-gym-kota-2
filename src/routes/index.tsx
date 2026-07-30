@@ -285,14 +285,12 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
-        <video
-          src={heroShowreel.url}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover bg-black"
+        <img
+          src={imgFloorWide}
+          alt="Training floor at Fitsters Club Jhalawar"
+          width={1600}
+          height={1200}
+          className="absolute inset-0 h-full w-full animate-[kenburns_24s_ease-in-out_infinite_alternate] object-cover bg-black"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
         <div
