@@ -16,6 +16,7 @@ import { Route as PtContractRouteImport } from './routes/pt-contract'
 import { Route as ParQRouteImport } from './routes/par-q'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OffersRouteImport } from './routes/offers'
+import { Route as MyAccountRouteImport } from './routes/my-account'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FeedbackRouteImport } from './routes/feedback'
@@ -57,6 +58,11 @@ const PackagesRoute = PackagesRouteImport.update({
 const OffersRoute = OffersRouteImport.update({
   id: '/offers',
   path: '/offers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyAccountRoute = MyAccountRouteImport.update({
+  id: '/my-account',
+  path: '/my-account',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
+  '/my-account': typeof MyAccountRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
   '/par-q': typeof ParQRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/feedback'
     | '/gallery'
     | '/login'
+    | '/my-account'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/feedback'
     | '/gallery'
     | '/login'
+    | '/my-account'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/feedback'
     | '/gallery'
     | '/login'
+    | '/my-account'
     | '/offers'
     | '/packages'
     | '/par-q'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
   LoginRoute: typeof LoginRoute
+  MyAccountRoute: typeof MyAccountRoute
   OffersRoute: typeof OffersRoute
   PackagesRoute: typeof PackagesRoute
   ParQRoute: typeof ParQRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/offers'
       fullPath: '/offers'
       preLoaderRoute: typeof OffersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-account': {
+      id: '/my-account'
+      path: '/my-account'
+      fullPath: '/my-account'
+      preLoaderRoute: typeof MyAccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
   LoginRoute: LoginRoute,
+  MyAccountRoute: MyAccountRoute,
   OffersRoute: OffersRoute,
   PackagesRoute: PackagesRoute,
   ParQRoute: ParQRoute,
@@ -334,13 +355,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
