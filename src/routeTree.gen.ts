@@ -14,6 +14,7 @@ import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OffersRouteImport } from './routes/offers'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FeedbackRouteImport } from './routes/feedback'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -42,6 +43,11 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FeedbackRoute = FeedbackRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EnquiryRoute = EnquiryRouteImport.update({
   id: '/enquiry',
   path: '/enquiry',
@@ -56,6 +62,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/enquiry': typeof EnquiryRoute
+  '/feedback': typeof FeedbackRoute
   '/gallery': typeof GalleryRoute
   '/offers': typeof OffersRoute
   '/packages': typeof PackagesRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/enquiry'
+    | '/feedback'
     | '/gallery'
     | '/offers'
     | '/packages'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/enquiry'
+    | '/feedback'
     | '/gallery'
     | '/offers'
     | '/packages'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/enquiry'
+    | '/feedback'
     | '/gallery'
     | '/offers'
     | '/packages'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EnquiryRoute: typeof EnquiryRoute
+  FeedbackRoute: typeof FeedbackRoute
   GalleryRoute: typeof GalleryRoute
   OffersRoute: typeof OffersRoute
   PackagesRoute: typeof PackagesRoute
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/feedback': {
+      id: '/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof FeedbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/enquiry': {
       id: '/enquiry'
       path: '/enquiry'
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EnquiryRoute: EnquiryRoute,
+  FeedbackRoute: FeedbackRoute,
   GalleryRoute: GalleryRoute,
   OffersRoute: OffersRoute,
   PackagesRoute: PackagesRoute,
