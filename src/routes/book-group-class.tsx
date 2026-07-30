@@ -42,7 +42,7 @@ function BookGroupClassPage() {
       user_id: auth.user?.id ?? null,
       name: form.name.trim(),
       phone: form.phone.trim(),
-      class_name: form.class_name,
+      class_type: form.class_name,
       preferred_date: form.preferred_date,
       preferred_time: form.preferred_time,
       notes: form.notes.trim() || null,
