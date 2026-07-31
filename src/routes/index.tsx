@@ -23,6 +23,7 @@ import { MEMBER_LINKS } from "@/data/member-links";
 
 import logoFitsters from "@/assets/fitsters-logo.jpg";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
+import heroVideo from "@/assets/hero-fitsters.mp4.asset.json";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";
 import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
@@ -274,12 +275,16 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
-        <img
-          src={imgFloorWide}
-          alt="Training floor at Fitsters Club Jhalawar"
-          width={1600}
-          height={1200}
-          className="absolute inset-0 h-full w-full animate-[kenburns_24s_ease-in-out_infinite_alternate] object-cover bg-black"
+        <video
+          src={heroVideo.url}
+          poster={imgFloorWide}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="Fitsters Club Jhalawar training floor showreel"
+          className="absolute inset-0 h-full w-full object-cover bg-black"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
         <div
