@@ -198,6 +198,26 @@ function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
+function InstagramGlyph({ size = 22 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden focusable="false">
+      <defs>
+        <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+          <stop offset="0%" stopColor="#FDD25C" />
+          <stop offset="25%" stopColor="#F58529" />
+          <stop offset="50%" stopColor="#DD2A7B" />
+          <stop offset="75%" stopColor="#8134AF" />
+          <stop offset="100%" stopColor="#515BD4" />
+        </radialGradient>
+      </defs>
+      <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="url(#ig-grad)" />
+      <rect x="5.5" y="5.5" width="13" height="13" rx="4.2" fill="none" stroke="#fff" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" strokeWidth="1.7" />
+      <circle cx="16.6" cy="7.4" r="1.1" fill="#fff" />
+    </svg>
+  );
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -230,21 +250,32 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Fitsters Club Jhalawar on Instagram"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/85 transition hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 transition hover:border-[color:var(--color-brand)]"
           >
-            <Instagram size={22} />
+            <InstagramGlyph size={22} />
           </a>
           <a href={`tel:${PHONE}`} className="btn-primary btn-primary-hover inline-flex">
             <Phone size={16} /> Call Now
           </a>
         </div>
-        <button
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fitsters Club Jhalawar on Instagram"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15"
+          >
+            <InstagramGlyph size={20} />
+          </a>
+          <button
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white"
           aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="lg:hidden">
