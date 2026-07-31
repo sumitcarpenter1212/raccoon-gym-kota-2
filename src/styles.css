@@ -193,3 +193,22 @@
   from { transform: scale(1); }
   to { transform: scale(1.12); }
 }
+
+@utility wordmark-3d {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.55),
+    0 2px 0 rgba(0, 0, 0, 0.45),
+    0 3px 6px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(245, 115, 14, 0.28);
+}
+
+@utility wordmark-sub {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
