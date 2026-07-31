@@ -686,14 +686,20 @@ function Trainers() {
         </div>
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TRAINERS.map((t) => (
-            <div key={t.name} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img src={t.img} alt={`${t.name} — ${t.role}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-5">
-                <h3 className="font-display text-xl uppercase text-white">{t.name}</h3>
-                <p className="text-sm text-[color:var(--color-brand)]">{t.role}</p>
-                <p className="mt-2 text-[13px] leading-[1.5] text-white/70">{t.bio}</p>
+            <div
+              key={t.name}
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111111] p-6 transition duration-500 hover:border-[color:var(--color-brand)]/50"
+            >
+              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[color:var(--color-brand)] opacity-10 blur-2xl transition duration-500 group-hover:opacity-25" />
+              <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-[color:var(--color-brand)]/40 bg-[color:var(--color-brand)]/10">
+                <span className="font-display text-2xl uppercase text-[color:var(--color-brand)]">
+                  {t.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                </span>
               </div>
+              <h3 className="relative mt-6 font-display text-xl uppercase text-white">{t.name}</h3>
+              <p className="relative mt-1 text-xs font-bold uppercase tracking-[0.25em] text-[color:var(--color-brand)]">{t.role}</p>
+              <div className="relative mt-4 h-px w-12 bg-[color:var(--color-brand)]/60" />
+              <p className="relative mt-4 text-[14px] leading-[1.6] text-[color:var(--color-body)]">{t.bio}</p>
             </div>
           ))}
         </div>
