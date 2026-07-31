@@ -23,7 +23,7 @@ import { MEMBER_LINKS } from "@/data/member-links";
 
 import logoFitsters from "@/assets/fitsters-logo.jpg";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-import heroVideo from "@/assets/hero-fitsters.mp4.asset.json";
+import heroVideo from "@/assets/hero-fitsters-v2.mp4.asset.json";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";
 import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
