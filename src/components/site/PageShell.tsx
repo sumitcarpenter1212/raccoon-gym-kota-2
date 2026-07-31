@@ -16,7 +16,7 @@ export function Wordmark() {
       <span className="font-display text-lg font-bold leading-none tracking-wide md:text-xl">
         <span className="text-[color:var(--color-brand)]">FITSTERS</span>
         <span className="ml-1 text-white">CLUB</span>
-        <span className="mt-1 block text-[10px] tracking-[0.35em] text-white/60">JHALAWAR</span>
+        <span className="mt-1.5 block text-[12px] font-semibold uppercase tracking-[0.42em] text-white/75">Jhalawar</span>
       </span>
     </span>
   );

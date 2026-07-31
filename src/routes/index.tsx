@@ -186,7 +186,7 @@ function Wordmark({ className = "" }: { className?: string }) {
       <span className="font-display text-xl md:text-2xl font-bold tracking-wide leading-none">
         <span className="text-[color:var(--color-brand)]">FITSTERS</span>
         <span className="text-white ml-1">CLUB</span>
-        <span className="block text-[10px] tracking-[0.35em] text-white/60 mt-1">JHALAWAR</span>
+        <span className="mt-1.5 block text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.42em] text-white/75">Jhalawar</span>
       </span>
     </span>
   );
