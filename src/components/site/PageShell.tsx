@@ -13,10 +13,15 @@ export function Wordmark() {
         height={128}
         className="h-12 w-12 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
-      <span className="font-display text-lg font-bold leading-none tracking-wide md:text-xl">
-        <span className="text-[color:var(--color-brand)]">FITSTERS</span>
-        <span className="ml-1 text-white">CLUB</span>
-        <span className="mt-1.5 block text-[12px] font-semibold uppercase tracking-[0.42em] text-white/75">Jhalawar</span>
+      <span className="flex flex-col leading-none">
+        <span className="wordmark-3d whitespace-nowrap text-[20px] tracking-[0.06em] md:text-[23px]">
+          <span className="text-[color:var(--color-brand)]">Fitsters</span>
+          <span className="ml-1.5 text-white">Club</span>
+        </span>
+        <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em]">
+          <span className="h-px w-5 bg-[color:var(--color-brand)]/70" />
+          Jhalawar
+        </span>
       </span>
     </span>
   );

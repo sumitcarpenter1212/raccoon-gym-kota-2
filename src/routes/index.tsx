@@ -183,10 +183,15 @@ function Wordmark({ className = "" }: { className?: string }) {
         height={160}
         className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
-      <span className="font-display text-xl md:text-2xl font-bold tracking-wide leading-none">
-        <span className="text-[color:var(--color-brand)]">FITSTERS</span>
-        <span className="text-white ml-1">CLUB</span>
-        <span className="mt-1.5 block text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.42em] text-white/75">Jhalawar</span>
+      <span className="flex flex-col leading-none">
+        <span className="wordmark-3d whitespace-nowrap text-[22px] tracking-[0.06em] md:text-[26px]">
+          <span className="text-[color:var(--color-brand)]">Fitsters</span>
+          <span className="ml-1.5 text-white">Club</span>
+        </span>
+        <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em] md:text-[12px]">
+          <span className="h-px w-5 bg-[color:var(--color-brand)]/70" />
+          Jhalawar
+        </span>
       </span>
     </span>
   );
