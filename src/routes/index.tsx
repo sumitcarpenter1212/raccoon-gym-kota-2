@@ -324,10 +324,6 @@ function VideoHero() {
           aria-hidden
         />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm">
-            <Sparkles size={14} className="text-[color:var(--color-brand)]" />
-            Fitsters Athletic Club · Jhalawar
-          </p>
           <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
             <span className="block">Sweat.</span>
             <span className="block text-[color:var(--color-brand)]">Strength.</span>
