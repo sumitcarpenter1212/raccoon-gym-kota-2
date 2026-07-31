@@ -63,6 +63,7 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "+918441984416";
 const PHONE_DISPLAY = "+91 84419 84416";
+const INSTAGRAM_URL = "https://www.instagram.com/fitsters_jwr/";
 const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
 const NAV = [
   { label: "Home", href: "#home" },
@@ -217,9 +218,20 @@ function Header() {
             </a>
           ))}
         </nav>
-        <a href={`tel:${PHONE}`} className="hidden btn-primary btn-primary-hover lg:inline-flex">
-          <Phone size={16} /> Call Now
-        </a>
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fitsters Club Jhalawar on Instagram"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/85 transition hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]"
+          >
+            <Instagram size={22} />
+          </a>
+          <a href={`tel:${PHONE}`} className="btn-primary btn-primary-hover inline-flex">
+            <Phone size={16} /> Call Now
+          </a>
+        </div>
         <button
           onClick={() => setOpen((v) => !v)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white lg:hidden"
