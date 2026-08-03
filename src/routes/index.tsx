@@ -32,7 +32,10 @@ import {
   BRANCHES,
 } from "@/data/site";
 
+import heroVideoAsset from "@/assets/hero-herculean.mp4.asset.json";
+
 const heroImage = PHOTOS.hero;
+const heroVideo = heroVideoAsset.url;
 const imgFloorWide = PHOTOS.floorWide;
 const imgFloorMachines = PHOTOS.strengthMachines;
 const imgFloorOpen = PHOTOS.floorLogoWide;
