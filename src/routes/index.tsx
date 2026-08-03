@@ -145,6 +145,20 @@ const FAQS = [
 ];
 
 
+function openExt(e: React.MouseEvent<HTMLAnchorElement>) {
+  const url = e.currentTarget.href;
+  if (!url) return;
+  e.preventDefault();
+  const w = window.open(url, "_blank", "noopener,noreferrer");
+  if (!w) {
+    try {
+      (window.top ?? window).location.href = url;
+    } catch {
+      window.location.href = url;
+    }
+  }
+}
+
 function Embers() {
   const [seeds] = useState(() =>
     Array.from({ length: 24 }, (_, i) => ({
@@ -378,15 +392,15 @@ function Hero() {
             <a href="#pricing" className="btn-primary btn-primary-hover">
               Join Now <ChevronRight size={18} />
             </a>
-            <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
               <Navigation size={16} /> Get Directions
             </a>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
               ["Google", "Rated by Members"],
-              ["4", "Expert Trainers"],
-              ["5AM–10PM", "Open Daily"],
+              ["Nutrihub", "Cafe In-House"],
+              ["5AM–11PM", "Open Daily"],
             ].map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-2xl text-white md:text-3xl">{n}</div>
@@ -803,7 +817,7 @@ function Testimonials() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+          <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
             View More Reviews on Google
           </a>
         </div>
@@ -901,7 +915,7 @@ function Contact() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
-                  <a href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  <a onClick={openExt} href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     @herculean_fitness_club
                   </a>
                 </li>
@@ -910,7 +924,7 @@ function Contact() {
                 <Link to="/enquiry" className="btn-primary btn-primary-hover">
                   Send Enquiry
                 </Link>
-                <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   <Navigation size={16} /> Google Directions
                 </a>
               </div>
@@ -947,7 +961,7 @@ function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-[1.7] text-[color:var(--color-body)]">
-            Herculean Fitness Club — Jhalawar's premium gym at Mama Bhanja Circle. Train hard. Live strong.
+            Herculean Fitness Club — Jhalawar's premium gym on Darbaar Kothi Road, Anand Vihar. Train hard. Live strong.
           </p>
         </div>
         <div>
