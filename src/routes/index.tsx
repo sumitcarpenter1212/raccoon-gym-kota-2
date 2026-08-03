@@ -947,7 +947,7 @@ function Contact() {
               title="Herculean Fitness Club Jhalawar location"
               src="https://www.google.com/maps?q=Herculean+Fitness+Club+Jhalawar&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
-              loading="lazy" decoding="async"
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
