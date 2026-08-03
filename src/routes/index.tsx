@@ -325,7 +325,7 @@ function VideoHero() {
           aria-label="Herculean Fitness Club Jhalawar training floor"
           className="absolute inset-0 h-full w-full bg-black object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/80" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/85 md:from-black/45 md:via-black/20 md:to-black/80" aria-hidden />
         <div
           className="absolute inset-0 opacity-70"
           style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
