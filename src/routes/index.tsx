@@ -145,9 +145,23 @@ const FAQS = [
 ];
 
 
+function openExt(e: React.MouseEvent<HTMLAnchorElement>) {
+  const url = e.currentTarget.href;
+  if (!url) return;
+  e.preventDefault();
+  const w = window.open(url, "_blank", "noopener,noreferrer");
+  if (!w) {
+    try {
+      (window.top ?? window).location.href = url;
+    } catch {
+      window.location.href = url;
+    }
+  }
+}
+
 function Embers() {
   const [seeds] = useState(() =>
-    Array.from({ length: 24 }, (_, i) => ({
+    Array.from({ length: 14 }, (_, i) => ({
       left: `${(i * 37) % 100}%`,
       delay: `${(i * 0.7) % 12}s`,
       duration: `${8 + (i % 6)}s`,
@@ -238,7 +252,7 @@ function Header() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <a
+          <a onClick={openExt}
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -252,7 +266,7 @@ function Header() {
           </a>
         </div>
         <div className="flex items-center gap-2 lg:hidden">
-          <a
+          <a onClick={openExt}
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -307,10 +321,11 @@ function VideoHero() {
           loop
           playsInline
           preload="metadata"
+          disablePictureInPicture
           aria-label="Herculean Fitness Club Jhalawar training floor"
           className="absolute inset-0 h-full w-full bg-black object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/80" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/85 md:from-black/45 md:via-black/20 md:to-black/80" aria-hidden />
         <div
           className="absolute inset-0 opacity-70"
           style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
@@ -378,15 +393,15 @@ function Hero() {
             <a href="#pricing" className="btn-primary btn-primary-hover">
               Join Now <ChevronRight size={18} />
             </a>
-            <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
               <Navigation size={16} /> Get Directions
             </a>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
               ["Google", "Rated by Members"],
-              ["4", "Expert Trainers"],
-              ["5AM–10PM", "Open Daily"],
+              ["Nutrihub", "Cafe In-House"],
+              ["5AM–11PM", "Open Daily"],
             ].map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-2xl text-white md:text-3xl">{n}</div>
@@ -396,12 +411,14 @@ function Hero() {
           </div>
         </div>
         <div className="relative order-1 lg:order-2 lg:-mr-6">
-          <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
+          <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-2xl md:blur-3xl" aria-hidden />
           <img
             src={imgHeroBranded}
             alt="Herculean Fitness Club Jhalawar building exterior with signage on Darbaar Kothi Road"
             width={1400}
             height={2488}
+            loading="lazy"
+            decoding="async"
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>
@@ -497,7 +514,7 @@ function About() {
             alt="Inside Herculean Fitness Club Jhalawar"
             width={1000}
             height={1200}
-            loading="lazy"
+            loading="lazy" decoding="async"
             className="relative w-full rounded-3xl object-cover"
           />
         </div>
@@ -522,7 +539,7 @@ function Services() {
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
             <div key={s.title} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img src={s.img} alt={s.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <img src={s.img} alt={s.title} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <h3 className="font-display text-2xl uppercase text-white md:text-[26px]">{s.title}</h3>
@@ -745,7 +762,7 @@ function Gallery() {
               <img
                 src={src}
                 alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 className="aspect-square h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -803,7 +820,7 @@ function Testimonials() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+          <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
             View More Reviews on Google
           </a>
         </div>
@@ -815,7 +832,7 @@ function Testimonials() {
 function BigCta() {
   return (
     <section className="relative overflow-hidden">
-      <img src={imgCardioTreadmills} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={imgCardioTreadmills} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
       <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-36">
         <div className="max-w-2xl">
@@ -901,7 +918,7 @@ function Contact() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
-                  <a href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  <a onClick={openExt} href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     @herculean_fitness_club
                   </a>
                 </li>
@@ -910,7 +927,7 @@ function Contact() {
                 <Link to="/enquiry" className="btn-primary btn-primary-hover">
                   Send Enquiry
                 </Link>
-                <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   <Navigation size={16} /> Google Directions
                 </a>
               </div>
@@ -947,7 +964,7 @@ function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-[1.7] text-[color:var(--color-body)]">
-            Herculean Fitness Club — Jhalawar's premium gym at Mama Bhanja Circle. Train hard. Live strong.
+            Herculean Fitness Club — Jhalawar's premium gym on Darbaar Kothi Road, Anand Vihar. Train hard. Live strong.
           </p>
         </div>
         <div>
@@ -977,7 +994,7 @@ function Footer() {
 
           </ul>
           <div className="mt-4 flex gap-2">
-            <a
+            <a onClick={openExt}
               href="https://www.instagram.com/herculean_fitness_club/"
               target="_blank"
               rel="noopener noreferrer"
@@ -986,7 +1003,7 @@ function Footer() {
             >
               <Instagram size={16} />
             </a>
-            <a
+            <a onClick={openExt}
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"

@@ -32,7 +32,7 @@ function GalleryPage() {
             <img
               src={g.src}
               alt={`${g.caption} — Herculean Fitness Club Jhalawar`}
-              loading="lazy"
+              loading="lazy" decoding="async"
               className="w-full object-cover"
             />
             <figcaption className="px-4 py-3 text-[13px] leading-[1.5] text-[color:var(--color-body)]">{g.caption}</figcaption>
