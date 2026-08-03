@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Jhalawar's 5.0★ rated fitness club — premium equipment, qualified trainers, yoga & dance classes. Memberships from Rs.1,800/month.",
+          "A premium fitness club in Jhalawar — modern equipment, qualified trainers, yoga & dance classes and personal training.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

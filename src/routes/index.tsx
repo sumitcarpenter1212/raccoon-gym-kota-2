@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Premium equipment, certified trainers and 5.0★ Google-rated service in the heart of Jhalawar. Memberships from ₹1,800/month.",
+          "Premium equipment, qualified trainers and a spacious training floor in the heart of Jhalawar. Enquire online for current membership rates.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -88,8 +88,8 @@ const SERVICES = [
 const FEATURES = [
   { icon: Building2, title: "Jhalawar Location", desc: "Easy to reach from anywhere in Jhalawar — tap Get Directions for the map route." },
   { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
-  { icon: Users, title: "Qualified Trainers", desc: "A head trainer plus three dedicated personal trainers on the floor." },
-  { icon: Flame, title: "5.0★ Google Rated", desc: "Members consistently call us the best gym in Jhalawar." },
+  { icon: Users, title: "Qualified Trainers", desc: "Experienced trainers on the floor to guide your form and plan." },
+  { icon: Flame, title: "Google Rated", desc: "Loved by members across Jhalawar for the floor, staff and ambience." },
 ];
 
 const PRICING = [
@@ -380,7 +380,7 @@ function Hero() {
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
-              ["5.0★", "Google Rating"],
+              ["Google", "Rated by Members"],
               ["4", "Expert Trainers"],
               ["5AM–10PM", "Open Daily"],
             ].map(([n, l]) => (
@@ -479,7 +479,7 @@ function About() {
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-[color:var(--color-body)]">
             Herculean Fitness Club is Jhalawar's premium fitness destination — a spacious, well-ventilated floor packed with all-new
-            commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our head trainer and
+            commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our trainers and
             personal training team build the plan around you.
           </p>
           <a href="#contact" className="btn-primary btn-primary-hover mt-8">
@@ -567,7 +567,7 @@ function Pricing() {
             <h2 className="text-h2 font-black text-white">Membership Rates</h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Official Herculean Fitness Club packages. Longer plans include bonus months — pick the one that fits your goal and enquire
+            Herculean Fitness Club membership plans. Pick the one that fits your goal and enquire
             online in seconds.
           </p>
         </div>
@@ -735,10 +735,10 @@ function Gallery() {
 
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { k: "5.0★", v: "Google Rating" },
+            { k: "Google", v: "Rated by Members" },
             { k: "4", v: "Trainers" },
             { k: "17h", v: "Open Daily" },
-            { k: "Rs.1,800", v: "From / Month" },
+            { k: "Flexible", v: "Membership Plans" },
           ].map((s, i) => (
             <div key={i} className="rounded-2xl border border-white/10 bg-[#141210] p-6 text-center">
               <p className="font-display text-3xl text-[color:var(--color-brand)]">{s.k}</p>
@@ -759,7 +759,7 @@ function Testimonials() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Testimonials</p>
           <h2 className="text-h2 font-black text-white">Real Google Reviews</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Rated <span className="font-bold text-white">5.0★</span> on Google by members of Herculean Fitness Club Jhalawar.
+            Genuine Google reviews from members of Herculean Fitness Club Jhalawar.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

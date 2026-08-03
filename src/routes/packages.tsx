@@ -7,7 +7,7 @@ export const Route = createFileRoute("/packages")({
   head: () => ({
     meta: [
       { title: "Membership Packages & Fees — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Gym membership from Rs.1,800/month, yoga & dance classes from Rs.1,000 and personal training from Rs.7,000 at Herculean Fitness Club Jhalawar." },
+      { name: "description", content: "Gym membership, yoga and dance class batches and one-on-one personal training at Herculean Fitness Club Jhalawar. Enquire for current rates." },
       { property: "og:title", content: "Membership Packages — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Gym, group class and personal training packages with transparent pricing." },
       { property: "og:type", content: "website" },
@@ -22,7 +22,7 @@ function PackagesPage() {
     <PageShell
       eyebrow="Packages"
       title="Find A Package That Suits You"
-      intro="Transparent pricing, no hidden charges. Pick a plan and enquire online — our team will confirm everything for you."
+      intro="Pick a plan and enquire online — our team will share the current rates and confirm everything for you."
       image={IMAGES.floorMachines}
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">

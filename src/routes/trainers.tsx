@@ -7,7 +7,7 @@ export const Route = createFileRoute("/trainers")({
   head: () => ({
     meta: [
       { title: "Our Trainers — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Meet the Herculean Fitness Club Jhalawar coaching team — head trainer Arjan Singh plus three dedicated personal trainers." },
+      { name: "description", content: "Meet the coaching team at Herculean Fitness Club Jhalawar — experienced trainers guiding every member on the floor." },
       { property: "og:title", content: "Our Trainers — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Qualified, experienced trainers guiding every member on the floor." },
       { property: "og:type", content: "website" },
@@ -22,7 +22,7 @@ function TrainersPage() {
     <PageShell
       eyebrow="Our Team"
       title="Trainers & Qualifications"
-      intro="A head trainer plus three dedicated personal trainers, on the floor every day to guide your form, plan and progress."
+      intro="Our trainers are on the floor every day to guide your form, plan and progress."
       image={IMAGES.ptSession}
     >
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
