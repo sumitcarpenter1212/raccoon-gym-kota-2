@@ -133,12 +133,13 @@ const GALLERY = [
 const TESTIMONIALS: { name: string; role: string; quote: string }[] = [];
 
 const FAQS = [
-  { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar is open daily from 5:00 AM to 10:00 PM." },
-  { q: "Where exactly are you located?", a: "Jhalawar, Rajasthan — full address updating soon. Tap 'Get Directions' for the Google Maps route." },
-  { q: "How much is a monthly membership?", a: "Gym membership starts at Rs.1,800 for 30 days. Longer packages include bonus months — 3+1 months for Rs.6,000 and 6+1 months for Rs.8,500." },
-  { q: "Do you offer personal training?", a: "Yes. Personal training is Rs.7,000 for 1 month and Rs.18,000 for 3 months, with dedicated 1-on-1 coaching." },
-  { q: "Do you have group classes?", a: "Yes — Yoga at Rs.1,000/month and Dance Class at Rs.1,500/month. You can book a group class session online." },
+  { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar opens early morning and stays open till late evening. Call us to confirm today's batch timings." },
+  { q: "Where exactly are you located?", a: "We are in Jhalawar, Rajasthan. Tap 'Get Directions' for the exact Google Maps route." },
+  { q: "How much is a monthly membership?", a: "Gym, class and personal training rates change with running offers — send an enquiry and our team will share the current rates." },
+  { q: "Do you offer personal training?", a: "Yes. One-on-one personal training is available in 1-month and 3-month programmes with dedicated coaching." },
+  { q: "Do you have group classes?", a: "Yes — yoga and dance fitness batches run alongside the gym floor. You can book a group class session online." },
   { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
+
 ];
 
 function Embers() {
