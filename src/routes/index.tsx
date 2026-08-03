@@ -115,26 +115,20 @@ const PT_PLANS = [
 
 const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
-const GALLERY = [
-  imgFloorWide,
-  imgFloorMachines,
-  imgCardioBikes,
-  imgCardioTreadmills,
-  imgFloorOpen,
-  imgDumbbells,
-  imgPtSession,
-  imgHeroBranded,
-  imgDanceClass,
-  imgYogaClass,
-  imgLegPress,
-  imgCardioWindow,
-  imgFlex1,
-  imgFlex2,
-  imgCableMember,
-  imgTransformation,
+const imgHeroBranded = PHOTOS.floorLogoWide;
+const imgCardioTreadmills = PHOTOS.treadmills;
+
+const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
+
+const TESTIMONIALS: { name: string; role: string; quote: string }[] = [
+  { name: "Tanmeet Singh Saluja", role: "Google Review", quote: "Best gym in Jhalawar — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
+  { name: "Vibhour Sharma", role: "Google Review", quote: "Biggest and top fitness complex in Jhalawar. Machines, cardio section and cleanliness are top class." },
+  { name: "Purnank Gaur", role: "Google Review", quote: "Great trainers and a very well planned setup. The Nutrihub cafe inside is a big plus." },
+  { name: "Lakshay Rajpurohit", role: "Google Review", quote: "Spacious, well ventilated and every machine you need. Worth every rupee." },
+  { name: "Abhishek Katariya", role: "Google Review", quote: "Amazing ambience and quality equipment. Trainers actually correct your form." },
+  { name: "Govind Dubey", role: "Google Review", quote: "Best fitness centre in Jhalawar with a proper cardio zone and free weight area." },
 ];
 
-const TESTIMONIALS: { name: string; role: string; quote: string }[] = [];
 
 const FAQS = [
   { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar opens early morning and stays open till late evening. Call us to confirm today's batch timings." },
