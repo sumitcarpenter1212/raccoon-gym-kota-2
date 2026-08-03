@@ -252,7 +252,7 @@ function Header() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <a
+          <a onClick={openExt}
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -266,7 +266,7 @@ function Header() {
           </a>
         </div>
         <div className="flex items-center gap-2 lg:hidden">
-          <a
+          <a onClick={openExt}
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -991,7 +991,7 @@ function Footer() {
 
           </ul>
           <div className="mt-4 flex gap-2">
-            <a
+            <a onClick={openExt}
               href="https://www.instagram.com/herculean_fitness_club/"
               target="_blank"
               rel="noopener noreferrer"
@@ -1000,7 +1000,7 @@ function Footer() {
             >
               <Instagram size={16} />
             </a>
-            <a
+            <a onClick={openExt}
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
