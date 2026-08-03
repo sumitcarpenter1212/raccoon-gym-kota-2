@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Herculean Fitness Club Jhalawar is a premium gym at Raghuveer Plaza, Mama Bhanja Circle, Saket. Gym, yoga, dance classes & personal training. Open 5 AM–10 PM.",
+          "Herculean Fitness Club Jhalawar is a premium gym in Jhalawar, Rajasthan offering a full gym floor, group classes and personal training.",
       },
       { name: "author", content: "Herculean Fitness Club Jhalawar" },
       { property: "og:title", content: "Herculean Fitness Club Jhalawar — Train Hard. Live Strong." },

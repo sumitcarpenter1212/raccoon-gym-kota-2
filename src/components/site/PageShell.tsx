@@ -89,7 +89,7 @@ export function PageShell({
                 <MapPin size={15} /> Get Directions
               </a>
               <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-                <Instagram size={15} /> @fitsters_jwr
+                <Instagram size={15} /> @herculean_fitness_club
               </a>
             </div>
           </div>

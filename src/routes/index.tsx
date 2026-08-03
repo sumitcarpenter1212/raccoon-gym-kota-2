@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Herculean Fitness Club Jhalawar — premium gym at Raghuveer Plaza, Mama Bhanja Circle. Gym, yoga, dance & personal training. Open 5 AM–10 PM. Call 84419 84416.",
+          "Herculean Fitness Club Jhalawar — a premium gym in Jhalawar, Rajasthan. Gym floor, group classes and personal training.",
       },
       { property: "og:title", content: "Herculean Fitness Club Jhalawar — Best Gym in Jhalawar" },
       {
@@ -86,7 +86,7 @@ const SERVICES = [
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "Central Jhalawar Location", desc: "1st Floor, Raghuveer Plaza — right at Mama Bhanja Circle, Saket." },
+  { icon: Building2, title: "Jhalawar Location", desc: "Easy to reach from anywhere in Jhalawar — tap Get Directions for the map route." },
   { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
   { icon: Users, title: "Qualified Trainers", desc: "A head trainer plus three dedicated personal trainers on the floor." },
   { icon: Flame, title: "5.0★ Google Rated", desc: "Members consistently call us the best gym in Jhalawar." },
@@ -377,7 +377,7 @@ function Hero() {
             <span className="block text-[color:var(--color-brand)]">Your Life!</span>
           </h1>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Welcome to Herculean Fitness Club Jhalawar — 1st Floor, Raghuveer Plaza, near Mama Bhanja Circle. Premium machines,
+            Welcome to Herculean Fitness Club Jhalawar. Premium machines,
             qualified trainers, yoga & dance classes and personal training, all under one roof.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -865,7 +865,7 @@ function Contact() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Contact</p>
           <h2 className="text-h2 font-black text-white">Get In Touch</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Visit us at Raghuveer Plaza, Mama Bhanja Circle, Jhalawar — or send an enquiry and we'll call you back.
+            Visit us in Jhalawar — or send an enquiry and we'll call you back.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -887,7 +887,7 @@ function Contact() {
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
                   <a href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                    @fitsters_jwr
+                    @herculean_fitness_club
                   </a>
                 </li>
               </ul>
