@@ -44,6 +44,7 @@ export const PHOTOS = {
   exteriorBuilding: aExteriorBuilding.url,
   exteriorCafe: aExteriorCafe.url,
   exteriorFacade: aExteriorFacade.url,
+  exteriorPremium: aExteriorPremium.url,
 };
 
 /** Ordered gallery — best / highest-impact shots first. */
