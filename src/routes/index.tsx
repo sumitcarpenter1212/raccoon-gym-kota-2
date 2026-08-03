@@ -131,14 +131,16 @@ const TESTIMONIALS: { name: string; role: string; quote: string }[] = [
 
 
 const FAQS = [
-  { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar opens early morning and stays open till late evening. Call us to confirm today's batch timings." },
-  { q: "Where exactly are you located?", a: "We are in Jhalawar, Rajasthan. Tap 'Get Directions' for the exact Google Maps route." },
+  { q: "What are your timings?", a: `${HOURS}. Morning and evening batches both run — call ${PHONE_DISPLAY} to confirm today's batch timings.` },
+  { q: "Where exactly are you located?", a: `${ADDRESS}. Tap 'Get Directions' for the exact Google Maps route.` },
   { q: "How much is a monthly membership?", a: "Gym, class and personal training rates change with running offers — send an enquiry and our team will share the current rates." },
   { q: "Do you offer personal training?", a: "Yes. One-on-one personal training is available in 1-month and 3-month programmes with dedicated coaching." },
   { q: "Do you have group classes?", a: "Yes — yoga and dance fitness batches run alongside the gym floor. You can book a group class session online." },
+  { q: "Is there a cafe or nutrition store?", a: "Yes — Nutrihub Cafe and a nutrition/supplement counter are right at the club entrance." },
+  { q: "Do you have another branch?", a: "Yes — apart from the Jhalawar main club, we also run Aklera's biggest gym on NH-52, Bhopal Naka." },
   { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
-
 ];
+
 
 function Embers() {
   const [seeds] = useState(() =>
