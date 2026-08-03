@@ -871,14 +871,15 @@ function Contact() {
               <ul className="mt-6 space-y-4 text-[15px] text-[color:var(--color-body)]">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-1 shrink-0 text-[color:var(--color-brand)]" />
-                  Jhalawar, Rajasthan — full address updating soon
+                  {ADDRESS}
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-[color:var(--color-brand)]" />
                   <a href={`tel:${PHONE}`} className="hover:text-white">{PHONE_DISPLAY}</a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Clock size={18} className="text-[color:var(--color-brand)]" /> Open daily · 5:00 AM – 10:00 PM
+                  <Clock size={18} className="text-[color:var(--color-brand)]" /> {HOURS}
+
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
