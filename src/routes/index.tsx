@@ -22,23 +22,26 @@ import {
 import { MEMBER_LINKS } from "@/data/member-links";
 
 import logoHerculean from "@/assets/herculean-logo.png";
-import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-import heroImage from "@/assets/herculean-hero.jpg";
-import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
-import imgFloorOpen from "@/assets/gm-floor-open.jpg";
-import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
-import imgCardioTreadmills from "@/assets/gm-cardio-treadmills.jpg";
-import imgCardioWindow from "@/assets/gm-cardio-window.jpg";
-import imgDumbbells from "@/assets/gm-dumbbells.jpg";
-import imgPtSession from "@/assets/gm-pt-session.jpg";
-import imgLegPress from "@/assets/gm-legpress.jpg";
-import imgCableMember from "@/assets/gm-cable-member.jpg";
-import imgYogaClass from "@/assets/gm-yoga-class.jpg";
-import imgTransformation from "@/assets/gm-transformation.jpg";
-import imgFlex1 from "@/assets/gm-flex-1.jpg";
-import imgFlex2 from "@/assets/gm-flex-2.jpg";
-import imgDanceClass from "@/assets/gm-dance-class.jpg";
-import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
+import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
+import {
+  PHONE as SITE_PHONE,
+  PHONE_DISPLAY as SITE_PHONE_DISPLAY,
+  ADDRESS,
+  HOURS,
+  RATING,
+  BRANCHES,
+} from "@/data/site";
+
+const heroImage = PHOTOS.hero;
+const imgFloorWide = PHOTOS.floorWide;
+const imgFloorMachines = PHOTOS.strengthMachines;
+const imgFloorOpen = PHOTOS.floorLogoWide;
+const imgCardioBikes = PHOTOS.cardioZone;
+const imgDumbbells = PHOTOS.dumbbellRacks;
+const imgPtSession = PHOTOS.functionalArea;
+const imgYogaClass = PHOTOS.studioRoom;
+const imgDanceClass = PHOTOS.benchRack;
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,8 +65,8 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const PHONE = "+919000000000";
-const PHONE_DISPLAY = "Phone coming soon";
+const PHONE = SITE_PHONE;
+const PHONE_DISPLAY = SITE_PHONE_DISPLAY;
 const INSTAGRAM_URL = "https://www.instagram.com/herculean_fitness_club/";
 const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
 const NAV = [
@@ -82,15 +85,16 @@ const SERVICES = [
   { title: "Yoga Class", img: imgYogaClass, desc: "Daily yoga batches for mobility, flexibility and recovery." },
   { title: "Dance Class", img: imgDanceClass, desc: "High-energy dance fitness sessions for all levels." },
   { title: "Cardio Zone", img: imgCardioBikes, desc: "Treadmills, cycles and conditioning circuits for endurance." },
-  { title: "Functional Training", img: imgFloorWide, desc: "Kettlebells, ropes, turf sprint track and athletic conditioning." },
+  { title: "Functional Training", img: imgFloorWide, desc: "Cables, kettlebells and athletic conditioning space." },
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "Jhalawar Location", desc: "Easy to reach from anywhere in Jhalawar — tap Get Directions for the map route." },
-  { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
+  { icon: Building2, title: "Jhalawar's Biggest Complex", desc: "Darbaar Kothi Road, Anand Vihar — near Balaji Hospital, easy to reach from anywhere in Jhalawar." },
+  { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Two spacious floors of brand-new imported strength and cardio machines." },
   { icon: Users, title: "Qualified Trainers", desc: "Experienced trainers on the floor to guide your form and plan." },
-  { icon: Flame, title: "Google Rated", desc: "Loved by members across Jhalawar for the floor, staff and ambience." },
+  { icon: Flame, title: `${RATING.score}★ on Google`, desc: `Rated ${RATING.score} by ${RATING.count} members across Jhalawar for the floor, staff and ambience.` },
 ];
+
 
 const PRICING = [
   { n: "01", name: "Monthly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full gym access", "Trainer guidance on the floor", "Flexible timings", "Great for starters"], popular: false },
@@ -111,36 +115,32 @@ const PT_PLANS = [
 
 const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
-const GALLERY = [
-  imgFloorWide,
-  imgFloorMachines,
-  imgCardioBikes,
-  imgCardioTreadmills,
-  imgFloorOpen,
-  imgDumbbells,
-  imgPtSession,
-  imgHeroBranded,
-  imgDanceClass,
-  imgYogaClass,
-  imgLegPress,
-  imgCardioWindow,
-  imgFlex1,
-  imgFlex2,
-  imgCableMember,
-  imgTransformation,
+const imgHeroBranded = PHOTOS.floorLogoWide;
+const imgCardioTreadmills = PHOTOS.treadmills;
+
+const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
+
+const TESTIMONIALS: { name: string; role: string; quote: string }[] = [
+  { name: "Tanmeet Singh Saluja", role: "Google Review", quote: "Best gym in Jhalawar — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
+  { name: "Vibhour Sharma", role: "Google Review", quote: "Biggest and top fitness complex in Jhalawar. Machines, cardio section and cleanliness are top class." },
+  { name: "Purnank Gaur", role: "Google Review", quote: "Great trainers and a very well planned setup. The Nutrihub cafe inside is a big plus." },
+  { name: "Lakshay Rajpurohit", role: "Google Review", quote: "Spacious, well ventilated and every machine you need. Worth every rupee." },
+  { name: "Abhishek Katariya", role: "Google Review", quote: "Amazing ambience and quality equipment. Trainers actually correct your form." },
+  { name: "Govind Dubey", role: "Google Review", quote: "Best fitness centre in Jhalawar with a proper cardio zone and free weight area." },
 ];
 
-const TESTIMONIALS: { name: string; role: string; quote: string }[] = [];
 
 const FAQS = [
-  { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar opens early morning and stays open till late evening. Call us to confirm today's batch timings." },
-  { q: "Where exactly are you located?", a: "We are in Jhalawar, Rajasthan. Tap 'Get Directions' for the exact Google Maps route." },
+  { q: "What are your timings?", a: `${HOURS}. Morning and evening batches both run — call ${PHONE_DISPLAY} to confirm today's batch timings.` },
+  { q: "Where exactly are you located?", a: `${ADDRESS}. Tap 'Get Directions' for the exact Google Maps route.` },
   { q: "How much is a monthly membership?", a: "Gym, class and personal training rates change with running offers — send an enquiry and our team will share the current rates." },
   { q: "Do you offer personal training?", a: "Yes. One-on-one personal training is available in 1-month and 3-month programmes with dedicated coaching." },
   { q: "Do you have group classes?", a: "Yes — yoga and dance fitness batches run alongside the gym floor. You can book a group class session online." },
+  { q: "Is there a cafe or nutrition store?", a: "Yes — Nutrihub Cafe and a nutrition/supplement counter are right at the club entrance." },
+  { q: "Do you have another branch?", a: "Yes — apart from the Jhalawar main club, we also run Aklera's biggest gym on NH-52, Bhopal Naka." },
   { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
-
 ];
+
 
 function Embers() {
   const [seeds] = useState(() =>
@@ -548,7 +548,17 @@ function Features() {
             </div>
           ))}
         </div>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {BRANCHES.map((b) => (
+            <div key={b.name} className="rounded-2xl border border-[color:var(--color-brand)]/25 bg-[#101010] p-6">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Branch</p>
+              <h3 className="mt-2 font-display text-xl uppercase text-white">{b.name}</h3>
+              <p className="mt-2 text-[15px] leading-[1.6] text-[color:var(--color-body)]">{b.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
     </section>
   );
 }
@@ -871,14 +881,15 @@ function Contact() {
               <ul className="mt-6 space-y-4 text-[15px] text-[color:var(--color-body)]">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-1 shrink-0 text-[color:var(--color-brand)]" />
-                  Jhalawar, Rajasthan — full address updating soon
+                  {ADDRESS}
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-[color:var(--color-brand)]" />
                   <a href={`tel:${PHONE}`} className="hover:text-white">{PHONE_DISPLAY}</a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Clock size={18} className="text-[color:var(--color-brand)]" /> Open daily · 5:00 AM – 10:00 PM
+                  <Clock size={18} className="text-[color:var(--color-brand)]" /> {HOURS}
+
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
@@ -953,7 +964,9 @@ function Footer() {
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Reach Us</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><a href={`tel:${PHONE}`} className="hover:text-[color:var(--color-brand)]">{PHONE_DISPLAY}</a></li>
-            <li>5:00 AM – 10:00 PM daily</li>
+            <li>5:00 AM – 11:00 PM daily</li>
+            <li>{ADDRESS}</li>
+
           </ul>
           <div className="mt-4 flex gap-2">
             <a

@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
-import { GALLERY, IMAGES } from "@/data/site";
+import { IMAGES } from "@/data/site";
+import { GALLERY_PHOTOS } from "@/data/photos";
+
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -21,18 +23,20 @@ function GalleryPage() {
     <PageShell
       eyebrow="Photo Gallery"
       title="Our Facilities"
-      intro="A look inside our floor — premium machines, spacious layout and the classes that keep members coming back."
+      intro="Real photos from Herculean Fitness Club Jhalawar — premium machines, a spacious floor, the cardio deck and Nutrihub Cafe at the entrance."
       image={IMAGES.heroBranded}
     >
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
-        {GALLERY.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
-            loading="lazy"
-            className="w-full break-inside-avoid rounded-2xl border border-white/10 object-cover"
-          />
+        {GALLERY_PHOTOS.map((g, i) => (
+          <figure key={i} className="break-inside-avoid overflow-hidden rounded-2xl border border-white/10 bg-[#121212]">
+            <img
+              src={g.src}
+              alt={`${g.caption} — Herculean Fitness Club Jhalawar`}
+              loading="lazy"
+              className="w-full object-cover"
+            />
+            <figcaption className="px-4 py-3 text-[13px] leading-[1.5] text-[color:var(--color-body)]">{g.caption}</figcaption>
+          </figure>
         ))}
       </div>
     </PageShell>
