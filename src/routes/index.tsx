@@ -65,8 +65,8 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const PHONE = "+919000000000";
-const PHONE_DISPLAY = "Phone coming soon";
+const PHONE = SITE_PHONE;
+const PHONE_DISPLAY = SITE_PHONE_DISPLAY;
 const INSTAGRAM_URL = "https://www.instagram.com/herculean_fitness_club/";
 const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
 const NAV = [
@@ -85,15 +85,16 @@ const SERVICES = [
   { title: "Yoga Class", img: imgYogaClass, desc: "Daily yoga batches for mobility, flexibility and recovery." },
   { title: "Dance Class", img: imgDanceClass, desc: "High-energy dance fitness sessions for all levels." },
   { title: "Cardio Zone", img: imgCardioBikes, desc: "Treadmills, cycles and conditioning circuits for endurance." },
-  { title: "Functional Training", img: imgFloorWide, desc: "Kettlebells, ropes, turf sprint track and athletic conditioning." },
+  { title: "Functional Training", img: imgFloorWide, desc: "Cables, kettlebells and athletic conditioning space." },
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "Jhalawar Location", desc: "Easy to reach from anywhere in Jhalawar — tap Get Directions for the map route." },
-  { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
+  { icon: Building2, title: "Jhalawar's Biggest Complex", desc: "Darbaar Kothi Road, Anand Vihar — near Balaji Hospital, easy to reach from anywhere in Jhalawar." },
+  { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Two spacious floors of brand-new imported strength and cardio machines." },
   { icon: Users, title: "Qualified Trainers", desc: "Experienced trainers on the floor to guide your form and plan." },
-  { icon: Flame, title: "Google Rated", desc: "Loved by members across Jhalawar for the floor, staff and ambience." },
+  { icon: Flame, title: `${RATING.score}★ on Google`, desc: `Rated ${RATING.score} by ${RATING.count} members across Jhalawar for the floor, staff and ambience.` },
 ];
+
 
 const PRICING = [
   { n: "01", name: "Monthly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full gym access", "Trainer guidance on the floor", "Flexible timings", "Great for starters"], popular: false },
