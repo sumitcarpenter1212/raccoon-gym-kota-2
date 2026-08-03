@@ -1,4 +1,4 @@
-import logoHerculean from "@/assets/fitsters-logo.jpg";
+import logoHerculean from "@/assets/herculean-logo.png";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";

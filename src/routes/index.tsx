@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 import { MEMBER_LINKS } from "@/data/member-links";
 
-import logoHerculean from "@/assets/fitsters-logo.jpg";
+import logoHerculean from "@/assets/herculean-logo.png";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-const heroVideoSrc = "/hero-fitsters.mp4";
+import heroImage from "@/assets/herculean-hero.jpg";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";
 import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
@@ -296,15 +296,11 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
-        <video
-          src={heroVideoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          aria-label="Herculean Fitness Club Jhalawar training floor showreel"
+        <img
+          src={heroImage}
+          alt="Herculean Fitness Club Jhalawar training floor"
+          width={1920}
+          height={1088}
           className="absolute inset-0 h-full w-full object-cover bg-black"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
