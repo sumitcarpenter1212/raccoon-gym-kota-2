@@ -1,47 +1,44 @@
 import logoHerculean from "@/assets/herculean-logo.png";
-import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
-import imgFloorOpen from "@/assets/gm-floor-open.jpg";
-import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
-import imgCardioTreadmills from "@/assets/gm-cardio-treadmills.jpg";
-import imgCardioWindow from "@/assets/gm-cardio-window.jpg";
-import imgDumbbells from "@/assets/gm-dumbbells.jpg";
-import imgPtSession from "@/assets/gm-pt-session.jpg";
-import imgLegPress from "@/assets/gm-legpress.jpg";
-import imgCableMember from "@/assets/gm-cable-member.jpg";
-import imgYogaClass from "@/assets/gm-yoga-class.jpg";
-import imgTransformation from "@/assets/gm-transformation.jpg";
-import imgFlex1 from "@/assets/gm-flex-1.jpg";
-import imgFlex2 from "@/assets/gm-flex-2.jpg";
-import imgDanceClass from "@/assets/gm-dance-class.jpg";
-import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
+import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
 
 export const IMAGES = {
   logo: logoHerculean,
-  floorWide: imgFloorWide,
-  floorMachines: imgFloorMachines,
-  floorOpen: imgFloorOpen,
-  cardioBikes: imgCardioBikes,
-  cardioTreadmills: imgCardioTreadmills,
-  cardioWindow: imgCardioWindow,
-  dumbbells: imgDumbbells,
-  ptSession: imgPtSession,
-  legPress: imgLegPress,
-  cableMember: imgCableMember,
-  yogaClass: imgYogaClass,
-  transformation: imgTransformation,
-  flex1: imgFlex1,
-  flex2: imgFlex2,
-  danceClass: imgDanceClass,
-  heroBranded: imgHeroBranded,
+  floorWide: PHOTOS.floorWide,
+  floorMachines: PHOTOS.strengthMachines,
+  floorOpen: PHOTOS.floorLogoWide,
+  cardioBikes: PHOTOS.cardioZone,
+  cardioTreadmills: PHOTOS.treadmills,
+  cardioWindow: PHOTOS.cardioOpen,
+  dumbbells: PHOTOS.dumbbellRacks,
+  ptSession: PHOTOS.functionalArea,
+  legPress: PHOTOS.legPress,
+  cableMember: PHOTOS.machinesWood,
+  yogaClass: PHOTOS.studioRoom,
+  transformation: PHOTOS.squatRacks,
+  flex1: PHOTOS.strengthArea,
+  flex2: PHOTOS.plateLoaded,
+  danceClass: PHOTOS.benchRack,
+  heroBranded: PHOTOS.hero,
+  exterior: PHOTOS.exteriorSign,
+  cafe: PHOTOS.exteriorCafe,
 };
 
-export const PHONE = "+919000000000";
-export const PHONE_DISPLAY = "Phone coming soon";
+export const PHONE = "+917425074240";
+export const PHONE_DISPLAY = "074250 74240";
+export const WHATSAPP = "917425074240";
 export const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
 export const INSTAGRAM = "https://www.instagram.com/herculean_fitness_club/";
+export const INSTAGRAM_JWR = "https://www.instagram.com/hfc_jwr/";
 export const ADDRESS =
-  "Jhalawar, Rajasthan — full address updating soon";
+  "Darbaar, F-12, Kothi Road, near Balaji Hospital, Anand Vihar, Gayatri Nagar, Jhalawar, Rajasthan 326001";
+export const PLUS_CODE = "H5P5+HF Jhalawar, Rajasthan";
+export const HOURS = "Open daily · 5:00 AM – 11:00 PM";
+export const RATING = { score: "5.0", count: 32 };
+export const BRANCHES = [
+  { name: "Jhalawar (Main)", desc: "Darbaar Kothi Road, Anand Vihar — Jhalawar district's biggest fitness complex with Nutrihub Cafe inside." },
+  { name: "Aklera", desc: "Aklera's biggest gym, on NH-52 Bhopal Naka." },
+];
+
 
 export const GYM_PACKAGES = [
   { n: "01", name: "Monthly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full gym access", "Trainer guidance on the floor", "Flexible timings", "Great for starters"], popular: false },
