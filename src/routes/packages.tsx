@@ -6,9 +6,9 @@ import { GYM_PACKAGES, GROUP_CLASSES, PT_PLANS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/packages")({
   head: () => ({
     meta: [
-      { title: "Membership Packages & Fees — Fitsters Club Jhalawar" },
-      { name: "description", content: "Gym membership from Rs.1,800/month, yoga & dance classes from Rs.1,000 and personal training from Rs.7,000 at Fitsters Club Jhalawar." },
-      { property: "og:title", content: "Membership Packages — Fitsters Club Jhalawar" },
+      { title: "Membership Packages & Fees — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "Gym membership from Rs.1,800/month, yoga & dance classes from Rs.1,000 and personal training from Rs.7,000 at Herculean Fitness Club Jhalawar." },
+      { property: "og:title", content: "Membership Packages — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Gym, group class and personal training packages with transparent pricing." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -6,9 +6,9 @@ import { TRAINERS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/trainers")({
   head: () => ({
     meta: [
-      { title: "Our Trainers — Fitsters Club Jhalawar" },
-      { name: "description", content: "Meet the Fitsters Club Jhalawar coaching team — head trainer Arjan Singh plus three dedicated personal trainers." },
-      { property: "og:title", content: "Our Trainers — Fitsters Club Jhalawar" },
+      { title: "Our Trainers — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "Meet the Herculean Fitness Club Jhalawar coaching team — head trainer Arjan Singh plus three dedicated personal trainers." },
+      { property: "og:title", content: "Our Trainers — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Qualified, experienced trainers guiding every member on the floor." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

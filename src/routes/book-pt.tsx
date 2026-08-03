@@ -12,9 +12,9 @@ export const Route = createFileRoute("/book-pt")({
   }),
   head: () => ({
     meta: [
-      { title: "Book A Personal Training Session — Fitsters Club Jhalawar" },
-      { name: "description", content: "Book one-on-one personal training at Fitsters Club Jhalawar. Choose your trainer, plan and preferred slot." },
-      { property: "og:title", content: "Book Personal Training — Fitsters Club Jhalawar" },
+      { title: "Book A Personal Training Session — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "Book one-on-one personal training at Herculean Fitness Club Jhalawar. Choose your trainer, plan and preferred slot." },
+      { property: "og:title", content: "Book Personal Training — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "One-on-one coaching with a dedicated trainer and a plan built for your goal." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

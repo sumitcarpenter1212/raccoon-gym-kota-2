@@ -6,9 +6,9 @@ import { TESTIMONIALS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Member Reviews — Fitsters Club Jhalawar" },
-      { name: "description", content: "5.0-star rated by members in Jhalawar. Read genuine reviews about the equipment, trainers and ambience at Fitsters Club." },
-      { property: "og:title", content: "Member Reviews — Fitsters Club Jhalawar" },
+      { title: "Member Reviews — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "5.0-star rated by members in Jhalawar. Read genuine reviews about the equipment, trainers and ambience at Herculean Fitness Club." },
+      { property: "og:title", content: "Member Reviews — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "What members say about Jhalawar's most spacious fitness club." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -22,7 +22,7 @@ function ReviewsPage() {
     <PageShell
       eyebrow="Reviews"
       title="What Our Members Say"
-      intro="Rated 5.0 out of 5 by members of Fitsters Club Jhalawar."
+      intro="Rated 5.0 out of 5 by members of Herculean Fitness Club Jhalawar."
       image={IMAGES.floorOpen}
     >
       <div className="mx-auto mb-10 flex max-w-sm flex-col items-center rounded-3xl border border-white/10 bg-[#121212] p-6 text-center">

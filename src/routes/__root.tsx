@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Fitsters Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
+      { title: "Herculean Fitness Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
       {
         name: "description",
         content:
-          "Fitsters Club Jhalawar is a premium gym at Raghuveer Plaza, Mama Bhanja Circle, Saket. Gym, yoga, dance classes & personal training. Open 5 AM–10 PM.",
+          "Herculean Fitness Club Jhalawar is a premium gym at Raghuveer Plaza, Mama Bhanja Circle, Saket. Gym, yoga, dance classes & personal training. Open 5 AM–10 PM.",
       },
-      { name: "author", content: "Fitsters Club Jhalawar" },
-      { property: "og:title", content: "Fitsters Club Jhalawar — Train Hard. Live Strong." },
+      { name: "author", content: "Herculean Fitness Club Jhalawar" },
+      { property: "og:title", content: "Herculean Fitness Club Jhalawar — Train Hard. Live Strong." },
       {
         property: "og:description",
         content:

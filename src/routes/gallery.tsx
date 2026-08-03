@@ -5,9 +5,9 @@ import { GALLERY, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Photo Gallery — Fitsters Club Jhalawar Gym" },
-      { name: "description", content: "Real photos of Fitsters Club Jhalawar — training floor, cardio zone, strength equipment, yoga and dance classes." },
-      { property: "og:title", content: "Photo Gallery — Fitsters Club Jhalawar" },
+      { title: "Photo Gallery — Herculean Fitness Club Jhalawar Gym" },
+      { name: "description", content: "Real photos of Herculean Fitness Club Jhalawar — training floor, cardio zone, strength equipment, yoga and dance classes." },
+      { property: "og:title", content: "Photo Gallery — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Inside look at Jhalawar's most spacious gym floor and facilities." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,7 +29,7 @@ function GalleryPage() {
           <img
             key={i}
             src={src}
-            alt={`Fitsters Club Jhalawar facility photo ${i + 1}`}
+            alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
             loading="lazy"
             className="w-full break-inside-avoid rounded-2xl border border-white/10 object-cover"
           />

@@ -1,4 +1,4 @@
-import logoFitsters from "@/assets/fitsters-logo.jpg";
+import logoHerculean from "@/assets/fitsters-logo.jpg";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";
@@ -17,7 +17,7 @@ import imgDanceClass from "@/assets/gm-dance-class.jpg";
 import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
 
 export const IMAGES = {
-  logo: logoFitsters,
+  logo: logoHerculean,
   floorWide: imgFloorWide,
   floorMachines: imgFloorMachines,
   floorOpen: imgFloorOpen,
@@ -115,7 +115,7 @@ export const GALLERY = [
 
 export const TESTIMONIALS = [
   { name: "Akshit Nagar", role: "Google Review", rating: 5, quote: "Best gym of Jhalawar. Most spacious, all new and premium quality equipments, reasonable prices and great ambience." },
-  { name: "Rahul Mittal", role: "Google Review", rating: 5, quote: "As a beginner I joined Fitsters gym last month — totally satisfied with trainers and quality equipment. Best gym of Jhalawar with a friendly atmosphere. In just one month this became my habit. Full 5 out of 5." },
+  { name: "Rahul Mittal", role: "Google Review", rating: 5, quote: "As a beginner I joined Herculean Fitness Club last month — totally satisfied with trainers and quality equipment. Best gym of Jhalawar with a friendly atmosphere. In just one month this became my habit. Full 5 out of 5." },
   { name: "Reshma Verma", role: "Google Review", rating: 5, quote: "I recently joined this newly opened gym and I'm super satisfied with the trainers and their services. They developed real consistency and dedication in me towards my fitness goal. I suggest everyone come and join this crowd." },
   { name: "Shailly Singh", role: "Google Review", rating: 5, quote: "This is by far the greatest gym in Jhalawar. The staff is super amazing!! If you really feel like joining a gym, this should be it!!" },
   { name: "Pooja Nayak", role: "Google Review", rating: 5, quote: "One of the finest gyms in Jhalawar. The knowledge and behaviour of the staff is impressive. Gym is fully equipped with high quality machines and great ambience." },
