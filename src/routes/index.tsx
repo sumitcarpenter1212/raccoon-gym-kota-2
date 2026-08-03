@@ -317,7 +317,7 @@ function VideoHero() {
           className="absolute inset-0 h-full w-full object-contain object-center md:bg-black md:object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/90" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/85 md:from-black/75 md:via-black/40 md:to-black/90" aria-hidden />
         <div
           className="absolute inset-0 opacity-70"
           style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
