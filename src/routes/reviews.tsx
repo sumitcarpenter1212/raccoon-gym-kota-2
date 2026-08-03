@@ -25,15 +25,9 @@ function ReviewsPage() {
       intro="Genuine reviews from members of Herculean Fitness Club Jhalawar."
       image={IMAGES.floorOpen}
     >
-      <div className="mx-auto mb-10 flex max-w-sm flex-col items-center rounded-3xl border border-white/10 bg-[#121212] p-6 text-center">
-        <p className="font-display text-5xl text-[color:var(--color-brand)]">5.0</p>
-        <div className="mt-2 flex gap-1">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} size={18} className="fill-[color:var(--color-brand)] text-[color:var(--color-brand)]" />
-          ))}
-        </div>
-        <p className="mt-2 text-sm text-[color:var(--color-body)]">Average member rating</p>
-      </div>
+      {TESTIMONIALS.length === 0 && (
+        <p className="rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">Member reviews are being added shortly. Read the latest ones on our Google profile in the meantime.</p>
+      )}
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {TESTIMONIALS.map((t) => (

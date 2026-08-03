@@ -25,6 +25,10 @@ function TrainersPage() {
       intro="Our trainers are on the floor every day to guide your form, plan and progress."
       image={IMAGES.ptSession}
     >
+      {TRAINERS.length === 0 && (
+        <p className="rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">Our trainer profiles are being updated. Call us or send an enquiry to know who's on the floor for your goal.</p>
+      )}
+
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {TRAINERS.map((t) => (
           <div key={t.name} className="overflow-hidden rounded-3xl border border-white/10 bg-[#121212]">

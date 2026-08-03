@@ -674,6 +674,11 @@ function Trainers() {
             The team behind every transformation at Herculean Fitness Club Jhalawar.
           </p>
         </div>
+        {TRAINERS.length === 0 && (
+          <p className="mx-auto mt-10 max-w-xl rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">
+            Trainer profiles are being updated. Send an enquiry and we'll match you with the right coach.
+          </p>
+        )}
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TRAINERS.map((t) => (
             <div
@@ -762,6 +767,11 @@ function Testimonials() {
             Genuine Google reviews from members of Herculean Fitness Club Jhalawar.
           </p>
         </div>
+        {TESTIMONIALS.length === 0 && (
+          <p className="mx-auto mt-10 max-w-xl rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">
+            Member reviews are being added shortly — read them on our Google profile below.
+          </p>
+        )}
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div key={t.name} className="flex flex-col rounded-3xl border border-white/10 bg-[#121212] p-8">
