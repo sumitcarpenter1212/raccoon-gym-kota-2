@@ -93,28 +93,23 @@ const FEATURES = [
 ];
 
 const PRICING = [
-  { n: "01", name: "1 Month", price: "Rs.1,800", period: "/30 days", cat: "Gym Membership", features: ["Full gym access", "Floor guidance", "Flexible timings", "Great for starters"], popular: false },
-  { n: "02", name: "3 Months + 1 Month", price: "Rs.6,000", period: "/120 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Best short-term value"], popular: true },
-  { n: "03", name: "6 Months + 1 Month", price: "Rs.8,500", period: "/210 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Save more per month"], popular: false },
-  { n: "04", name: "12 Months", price: "Rs.12,000", period: "/365 days", cat: "Gym Membership", features: ["Full year access", "Lowest monthly cost", "Trainer guidance", "Priority support"], popular: false },
+  { n: "01", name: "Monthly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full gym access", "Trainer guidance on the floor", "Flexible timings", "Great for starters"], popular: false },
+  { n: "02", name: "Quarterly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["3 months of full access", "Trainer guidance", "Better value per month", "Popular with regulars"], popular: true },
+  { n: "03", name: "Half Yearly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["6 months of full access", "Trainer guidance", "Save more per month", "Steady progress plan"], popular: false },
+  { n: "04", name: "Annual", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full year access", "Lowest monthly cost", "Trainer guidance", "Priority support"], popular: false },
 ];
 
 const GROUP_CLASSES = [
-  { name: "Yoga Class", price: "Rs.1,000", period: "/30 days", desc: "Daily guided yoga sessions." },
-  { name: "Dance Class", price: "Rs.1,500", period: "/30 days", desc: "Fun, high-energy dance fitness." },
+  { name: "Yoga Class", price: "Ask us", period: "", desc: "Guided yoga sessions for flexibility and calm." },
+  { name: "Dance Fitness", price: "Ask us", period: "", desc: "Fun, high-energy dance fitness batches." },
 ];
 
 const PT_PLANS = [
-  { name: "1 Month PT", price: "Rs.7,000", period: "/30 days", desc: "One-on-one personal training." },
-  { name: "3 Months PT", price: "Rs.18,000", period: "/90 days", desc: "Full transformation programme." },
+  { name: "1 Month PT", price: "Ask us", period: "", desc: "One-on-one personal training." },
+  { name: "3 Months PT", price: "Ask us", period: "", desc: "Full transformation programme." },
 ];
 
-const TRAINERS = [
-  { name: "Arjan Singh", role: "Head Trainer", bio: "Specialises in fat loss, weight loss and body recomposition.", img: imgPtSession },
-  { name: "Mahesh Verma", role: "Personal Trainer", bio: "Strength training and weight loss for all populations — athletes to seniors.", img: imgCableMember },
-  { name: "Adnan", role: "Personal Trainer", bio: "A powerful role model demonstrating strength, discipline and resilience.", img: imgLegPress },
-  { name: "Tanveer Singh", role: "Personal Trainer", bio: "Highly skilled professional dedicated to helping members reach their goals.", img: imgFlex1 },
-];
+const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
 const GALLERY = [
   imgFloorWide,
@@ -135,13 +130,7 @@ const GALLERY = [
   imgTransformation,
 ];
 
-const TESTIMONIALS = [
-  { name: "Akshit Nagar", role: "Google Review", quote: "Best gym of Jhalawar. Most spacious, all new and premium quality equipments, reasonable prices and great ambience." },
-  { name: "Rahul Mittal", role: "Google Review", quote: "As a beginner I joined Herculean Fitness Club last month — totally satisfied with trainers and quality equipment. Best gym of Jhalawar with a friendly atmosphere. In just one month this became my habit. Full 5 out of 5." },
-  { name: "Reshma Verma", role: "Google Review", quote: "I recently joined this newly opened gym and I'm super satisfied with the trainers and their services. They developed real consistency and dedication in me towards my fitness goal. I suggest everyone come and join this crowd." },
-  { name: "Shailly Singh", role: "Google Review", quote: "This is by far the greatest gym in Jhalawar. The staff is super amazing!! If you really feel like joining a gym, this should be it!!" },
-  { name: "Pooja Nayak", role: "Google Review", quote: "One of the finest gyms in Jhalawar. The knowledge and behaviour of the staff is impressive. Gym is fully equipped with high quality machines and great ambience." },
-];
+const TESTIMONIALS: { name: string; role: string; quote: string }[] = [];
 
 const FAQS = [
   { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar is open daily from 5:00 AM to 10:00 PM." },
