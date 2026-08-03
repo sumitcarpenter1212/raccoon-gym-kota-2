@@ -22,23 +22,26 @@ import {
 import { MEMBER_LINKS } from "@/data/member-links";
 
 import logoHerculean from "@/assets/herculean-logo.png";
-import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-import heroImage from "@/assets/herculean-hero.jpg";
-import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
-import imgFloorOpen from "@/assets/gm-floor-open.jpg";
-import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
-import imgCardioTreadmills from "@/assets/gm-cardio-treadmills.jpg";
-import imgCardioWindow from "@/assets/gm-cardio-window.jpg";
-import imgDumbbells from "@/assets/gm-dumbbells.jpg";
-import imgPtSession from "@/assets/gm-pt-session.jpg";
-import imgLegPress from "@/assets/gm-legpress.jpg";
-import imgCableMember from "@/assets/gm-cable-member.jpg";
-import imgYogaClass from "@/assets/gm-yoga-class.jpg";
-import imgTransformation from "@/assets/gm-transformation.jpg";
-import imgFlex1 from "@/assets/gm-flex-1.jpg";
-import imgFlex2 from "@/assets/gm-flex-2.jpg";
-import imgDanceClass from "@/assets/gm-dance-class.jpg";
-import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
+import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
+import {
+  PHONE as SITE_PHONE,
+  PHONE_DISPLAY as SITE_PHONE_DISPLAY,
+  ADDRESS,
+  HOURS,
+  RATING,
+  BRANCHES,
+} from "@/data/site";
+
+const heroImage = PHOTOS.hero;
+const imgFloorWide = PHOTOS.floorWide;
+const imgFloorMachines = PHOTOS.strengthMachines;
+const imgFloorOpen = PHOTOS.floorLogoWide;
+const imgCardioBikes = PHOTOS.cardioZone;
+const imgDumbbells = PHOTOS.dumbbellRacks;
+const imgPtSession = PHOTOS.functionalArea;
+const imgYogaClass = PHOTOS.studioRoom;
+const imgDanceClass = PHOTOS.benchRack;
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
