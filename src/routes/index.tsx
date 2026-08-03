@@ -299,6 +299,12 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
+        {/* Blurred fill so letterboxed bands on narrow screens never look empty */}
+        <div
+          className="absolute inset-0 scale-110 bg-cover bg-center blur-2xl md:hidden"
+          style={{ backgroundImage: `url(${heroImage})` }}
+          aria-hidden
+        />
         <video
           src={heroVideo}
           poster={heroImage}
@@ -308,9 +314,10 @@ function VideoHero() {
           playsInline
           preload="metadata"
           aria-label="Herculean Fitness Club Jhalawar training floor"
-          className="absolute inset-0 h-full w-full bg-black object-cover"
+          className="absolute inset-0 h-full w-full object-contain object-center md:bg-black md:object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/90" aria-hidden />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/85 md:from-black/75 md:via-black/40 md:to-black/90" aria-hidden />
         <div
           className="absolute inset-0 opacity-70"
           style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
