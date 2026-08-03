@@ -118,7 +118,7 @@ const PT_PLANS = [
 
 const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
-const imgHeroBranded = PHOTOS.floorLogoWide;
+const imgHeroBranded = PHOTOS.exteriorPremium;
 const imgCardioTreadmills = PHOTOS.treadmills;
 
 const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
