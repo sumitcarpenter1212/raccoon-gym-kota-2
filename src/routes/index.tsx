@@ -417,6 +417,8 @@ function Hero() {
             alt="Herculean Fitness Club Jhalawar building exterior with signage on Darbaar Kothi Road"
             width={1400}
             height={2488}
+            loading="lazy"
+            decoding="async"
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>
