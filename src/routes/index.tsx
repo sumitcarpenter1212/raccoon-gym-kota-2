@@ -710,7 +710,7 @@ function Gallery() {
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Photo Gallery</p>
             <h2 className="text-hero font-black leading-[0.9] text-white">
-              INSIDE <span className="text-[color:var(--color-brand)]">FITSTERS</span>
+              INSIDE <span className="text-[color:var(--color-brand)]">HERCULEAN</span>
               <br />
               CLUB JHALAWAR
             </h2>
