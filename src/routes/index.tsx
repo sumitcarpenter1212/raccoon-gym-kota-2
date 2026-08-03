@@ -118,7 +118,7 @@ const PT_PLANS = [
 
 const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
-const imgHeroBranded = PHOTOS.floorLogoWide;
+const imgHeroBranded = PHOTOS.exteriorPremium;
 const imgCardioTreadmills = PHOTOS.treadmills;
 
 const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
@@ -399,9 +399,9 @@ function Hero() {
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
           <img
             src={imgHeroBranded}
-            alt="Herculean Fitness Club Jhalawar branded training floor with kettlebells, battle ropes and power racks"
-            width={1024}
-            height={1280}
+            alt="Herculean Fitness Club Jhalawar building exterior with signage on Darbaar Kothi Road"
+            width={1400}
+            height={2488}
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
           />
         </div>

@@ -8,6 +8,7 @@ import aExteriorCafe from "@/assets/gm/exterior-cafe.jpg.asset.json";
 import aExteriorFacade from "@/assets/gm/exterior-facade.jpg.asset.json";
 import aExteriorSign from "@/assets/gm/exterior-sign.jpg.asset.json";
 import aExteriorSign2 from "@/assets/gm/exterior-sign-2.jpg.asset.json";
+import aExteriorPremium from "@/assets/gm/exterior-premium.jpg.asset.json";
 import aFloorLogoWide from "@/assets/gm/floor-logo-wide.jpg.asset.json";
 import aFloorWide from "@/assets/gm/floor-wide.jpg.asset.json";
 import aFunctionalArea from "@/assets/gm/functional-area.jpg.asset.json";
@@ -43,6 +44,7 @@ export const PHOTOS = {
   exteriorBuilding: aExteriorBuilding.url,
   exteriorCafe: aExteriorCafe.url,
   exteriorFacade: aExteriorFacade.url,
+  exteriorPremium: aExteriorPremium.url,
 };
 
 /** Ordered gallery — best / highest-impact shots first. */
