@@ -299,20 +299,25 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
-        <img
-          src={heroImage}
-          alt="Herculean Fitness Club Jhalawar training floor"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 h-full w-full object-cover bg-black"
+        <video
+          src={heroVideo}
+          poster={heroImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Herculean Fitness Club Jhalawar training floor"
+          className="absolute inset-0 h-full w-full bg-black object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-black/90" aria-hidden />
         <div
           className="absolute inset-0 opacity-70"
           style={{ backgroundImage: `radial-gradient(circle at 70% 40%, rgba(245,115,14,0.35), transparent 60%)` }}
           aria-hidden
         />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
+          <Wordmark className="mb-6 md:mb-8" />
           <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
             <span className="block">Sweat.</span>
             <span className="block text-[color:var(--color-brand)]">Strength.</span>
