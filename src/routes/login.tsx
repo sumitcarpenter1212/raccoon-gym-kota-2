@@ -10,9 +10,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Member Login — Fitsters Club Jhalawar" },
-      { name: "description", content: "Log in to your Fitsters Club Jhalawar member account to view your bookings, enquiries and submitted forms." },
-      { property: "og:title", content: "Member Login — Fitsters Club Jhalawar" },
+      { title: "Member Login — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "Log in to your Herculean Fitness Club Jhalawar member account to view your bookings, enquiries and submitted forms." },
+      { property: "og:title", content: "Member Login — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Access your membership dashboard and booking history." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

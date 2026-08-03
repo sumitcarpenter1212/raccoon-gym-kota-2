@@ -9,9 +9,9 @@ import { GROUP_CLASSES, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/book-group-class")({
   head: () => ({
     meta: [
-      { title: "Book A Group Class — Fitsters Club Jhalawar" },
-      { name: "description", content: "Reserve your spot in yoga, dance fitness or functional group classes at Fitsters Club Jhalawar." },
-      { property: "og:title", content: "Book A Group Class — Fitsters Club Jhalawar" },
+      { title: "Book A Group Class — Herculean Fitness Club Jhalawar" },
+      { name: "description", content: "Reserve your spot in yoga, dance fitness or functional group classes at Herculean Fitness Club Jhalawar." },
+      { property: "og:title", content: "Book A Group Class — Herculean Fitness Club Jhalawar" },
       { property: "og:description", content: "Pick a class, date and time slot and we'll confirm your seat." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

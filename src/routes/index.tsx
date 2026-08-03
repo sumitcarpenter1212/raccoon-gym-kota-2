@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 import { MEMBER_LINKS } from "@/data/member-links";
 
-import logoFitsters from "@/assets/fitsters-logo.jpg";
+import logoHerculean from "@/assets/herculean-logo.png";
 import imgFloorWide from "@/assets/gm-floor-wide.jpg";
-const heroVideoSrc = "/hero-fitsters.mp4";
+import heroImage from "@/assets/herculean-hero.jpg";
 import imgFloorMachines from "@/assets/gm-floor-machines.jpg";
 import imgFloorOpen from "@/assets/gm-floor-open.jpg";
 import imgCardioBikes from "@/assets/gm-cardio-bikes.jpg";
@@ -43,17 +43,17 @@ import imgHeroBranded from "@/assets/gm-hero-branded.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fitsters Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
+      { title: "Herculean Fitness Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
       {
         name: "description",
         content:
-          "Fitsters Club Jhalawar — premium gym at Raghuveer Plaza, Mama Bhanja Circle. Gym, yoga, dance & personal training. Open 5 AM–10 PM. Call 84419 84416.",
+          "Herculean Fitness Club Jhalawar — a premium gym in Jhalawar, Rajasthan. Gym floor, group classes and personal training.",
       },
-      { property: "og:title", content: "Fitsters Club Jhalawar — Best Gym in Jhalawar" },
+      { property: "og:title", content: "Herculean Fitness Club Jhalawar — Best Gym in Jhalawar" },
       {
         property: "og:description",
         content:
-          "Premium equipment, certified trainers and 5.0★ Google-rated service in the heart of Jhalawar. Memberships from ₹1,800/month.",
+          "Premium equipment, qualified trainers and a spacious training floor in the heart of Jhalawar. Enquire online for current membership rates.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -62,10 +62,10 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const PHONE = "+918441984416";
-const PHONE_DISPLAY = "+91 84419 84416";
-const INSTAGRAM_URL = "https://www.instagram.com/fitsters_jwr/";
-const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
+const PHONE = "+919000000000";
+const PHONE_DISPLAY = "Phone coming soon";
+const INSTAGRAM_URL = "https://www.instagram.com/herculean_fitness_club/";
+const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
@@ -86,35 +86,30 @@ const SERVICES = [
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "Central Jhalawar Location", desc: "1st Floor, Raghuveer Plaza — right at Mama Bhanja Circle, Saket." },
+  { icon: Building2, title: "Jhalawar Location", desc: "Easy to reach from anywhere in Jhalawar — tap Get Directions for the map route." },
   { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Spacious floor with brand-new, high-quality machines." },
-  { icon: Users, title: "Qualified Trainers", desc: "A head trainer plus three dedicated personal trainers on the floor." },
-  { icon: Flame, title: "5.0★ Google Rated", desc: "Members consistently call us the best gym in Jhalawar." },
+  { icon: Users, title: "Qualified Trainers", desc: "Experienced trainers on the floor to guide your form and plan." },
+  { icon: Flame, title: "Google Rated", desc: "Loved by members across Jhalawar for the floor, staff and ambience." },
 ];
 
 const PRICING = [
-  { n: "01", name: "1 Month", price: "Rs.1,800", period: "/30 days", cat: "Gym Membership", features: ["Full gym access", "Floor guidance", "Flexible timings", "Great for starters"], popular: false },
-  { n: "02", name: "3 Months + 1 Month", price: "Rs.6,000", period: "/120 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Best short-term value"], popular: true },
-  { n: "03", name: "6 Months + 1 Month", price: "Rs.8,500", period: "/210 days", cat: "Gym Membership", features: ["1 bonus month free", "Full gym access", "Trainer guidance", "Save more per month"], popular: false },
-  { n: "04", name: "12 Months", price: "Rs.12,000", period: "/365 days", cat: "Gym Membership", features: ["Full year access", "Lowest monthly cost", "Trainer guidance", "Priority support"], popular: false },
+  { n: "01", name: "Monthly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full gym access", "Trainer guidance on the floor", "Flexible timings", "Great for starters"], popular: false },
+  { n: "02", name: "Quarterly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["3 months of full access", "Trainer guidance", "Better value per month", "Popular with regulars"], popular: true },
+  { n: "03", name: "Half Yearly", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["6 months of full access", "Trainer guidance", "Save more per month", "Steady progress plan"], popular: false },
+  { n: "04", name: "Annual", price: "Ask us", period: "Enquire for rates", cat: "Gym Membership", features: ["Full year access", "Lowest monthly cost", "Trainer guidance", "Priority support"], popular: false },
 ];
 
 const GROUP_CLASSES = [
-  { name: "Yoga Class", price: "Rs.1,000", period: "/30 days", desc: "Daily guided yoga sessions." },
-  { name: "Dance Class", price: "Rs.1,500", period: "/30 days", desc: "Fun, high-energy dance fitness." },
+  { name: "Yoga Class", price: "Ask us", period: "", desc: "Guided yoga sessions for flexibility and calm." },
+  { name: "Dance Fitness", price: "Ask us", period: "", desc: "Fun, high-energy dance fitness batches." },
 ];
 
 const PT_PLANS = [
-  { name: "1 Month PT", price: "Rs.7,000", period: "/30 days", desc: "One-on-one personal training." },
-  { name: "3 Months PT", price: "Rs.18,000", period: "/90 days", desc: "Full transformation programme." },
+  { name: "1 Month PT", price: "Ask us", period: "", desc: "One-on-one personal training." },
+  { name: "3 Months PT", price: "Ask us", period: "", desc: "Full transformation programme." },
 ];
 
-const TRAINERS = [
-  { name: "Arjan Singh", role: "Head Trainer", bio: "Specialises in fat loss, weight loss and body recomposition.", img: imgPtSession },
-  { name: "Mahesh Verma", role: "Personal Trainer", bio: "Strength training and weight loss for all populations — athletes to seniors.", img: imgCableMember },
-  { name: "Adnan", role: "Personal Trainer", bio: "A powerful role model demonstrating strength, discipline and resilience.", img: imgLegPress },
-  { name: "Tanveer Singh", role: "Personal Trainer", bio: "Highly skilled professional dedicated to helping members reach their goals.", img: imgFlex1 },
-];
+const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
 const GALLERY = [
   imgFloorWide,
@@ -135,21 +130,16 @@ const GALLERY = [
   imgTransformation,
 ];
 
-const TESTIMONIALS = [
-  { name: "Akshit Nagar", role: "Google Review", quote: "Best gym of Jhalawar. Most spacious, all new and premium quality equipments, reasonable prices and great ambience." },
-  { name: "Rahul Mittal", role: "Google Review", quote: "As a beginner I joined Fitsters gym last month — totally satisfied with trainers and quality equipment. Best gym of Jhalawar with a friendly atmosphere. In just one month this became my habit. Full 5 out of 5." },
-  { name: "Reshma Verma", role: "Google Review", quote: "I recently joined this newly opened gym and I'm super satisfied with the trainers and their services. They developed real consistency and dedication in me towards my fitness goal. I suggest everyone come and join this crowd." },
-  { name: "Shailly Singh", role: "Google Review", quote: "This is by far the greatest gym in Jhalawar. The staff is super amazing!! If you really feel like joining a gym, this should be it!!" },
-  { name: "Pooja Nayak", role: "Google Review", quote: "One of the finest gyms in Jhalawar. The knowledge and behaviour of the staff is impressive. Gym is fully equipped with high quality machines and great ambience." },
-];
+const TESTIMONIALS: { name: string; role: string; quote: string }[] = [];
 
 const FAQS = [
-  { q: "What are your timings?", a: "Fitsters Club Jhalawar is open daily from 5:00 AM to 10:00 PM." },
-  { q: "Where exactly are you located?", a: "1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001. Tap 'Get Directions' for the Google Maps route." },
-  { q: "How much is a monthly membership?", a: "Gym membership starts at Rs.1,800 for 30 days. Longer packages include bonus months — 3+1 months for Rs.6,000 and 6+1 months for Rs.8,500." },
-  { q: "Do you offer personal training?", a: "Yes. Personal training is Rs.7,000 for 1 month and Rs.18,000 for 3 months, with dedicated 1-on-1 coaching." },
-  { q: "Do you have group classes?", a: "Yes — Yoga at Rs.1,000/month and Dance Class at Rs.1,500/month. You can book a group class session online." },
+  { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar opens early morning and stays open till late evening. Call us to confirm today's batch timings." },
+  { q: "Where exactly are you located?", a: "We are in Jhalawar, Rajasthan. Tap 'Get Directions' for the exact Google Maps route." },
+  { q: "How much is a monthly membership?", a: "Gym, class and personal training rates change with running offers — send an enquiry and our team will share the current rates." },
+  { q: "Do you offer personal training?", a: "Yes. One-on-one personal training is available in 1-month and 3-month programmes with dedicated coaching." },
+  { q: "Do you have group classes?", a: "Yes — yoga and dance fitness batches run alongside the gym floor. You can book a group class session online." },
   { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
+
 ];
 
 function Embers() {
@@ -178,15 +168,15 @@ function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
-        src={logoFitsters}
-        alt="Fitsters Club Jhalawar logo"
+        src={logoHerculean}
+        alt="Herculean Fitness Club Jhalawar logo"
         width={160}
         height={160}
         className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
       <span className="flex flex-col leading-none">
         <span className="wordmark-3d whitespace-nowrap text-[22px] tracking-[0.06em] md:text-[26px]">
-          <span className="text-[color:var(--color-brand)]">Fitsters</span>
+          <span className="text-[color:var(--color-brand)]">Herculean</span>
           <span className="ml-1.5 text-white">Club</span>
         </span>
         <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em] md:text-[12px]">
@@ -249,7 +239,7 @@ function Header() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Fitsters Club Jhalawar on Instagram"
+            aria-label="Herculean Fitness Club Jhalawar on Instagram"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 transition hover:border-[color:var(--color-brand)]"
           >
             <InstagramGlyph size={22} />
@@ -263,7 +253,7 @@ function Header() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Fitsters Club Jhalawar on Instagram"
+            aria-label="Herculean Fitness Club Jhalawar on Instagram"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15"
           >
             <InstagramGlyph size={20} />
@@ -306,15 +296,11 @@ function VideoHero() {
   return (
     <section id="showreel" className="relative w-full overflow-hidden">
       <div className="relative h-[100svh] min-h-[560px] w-full">
-        <video
-          src={heroVideoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          aria-label="Fitsters Club Jhalawar training floor showreel"
+        <img
+          src={heroImage}
+          alt="Herculean Fitness Club Jhalawar training floor"
+          width={1920}
+          height={1088}
           className="absolute inset-0 h-full w-full object-cover bg-black"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/85" aria-hidden />
@@ -346,7 +332,7 @@ function VideoHero() {
             <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
             <span>Live Strong</span>
             <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
-            <span>Fitsters</span>
+            <span>Herculean</span>
           </div>
         </div>
       </div>
@@ -377,7 +363,7 @@ function Hero() {
             <span className="block text-[color:var(--color-brand)]">Your Life!</span>
           </h1>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Welcome to Fitsters Club Jhalawar — 1st Floor, Raghuveer Plaza, near Mama Bhanja Circle. Premium machines,
+            Welcome to Herculean Fitness Club Jhalawar. Premium machines,
             qualified trainers, yoga & dance classes and personal training, all under one roof.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -390,7 +376,7 @@ function Hero() {
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
-              ["5.0★", "Google Rating"],
+              ["Google", "Rated by Members"],
               ["4", "Expert Trainers"],
               ["5AM–10PM", "Open Daily"],
             ].map(([n, l]) => (
@@ -405,7 +391,7 @@ function Hero() {
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
           <img
             src={imgHeroBranded}
-            alt="Fitsters Club Jhalawar branded training floor with kettlebells, battle ropes and power racks"
+            alt="Herculean Fitness Club Jhalawar branded training floor with kettlebells, battle ropes and power racks"
             width={1024}
             height={1280}
             className="relative w-full max-w-[640px] mx-auto rounded-3xl object-cover shadow-[0_30px_80px_-20px_rgba(245,115,14,0.45)] ring-1 ring-white/10"
@@ -488,8 +474,8 @@ function About() {
             <span className="block text-[color:var(--color-brand)]">Further.</span>
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-[color:var(--color-body)]">
-            Fitsters Club is Jhalawar's premium fitness destination — a spacious, well-ventilated floor packed with all-new
-            commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our head trainer and
+            Herculean Fitness Club is Jhalawar's premium fitness destination — a spacious, well-ventilated floor packed with all-new
+            commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our trainers and
             personal training team build the plan around you.
           </p>
           <a href="#contact" className="btn-primary btn-primary-hover mt-8">
@@ -500,7 +486,7 @@ function About() {
           <div className="absolute -inset-6 rounded-[2rem] bg-[color:var(--color-brand-glow)]/20 blur-3xl" aria-hidden />
           <img
             src={imgFloorMachines}
-            alt="Inside Fitsters Club Jhalawar"
+            alt="Inside Herculean Fitness Club Jhalawar"
             width={1000}
             height={1200}
             loading="lazy"
@@ -577,7 +563,7 @@ function Pricing() {
             <h2 className="text-h2 font-black text-white">Membership Rates</h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Official Fitsters Club packages. Longer plans include bonus months — pick the one that fits your goal and enquire
+            Herculean Fitness Club membership plans. Pick the one that fits your goal and enquire
             online in seconds.
           </p>
         </div>
@@ -681,9 +667,14 @@ function Trainers() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Our Team</p>
           <h2 className="text-h2 font-black text-white">Meet Our Trainers</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            The team behind every transformation at Fitsters Club Jhalawar.
+            The team behind every transformation at Herculean Fitness Club Jhalawar.
           </p>
         </div>
+        {TRAINERS.length === 0 && (
+          <p className="mx-auto mt-10 max-w-xl rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">
+            Trainer profiles are being updated. Send an enquiry and we'll match you with the right coach.
+          </p>
+        )}
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TRAINERS.map((t) => (
             <div
@@ -719,13 +710,13 @@ function Gallery() {
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Photo Gallery</p>
             <h2 className="text-hero font-black leading-[0.9] text-white">
-              INSIDE <span className="text-[color:var(--color-brand)]">FITSTERS</span>
+              INSIDE <span className="text-[color:var(--color-brand)]">HERCULEAN</span>
               <br />
               CLUB JHALAWAR
             </h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            A look at our facilities — the spacious training floor, premium machines and the community that makes Fitsters
+            A look at our facilities — the spacious training floor, premium machines and the community that makes Herculean
             the best gym in Jhalawar.
           </p>
         </div>
@@ -735,7 +726,7 @@ function Gallery() {
             <div key={i} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#141210]">
               <img
                 src={src}
-                alt={`Fitsters Club Jhalawar facility photo ${i + 1}`}
+                alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
                 loading="lazy"
                 className="aspect-square h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -745,10 +736,10 @@ function Gallery() {
 
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { k: "5.0★", v: "Google Rating" },
+            { k: "Google", v: "Rated by Members" },
             { k: "4", v: "Trainers" },
             { k: "17h", v: "Open Daily" },
-            { k: "Rs.1,800", v: "From / Month" },
+            { k: "Flexible", v: "Membership Plans" },
           ].map((s, i) => (
             <div key={i} className="rounded-2xl border border-white/10 bg-[#141210] p-6 text-center">
               <p className="font-display text-3xl text-[color:var(--color-brand)]">{s.k}</p>
@@ -769,9 +760,14 @@ function Testimonials() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Testimonials</p>
           <h2 className="text-h2 font-black text-white">Real Google Reviews</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Rated <span className="font-bold text-white">5.0★</span> on Google by members of Fitsters Club Jhalawar.
+            Genuine Google reviews from members of Herculean Fitness Club Jhalawar.
           </p>
         </div>
+        {TESTIMONIALS.length === 0 && (
+          <p className="mx-auto mt-10 max-w-xl rounded-3xl border border-dashed border-white/15 bg-[#121212] p-8 text-center text-[15px] text-[color:var(--color-body)]">
+            Member reviews are being added shortly — read them on our Google profile below.
+          </p>
+        )}
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div key={t.name} className="flex flex-col rounded-3xl border border-white/10 bg-[#121212] p-8">
@@ -807,10 +803,10 @@ function BigCta() {
         <div className="max-w-2xl">
           <h2 className="text-hero font-black uppercase text-white">
             Ready to Join <br />
-            <span className="text-[color:var(--color-brand)]">Fitsters Club</span> Jhalawar?
+            <span className="text-[color:var(--color-brand)]">Herculean Fitness Club</span> Jhalawar?
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Walk in for a trial session today. Meet the trainers, tour the floor and see why Fitsters is Jhalawar's
+            Walk in for a trial session today. Meet the trainers, tour the floor and see why Herculean is Jhalawar's
             highest-rated fitness club.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -865,7 +861,7 @@ function Contact() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Contact</p>
           <h2 className="text-h2 font-black text-white">Get In Touch</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Visit us at Raghuveer Plaza, Mama Bhanja Circle, Jhalawar — or send an enquiry and we'll call you back.
+            Visit us in Jhalawar — or send an enquiry and we'll call you back.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -875,7 +871,7 @@ function Contact() {
               <ul className="mt-6 space-y-4 text-[15px] text-[color:var(--color-body)]">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-1 shrink-0 text-[color:var(--color-brand)]" />
-                  1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001
+                  Jhalawar, Rajasthan — full address updating soon
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-[color:var(--color-brand)]" />
@@ -886,8 +882,8 @@ function Contact() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
-                  <a href="https://www.instagram.com/fitsters_jwr/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                    @fitsters_jwr
+                  <a href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    @herculean_fitness_club
                   </a>
                 </li>
               </ul>
@@ -912,8 +908,8 @@ function Contact() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-white/10">
             <iframe
-              title="Fitsters Club Jhalawar location"
-              src="https://www.google.com/maps?q=Fitsters+Club+Jhalawar&ll=24.591914,76.1563261&z=17&output=embed"
+              title="Herculean Fitness Club Jhalawar location"
+              src="https://www.google.com/maps?q=Herculean+Fitness+Club+Jhalawar&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -932,7 +928,7 @@ function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-[1.7] text-[color:var(--color-body)]">
-            Fitsters Athletic Club — Jhalawar's premium gym at Mama Bhanja Circle. Train hard. Live strong.
+            Herculean Fitness Club — Jhalawar's premium gym at Mama Bhanja Circle. Train hard. Live strong.
           </p>
         </div>
         <div>
@@ -961,7 +957,7 @@ function Footer() {
           </ul>
           <div className="mt-4 flex gap-2">
             <a
-              href="https://www.instagram.com/fitsters_jwr/"
+              href="https://www.instagram.com/herculean_fitness_club/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -983,7 +979,7 @@ function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-white/50 md:flex-row md:px-8">
-          <div>© {new Date().getFullYear()} Fitsters Club Jhalawar — All Rights Reserved.</div>
+          <div>© {new Date().getFullYear()} Herculean Fitness Club Jhalawar — All Rights Reserved.</div>
           <div className="flex gap-6">
             <Link to="/feedback" className="hover:text-white">Feedback</Link>
             <Link to="/enquiry" className="hover:text-white">Enquiry</Link>
