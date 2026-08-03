@@ -161,7 +161,7 @@ function openExt(e: React.MouseEvent<HTMLAnchorElement>) {
 
 function Embers() {
   const [seeds] = useState(() =>
-    Array.from({ length: 24 }, (_, i) => ({
+    Array.from({ length: 14 }, (_, i) => ({
       left: `${(i * 37) % 100}%`,
       delay: `${(i * 0.7) % 12}s`,
       duration: `${8 + (i % 6)}s`,
@@ -321,6 +321,7 @@ function VideoHero() {
           loop
           playsInline
           preload="metadata"
+          disablePictureInPicture
           aria-label="Herculean Fitness Club Jhalawar training floor"
           className="absolute inset-0 h-full w-full bg-black object-cover object-center"
         />
@@ -410,7 +411,7 @@ function Hero() {
           </div>
         </div>
         <div className="relative order-1 lg:order-2 lg:-mr-6">
-          <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-3xl" aria-hidden />
+          <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-2xl md:blur-3xl" aria-hidden />
           <img
             src={imgHeroBranded}
             alt="Herculean Fitness Club Jhalawar building exterior with signage on Darbaar Kothi Road"
