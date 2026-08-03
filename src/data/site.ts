@@ -36,12 +36,12 @@ export const IMAGES = {
   heroBranded: imgHeroBranded,
 };
 
-export const PHONE = "+918441984416";
-export const PHONE_DISPLAY = "+91 84419 84416";
-export const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
-export const INSTAGRAM = "https://www.instagram.com/fitsters_jwr/";
+export const PHONE = "+919000000000";
+export const PHONE_DISPLAY = "Phone coming soon";
+export const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
+export const INSTAGRAM = "https://www.instagram.com/herculean_fitness_club/";
 export const ADDRESS =
-  "1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001";
+  "Jhalawar, Rajasthan — full address updating soon";
 
 export const GYM_PACKAGES = [
   { n: "01", name: "1 Month", price: "Rs.1,800", period: "/30 days", cat: "Gym Membership", features: ["Full gym access", "Floor guidance", "Flexible timings", "Great for starters"], popular: false },

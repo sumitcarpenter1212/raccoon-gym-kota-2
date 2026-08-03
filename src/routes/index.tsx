@@ -62,10 +62,10 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const PHONE = "+918441984416";
-const PHONE_DISPLAY = "+91 84419 84416";
-const INSTAGRAM_URL = "https://www.instagram.com/fitsters_jwr/";
-const MAPS_LINK = "https://maps.app.goo.gl/4X9uRmA25ZDBSxcW6";
+const PHONE = "+919000000000";
+const PHONE_DISPLAY = "Phone coming soon";
+const INSTAGRAM_URL = "https://www.instagram.com/herculean_fitness_club/";
+const MAPS_LINK = "https://maps.app.goo.gl/bP2aZp4Ve9WtJP4g7";
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
@@ -145,7 +145,7 @@ const TESTIMONIALS = [
 
 const FAQS = [
   { q: "What are your timings?", a: "Herculean Fitness Club Jhalawar is open daily from 5:00 AM to 10:00 PM." },
-  { q: "Where exactly are you located?", a: "1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001. Tap 'Get Directions' for the Google Maps route." },
+  { q: "Where exactly are you located?", a: "Jhalawar, Rajasthan — full address updating soon. Tap 'Get Directions' for the Google Maps route." },
   { q: "How much is a monthly membership?", a: "Gym membership starts at Rs.1,800 for 30 days. Longer packages include bonus months — 3+1 months for Rs.6,000 and 6+1 months for Rs.8,500." },
   { q: "Do you offer personal training?", a: "Yes. Personal training is Rs.7,000 for 1 month and Rs.18,000 for 3 months, with dedicated 1-on-1 coaching." },
   { q: "Do you have group classes?", a: "Yes — Yoga at Rs.1,000/month and Dance Class at Rs.1,500/month. You can book a group class session online." },
@@ -875,7 +875,7 @@ function Contact() {
               <ul className="mt-6 space-y-4 text-[15px] text-[color:var(--color-body)]">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-1 shrink-0 text-[color:var(--color-brand)]" />
-                  1st Floor, Raghuveer Plaza, near Mama Bhanja Circle, Saket, Jhalawar, Rajasthan 326001
+                  Jhalawar, Rajasthan — full address updating soon
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-[color:var(--color-brand)]" />
@@ -886,7 +886,7 @@ function Contact() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram size={18} className="text-[color:var(--color-brand)]" />
-                  <a href="https://www.instagram.com/fitsters_jwr/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  <a href="https://www.instagram.com/herculean_fitness_club/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     @fitsters_jwr
                   </a>
                 </li>
@@ -913,7 +913,7 @@ function Contact() {
           <div className="overflow-hidden rounded-3xl border border-white/10">
             <iframe
               title="Herculean Fitness Club Jhalawar location"
-              src="https://www.google.com/maps?q=Herculean+Club+Jhalawar&ll=24.591914,76.1563261&z=17&output=embed"
+              src="https://www.google.com/maps?q=Herculean+Fitness+Club+Jhalawar&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -961,7 +961,7 @@ function Footer() {
           </ul>
           <div className="mt-4 flex gap-2">
             <a
-              href="https://www.instagram.com/fitsters_jwr/"
+              href="https://www.instagram.com/herculean_fitness_club/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
