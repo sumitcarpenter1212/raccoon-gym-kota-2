@@ -954,7 +954,9 @@ function Footer() {
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Reach Us</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><a href={`tel:${PHONE}`} className="hover:text-[color:var(--color-brand)]">{PHONE_DISPLAY}</a></li>
-            <li>5:00 AM – 10:00 PM daily</li>
+            <li>5:00 AM – 11:00 PM daily</li>
+            <li>{ADDRESS}</li>
+
           </ul>
           <div className="mt-4 flex gap-2">
             <a
