@@ -512,7 +512,7 @@ function About() {
             alt="Inside Herculean Fitness Club Jhalawar"
             width={1000}
             height={1200}
-            loading="lazy"
+            loading="lazy" decoding="async"
             className="relative w-full rounded-3xl object-cover"
           />
         </div>
@@ -537,7 +537,7 @@ function Services() {
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
             <div key={s.title} className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-              <img src={s.img} alt={s.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <img src={s.img} alt={s.title} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <h3 className="font-display text-2xl uppercase text-white md:text-[26px]">{s.title}</h3>
@@ -760,7 +760,7 @@ function Gallery() {
               <img
                 src={src}
                 alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 className="aspect-square h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -830,7 +830,7 @@ function Testimonials() {
 function BigCta() {
   return (
     <section className="relative overflow-hidden">
-      <img src={imgCardioTreadmills} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={imgCardioTreadmills} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
       <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-8 md:py-36">
         <div className="max-w-2xl">
@@ -945,7 +945,7 @@ function Contact() {
               title="Herculean Fitness Club Jhalawar location"
               src="https://www.google.com/maps?q=Herculean+Fitness+Club+Jhalawar&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
-              loading="lazy"
+              loading="lazy" decoding="async"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>

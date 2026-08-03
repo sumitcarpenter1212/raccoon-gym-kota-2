@@ -32,7 +32,7 @@ function TrainersPage() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {TRAINERS.map((t) => (
           <div key={t.name} className="overflow-hidden rounded-3xl border border-white/10 bg-[#121212]">
-            <img src={t.img} alt={t.name} loading="lazy" className="h-72 w-full object-cover" />
+            <img src={t.img} alt={t.name} loading="lazy" decoding="async" className="h-72 w-full object-cover" />
             <div className="p-6">
               <h2 className="font-display text-2xl uppercase text-white">{t.name}</h2>
               <p className="mt-1 text-xs font-bold uppercase tracking-[0.25em] text-[color:var(--color-brand)]">{t.role}</p>
