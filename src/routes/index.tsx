@@ -548,7 +548,17 @@ function Features() {
             </div>
           ))}
         </div>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {BRANCHES.map((b) => (
+            <div key={b.name} className="rounded-2xl border border-[color:var(--color-brand)]/25 bg-[#101010] p-6">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Branch</p>
+              <h3 className="mt-2 font-display text-xl uppercase text-white">{b.name}</h3>
+              <p className="mt-2 text-[15px] leading-[1.6] text-[color:var(--color-body)]">{b.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
     </section>
   );
 }
