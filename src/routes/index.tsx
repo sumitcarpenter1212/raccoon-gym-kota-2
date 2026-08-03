@@ -32,7 +32,7 @@ import {
   BRANCHES,
 } from "@/data/site";
 
-import heroVideoAsset from "@/assets/hero-herculean.mp4.asset.json";
+import heroVideoAsset from "@/assets/hero-herculean-v2.mp4.asset.json";
 
 const heroImage = PHOTOS.hero;
 const heroVideo = heroVideoAsset.url;
