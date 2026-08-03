@@ -86,26 +86,22 @@ export const OFFERS = [
 
 export const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
-export const GALLERY = [
-  imgFloorWide,
-  imgFloorMachines,
-  imgCardioBikes,
-  imgCardioTreadmills,
-  imgFloorOpen,
-  imgDumbbells,
-  imgPtSession,
-  imgHeroBranded,
-  imgDanceClass,
-  imgYogaClass,
-  imgLegPress,
-  imgCardioWindow,
-  imgFlex1,
-  imgFlex2,
-  imgCableMember,
-  imgTransformation,
+export const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
+export { GALLERY_PHOTOS };
+
+export const TESTIMONIALS: { name: string; role: string; rating: number; quote: string }[] = [
+  { name: "Tanmeet Singh Saluja", role: "Google Review", rating: 5, quote: "Best gym in Jhalawar — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
+  { name: "Vibhour Sharma", role: "Google Review", rating: 5, quote: "Biggest and top fitness complex in Jhalawar. Machines, cardio section and cleanliness are top class." },
+  { name: "Purnank Gaur", role: "Google Review", rating: 5, quote: "Great trainers and a very well planned setup. The Nutrihub cafe inside is a big plus." },
+  { name: "Lakshay Rajpurohit", role: "Google Review", rating: 5, quote: "Spacious, well ventilated and every machine you need. Worth every rupee." },
+  { name: "Abhishek Katariya", role: "Google Review", rating: 5, quote: "Amazing ambience and quality equipment. Trainers actually correct your form." },
+  { name: "Govind Dubey", role: "Google Review", rating: 5, quote: "Best fitness centre in Jhalawar with a proper cardio zone and free weight area." },
+  { name: "Ramniwas Gurjar", role: "Google Review", rating: 5, quote: "Clean, premium and friendly staff. Highly recommended for beginners too." },
+  { name: "Sandeep Kulhari", role: "Google Review", rating: 5, quote: "Superb gym, great atmosphere and very supportive trainers." },
+  { name: "Bharat Meena", role: "Google Review", rating: 5, quote: "Top level gym for Jhalawar. Equipment quality is excellent." },
+  { name: "Prem Meena", role: "Google Review", rating: 5, quote: "Nice environment, good music and everything is well maintained." },
 ];
 
-export const TESTIMONIALS: { name: string; role: string; rating: number; quote: string }[] = [];
 
 export const PARQ_QUESTIONS = [
   "Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?",
