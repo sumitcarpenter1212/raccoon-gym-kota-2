@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
-import { GALLERY, IMAGES } from "@/data/site";
+import { IMAGES } from "@/data/site";
+import { GALLERY_PHOTOS } from "@/data/photos";
+
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
