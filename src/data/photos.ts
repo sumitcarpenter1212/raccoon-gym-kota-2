@@ -1,4 +1,5 @@
 // Real photos of Herculean Fitness Club Jhalawar (Google Business Profile), CDN-hosted.
+import { assetUrl } from "@/lib/asset-url";
 import aBenchRack from "@/assets/gm/bench-rack.jpg.asset.json";
 import aCardioOpen from "@/assets/gm/cardio-open.jpg.asset.json";
 import aCardioZone from "@/assets/gm/cardio-zone.jpg.asset.json";
@@ -23,28 +24,28 @@ import aStudioRoom from "@/assets/gm/studio-room.jpg.asset.json";
 import aTreadmills from "@/assets/gm/treadmills.jpg.asset.json";
 
 export const PHOTOS = {
-  hero: aHero.url,
-  floorLogoWide: aFloorLogoWide.url,
-  floorWide: aFloorWide.url,
-  strengthMachines: aStrengthMachines.url,
-  strengthArea: aStrengthArea.url,
-  plateLoaded: aPlateLoaded.url,
-  squatRacks: aSquatRacks.url,
-  benchRack: aBenchRack.url,
-  dumbbellRacks: aDumbbellRacks.url,
-  legPress: aLegPress.url,
-  machinesWood: aMachinesWood.url,
-  functionalArea: aFunctionalArea.url,
-  cardioZone: aCardioZone.url,
-  cardioOpen: aCardioOpen.url,
-  treadmills: aTreadmills.url,
-  studioRoom: aStudioRoom.url,
-  exteriorSign: aExteriorSign.url,
-  exteriorSign2: aExteriorSign2.url,
-  exteriorBuilding: aExteriorBuilding.url,
-  exteriorCafe: aExteriorCafe.url,
-  exteriorFacade: aExteriorFacade.url,
-  exteriorPremium: aExteriorPremium.url,
+  hero: assetUrl(aHero.url),
+  floorLogoWide: assetUrl(aFloorLogoWide.url),
+  floorWide: assetUrl(aFloorWide.url),
+  strengthMachines: assetUrl(aStrengthMachines.url),
+  strengthArea: assetUrl(aStrengthArea.url),
+  plateLoaded: assetUrl(aPlateLoaded.url),
+  squatRacks: assetUrl(aSquatRacks.url),
+  benchRack: assetUrl(aBenchRack.url),
+  dumbbellRacks: assetUrl(aDumbbellRacks.url),
+  legPress: assetUrl(aLegPress.url),
+  machinesWood: assetUrl(aMachinesWood.url),
+  functionalArea: assetUrl(aFunctionalArea.url),
+  cardioZone: assetUrl(aCardioZone.url),
+  cardioOpen: assetUrl(aCardioOpen.url),
+  treadmills: assetUrl(aTreadmills.url),
+  studioRoom: assetUrl(aStudioRoom.url),
+  exteriorSign: assetUrl(aExteriorSign.url),
+  exteriorSign2: assetUrl(aExteriorSign2.url),
+  exteriorBuilding: assetUrl(aExteriorBuilding.url),
+  exteriorCafe: assetUrl(aExteriorCafe.url),
+  exteriorFacade: assetUrl(aExteriorFacade.url),
+  exteriorPremium: assetUrl(aExteriorPremium.url),
 };
 
 /** Ordered gallery — best / highest-impact shots first. */
