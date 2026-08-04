@@ -33,9 +33,10 @@ import {
 } from "@/data/site";
 
 import heroVideoAsset from "@/assets/hero-herculean-v3.mp4.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 const heroImage = PHOTOS.hero;
-const heroVideo = heroVideoAsset.url;
+const heroVideo = assetUrl(heroVideoAsset.url);
 const imgFloorWide = PHOTOS.floorWide;
 const imgFloorMachines = PHOTOS.strengthMachines;
 const imgFloorOpen = PHOTOS.floorLogoWide;
@@ -332,7 +333,6 @@ function VideoHero() {
           aria-hidden
         />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
-          <Wordmark className="mb-6 md:mb-8" />
           <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
             <span className="block">Sweat.</span>
             <span className="block text-[color:var(--color-brand)]">Strength.</span>
