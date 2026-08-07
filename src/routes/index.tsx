@@ -980,8 +980,8 @@ function Footer() {
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Members</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><Link to="/login" className="hover:text-[color:var(--color-brand)]">Client Login</Link></li>
-            <li><Link to="/book-group-class" className="hover:text-[color:var(--color-brand)]">Book Group Class</Link></li>
-            <li><Link to="/book-pt" className="hover:text-[color:var(--color-brand)]">Book PT Session</Link></li>
+            <li><Link to="/book-group-class" search={{ class: undefined }} className="hover:text-[color:var(--color-brand)]">Book Group Class</Link></li>
+            <li><Link to="/book-pt" search={{ trainer: undefined }} className="hover:text-[color:var(--color-brand)]">Book PT Session</Link></li>
             <li><Link to="/offers" className="hover:text-[color:var(--color-brand)]">Offers</Link></li>
           </ul>
         </div>
