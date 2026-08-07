@@ -1020,7 +1020,7 @@ function Footer() {
           <div>© {new Date().getFullYear()} Atmos Fitness Kota — All Rights Reserved.</div>
           <div className="flex gap-6">
             <Link to="/feedback" className="hover:text-white">Feedback</Link>
-            <Link to="/enquiry" className="hover:text-white">Enquiry</Link>
+            <Link to="/enquiry" search={{ package: undefined }} className="hover:text-white">Enquiry</Link>
           </div>
         </div>
       </div>
