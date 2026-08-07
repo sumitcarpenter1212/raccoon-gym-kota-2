@@ -995,7 +995,7 @@ function Footer() {
           </ul>
           <div className="mt-4 flex gap-2">
             <a onClick={openExt}
-              href="https://www.instagram.com/herculean_fitness_club/"
+              href={INSTAGRAM}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
