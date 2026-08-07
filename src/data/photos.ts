@@ -49,7 +49,7 @@ export const PHOTOS = {
   interior11: assetUrl(a19.url),
 };
 
-/** Ordered gallery — best / highest-impact shots first. */
+/** Ordered gallery — focused on high-quality unique shots. */
 export const GALLERY_PHOTOS: { src: string; caption: string }[] = [
   { src: PHOTOS.hero, caption: "Spacious training hall with premium equipment" },
   { src: PHOTOS.strengthArea, caption: "Professional strength training zone" },
@@ -59,16 +59,11 @@ export const GALLERY_PHOTOS: { src: string; caption: string }[] = [
   { src: PHOTOS.dumbbells, caption: "Extensive free weight and dumbbell section" },
   { src: PHOTOS.reception, caption: "Welcoming reception and member lounge" },
   { src: PHOTOS.entrance, caption: "Grand entrance of Atmos Fitness Kota" },
-  { src: PHOTOS.interior1, caption: "High-end fitness infrastructure" },
-  { src: PHOTOS.interior2, caption: "Optimized space for group workouts" },
-  { src: PHOTOS.interior3, caption: "Premium lifting platforms and racks" },
   { src: PHOTOS.interior4, caption: "Clean and well-maintained training floor" },
-  { src: PHOTOS.interior5, caption: "Top-tier cardio equipment lineup" },
   { src: PHOTOS.interior6, caption: "Dynamic lighting and professional atmosphere" },
   { src: PHOTOS.exteriorFacade, caption: "Atmos Fitness Kota - Exterior View" },
   { src: PHOTOS.interior7, caption: "Advanced strength building stations" },
-  { src: PHOTOS.interior8, caption: "Dedicated space for personal training" },
   { src: PHOTOS.interior9, caption: "Member lockers and premium amenities" },
   { src: PHOTOS.interior10, caption: "Expertly designed workout zones" },
-  { src: PHOTOS.interior11, caption: "Experience the elite fitness community" },
+  { src: PHOTOS.interior3, caption: "Premium lifting platforms and racks" },
 ];
