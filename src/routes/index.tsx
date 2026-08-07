@@ -30,6 +30,7 @@ import {
   HOURS,
   RATING,
   BRANCHES,
+  INSTAGRAM,
 } from "@/data/site";
 
 import heroVideoAsset from "@/assets/hero-herculean-v3.mp4.asset.json";
@@ -37,14 +38,14 @@ import { assetUrl } from "@/lib/asset-url";
 
 const heroImage = PHOTOS.hero;
 const heroVideo = assetUrl(heroVideoAsset.url);
-const imgFloorWide = PHOTOS.floorWide;
-const imgFloorMachines = PHOTOS.strengthMachines;
-const imgFloorOpen = PHOTOS.floorLogoWide;
+const imgFloorWide = PHOTOS.hero;
+const imgFloorMachines = PHOTOS.machines;
+const imgFloorOpen = PHOTOS.strengthArea;
 const imgCardioBikes = PHOTOS.cardioZone;
-const imgDumbbells = PHOTOS.dumbbellRacks;
+const imgDumbbells = PHOTOS.dumbbells;
 const imgPtSession = PHOTOS.functionalArea;
-const imgYogaClass = PHOTOS.studioRoom;
-const imgDanceClass = PHOTOS.benchRack;
+const imgYogaClass = PHOTOS.interior2;
+const imgDanceClass = PHOTOS.interior1;
 
 
 export const Route = createFileRoute("/")({
@@ -120,7 +121,7 @@ const PT_PLANS = [
 const TRAINERS: { name: string; role: string; bio: string; img: string }[] = [];
 
 const imgHeroBranded = PHOTOS.exteriorPremium;
-const imgCardioTreadmills = PHOTOS.treadmills;
+const imgCardioTreadmills = PHOTOS.interior5;
 
 const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
 
@@ -663,7 +664,7 @@ function Pricing() {
                 </div>
               ))}
             </div>
-            <Link to="/book-group-class" className="btn-primary btn-primary-hover mt-6">
+            <Link to="/book-group-class" search={{ class: undefined }} className="btn-primary btn-primary-hover mt-6">
               Book Group Class
             </Link>
           </div>
@@ -980,8 +981,8 @@ function Footer() {
           <h4 className="font-display text-sm uppercase tracking-widest text-white">Members</h4>
           <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-body)]">
             <li><Link to="/login" className="hover:text-[color:var(--color-brand)]">Client Login</Link></li>
-            <li><Link to="/book-group-class" className="hover:text-[color:var(--color-brand)]">Book Group Class</Link></li>
-            <li><Link to="/book-pt" className="hover:text-[color:var(--color-brand)]">Book PT Session</Link></li>
+            <li><Link to="/book-group-class" search={{ class: undefined }} className="hover:text-[color:var(--color-brand)]">Book Group Class</Link></li>
+            <li><Link to="/book-pt" search={{ trainer: undefined }} className="hover:text-[color:var(--color-brand)]">Book PT Session</Link></li>
             <li><Link to="/offers" className="hover:text-[color:var(--color-brand)]">Offers</Link></li>
           </ul>
         </div>
@@ -995,7 +996,7 @@ function Footer() {
           </ul>
           <div className="mt-4 flex gap-2">
             <a onClick={openExt}
-              href="https://www.instagram.com/herculean_fitness_club/"
+              href={INSTAGRAM}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -1020,7 +1021,7 @@ function Footer() {
           <div>© {new Date().getFullYear()} Atmos Fitness Kota — All Rights Reserved.</div>
           <div className="flex gap-6">
             <Link to="/feedback" className="hover:text-white">Feedback</Link>
-            <Link to="/enquiry" className="hover:text-white">Enquiry</Link>
+            <Link to="/enquiry" search={{ package: undefined }} className="hover:text-white">Enquiry</Link>
           </div>
         </div>
       </div>
