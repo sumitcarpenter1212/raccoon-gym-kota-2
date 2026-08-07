@@ -7,6 +7,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { GROUP_CLASSES, IMAGES } from "@/data/site";
 
 export const Route = createFileRoute("/book-group-class")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    class: typeof search.class === "string" ? search.class : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Book A Group Class — Atmos Fitness Kota" },
