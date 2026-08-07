@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { MEMBER_LINKS } from "@/data/member-links";
 
-import logoAtmos from "@/assets/herculean-logo.png";
+import raccoonLogo from "@/assets/raccoon-logo.png.asset.json";
 import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
 import {
   PHONE as SITE_PHONE,
@@ -187,20 +187,20 @@ function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
-        src={logoAtmos}
-        alt="Atmos Fitness Kota logo"
+        src={raccoonLogo.url}
+        alt="Raccoon Fitness logo"
         width={160}
         height={160}
         className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
       <span className="flex flex-col leading-none">
         <span className="wordmark-3d whitespace-nowrap text-[22px] tracking-[0.06em] md:text-[26px]">
-          <span className="text-[color:var(--color-brand)]">Atmos</span>
-          <span className="ml-1.5 text-white">Club</span>
+          <span className="text-[color:var(--color-brand)]">Raccoon</span>
+          <span className="ml-1.5 text-white">Fitness</span>
         </span>
-        <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em] md:text-[12px]">
+        <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.2em] md:text-[12px]">
           <span className="h-px w-5 bg-[color:var(--color-brand)]/70" />
-          Kota
+          Gurgaon
         </span>
       </span>
     </span>
