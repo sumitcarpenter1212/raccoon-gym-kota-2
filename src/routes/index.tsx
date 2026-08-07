@@ -30,6 +30,7 @@ import {
   HOURS,
   RATING,
   BRANCHES,
+  INSTAGRAM,
 } from "@/data/site";
 
 import heroVideoAsset from "@/assets/hero-herculean-v3.mp4.asset.json";
