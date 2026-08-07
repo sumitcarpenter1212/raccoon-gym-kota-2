@@ -9,9 +9,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/feedback")({
   head: () => ({
     meta: [
-      { title: "Feedback — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Share your genuine suggestions with Herculean Fitness Club Jhalawar so we can keep improving equipment, classes and service." },
-      { property: "og:title", content: "Feedback — Herculean Fitness Club Jhalawar" },
+      { title: "Feedback — Atmos Fitness Kota" },
+      { name: "description", content: "Share your genuine suggestions with Atmos Fitness Kota so we can keep improving equipment, classes and service." },
+      { property: "og:title", content: "Feedback — Atmos Fitness Kota" },
       { property: "og:description", content: "Rate your experience and tell us how we can improve." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

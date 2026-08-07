@@ -9,9 +9,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/trial-waiver")({
   head: () => ({
     meta: [
-      { title: "Trial Waiver & Release Form — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Sign the trial waiver and release form online to book your free trial session at Herculean Fitness Club Jhalawar." },
-      { property: "og:title", content: "Trial Waiver — Herculean Fitness Club Jhalawar" },
+      { title: "Trial Waiver & Release Form — Atmos Fitness Kota" },
+      { name: "description", content: "Sign the trial waiver and release form online to book your free trial session at Atmos Fitness Kota." },
+      { property: "og:title", content: "Trial Waiver — Atmos Fitness Kota" },
       { property: "og:description", content: "Complete the release form and claim your free trial session." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,7 +24,7 @@ const WAIVER = [
   "I understand that a trial session involves physical exertion and carries an inherent risk of injury.",
   "I confirm that I am medically fit to take part and have disclosed any condition that may affect my safety.",
   "I take full responsibility for my own health and safety during the trial session.",
-  "I release Herculean Fitness Club Jhalawar, its owners, trainers and staff from liability for injury or loss arising from my participation, except in the case of proven negligence.",
+  "I release Atmos Fitness Kota, its owners, trainers and staff from liability for injury or loss arising from my participation, except in the case of proven negligence.",
   "I agree to follow all instructions given by the trainers and all club rules while on the premises.",
   "I understand that the trial session is a one-time complimentary session and does not include membership benefits.",
 ];

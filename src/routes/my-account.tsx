@@ -8,9 +8,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/my-account")({
   head: () => ({
     meta: [
-      { title: "My Account — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "View your Herculean Fitness Club Jhalawar bookings, enquiries, feedback and signed forms in one member dashboard." },
-      { property: "og:title", content: "My Account — Herculean Fitness Club Jhalawar" },
+      { title: "My Account — Atmos Fitness Kota" },
+      { name: "description", content: "View your Atmos Fitness Kota bookings, enquiries, feedback and signed forms in one member dashboard." },
+      { property: "og:title", content: "My Account — Atmos Fitness Kota" },
       { property: "og:description", content: "Your bookings and submitted forms in one place." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -76,8 +76,8 @@ function MyAccountPage() {
       ) : (
         <>
           <div className="mb-8 flex flex-wrap justify-center gap-3">
-            <Link to="/book-group-class" className="btn-ghost">Book Class</Link>
-            <Link to="/book-pt" className="btn-ghost">Book PT</Link>
+            <Link to="/book-group-class" search={{ class: undefined }} className="btn-ghost">Book Class</Link>
+            <Link to="/book-pt" search={{ trainer: undefined }} className="btn-ghost">Book PT</Link>
             <Link to="/packages" className="btn-ghost">Packages</Link>
             <button onClick={signOut} className="btn-primary btn-primary-hover">
               <LogOut size={16} /> Log Out

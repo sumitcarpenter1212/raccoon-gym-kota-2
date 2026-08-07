@@ -6,9 +6,9 @@ import { GYM_PACKAGES, GROUP_CLASSES, PT_PLANS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/packages")({
   head: () => ({
     meta: [
-      { title: "Membership Packages & Fees — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Gym membership, yoga and dance class batches and one-on-one personal training at Herculean Fitness Club Jhalawar. Enquire for current rates." },
-      { property: "og:title", content: "Membership Packages — Herculean Fitness Club Jhalawar" },
+      { title: "Membership Packages & Fees — Atmos Fitness Kota" },
+      { name: "description", content: "Gym membership, yoga and dance class batches and one-on-one personal training at Atmos Fitness Kota. Enquire for current rates." },
+      { property: "og:title", content: "Membership Packages — Atmos Fitness Kota" },
       { property: "og:description", content: "Gym, group class and personal training packages with transparent pricing." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -75,7 +75,7 @@ function PackagesPage() {
               </div>
             ))}
           </div>
-          <Link to="/book-group-class" className="btn-primary btn-primary-hover mt-6">
+          <Link to="/book-group-class" search={{ class: undefined }} className="btn-primary btn-primary-hover mt-6">
             Book Group Class <ChevronRight size={16} />
           </Link>
         </div>
@@ -96,7 +96,7 @@ function PackagesPage() {
               </div>
             ))}
           </div>
-          <Link to="/book-pt" className="btn-primary btn-primary-hover mt-6">
+          <Link to="/book-pt" search={{ trainer: undefined }} className="btn-primary btn-primary-hover mt-6">
             Book PT Session <ChevronRight size={16} />
           </Link>
         </div>

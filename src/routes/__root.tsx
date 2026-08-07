@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Herculean Fitness Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
+      { title: "Atmos Fitness Kota — Best Gym & Fitness Club in Kota" },
       {
         name: "description",
         content:
-          "Herculean Fitness Club Jhalawar is a premium gym in Jhalawar, Rajasthan offering a full gym floor, group classes and personal training.",
+          "Atmos Fitness Kota is a premium gym in Kota, Rajasthan offering a full gym floor, group classes and personal training.",
       },
-      { name: "author", content: "Herculean Fitness Club Jhalawar" },
-      { property: "og:title", content: "Herculean Fitness Club Jhalawar — Train Hard. Live Strong." },
+      { name: "author", content: "Atmos Fitness Kota" },
+      { property: "og:title", content: "Atmos Fitness Kota — Train Hard. Live Strong." },
       {
         property: "og:description",
         content:
-          "A premium fitness club in Jhalawar — modern equipment, qualified trainers, yoga & dance classes and personal training.",
+          "A premium fitness club in Kota — modern equipment, qualified trainers, yoga & dance classes and personal training.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

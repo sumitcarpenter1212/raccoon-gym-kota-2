@@ -50,17 +50,17 @@ const imgDanceClass = PHOTOS.benchRack;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Herculean Fitness Club Jhalawar — Best Gym & Fitness Club in Jhalawar" },
+      { title: "Atmos Fitness Kota — Best Gym & Fitness Club in Kota" },
       {
         name: "description",
         content:
-          "Herculean Fitness Club Jhalawar — a premium gym in Jhalawar, Rajasthan. Gym floor, group classes and personal training.",
+          "Atmos Fitness Kota — a premium gym in Kota, Rajasthan. Gym floor, group classes and personal training.",
       },
-      { property: "og:title", content: "Herculean Fitness Club Jhalawar — Best Gym in Jhalawar" },
+      { property: "og:title", content: "Atmos Fitness Kota — Best Gym in Kota" },
       {
         property: "og:description",
         content:
-          "Premium equipment, qualified trainers and a spacious training floor in the heart of Jhalawar. Enquire online for current membership rates.",
+          "Premium equipment, qualified trainers and a spacious training floor in the heart of Kota. Enquire online for current membership rates.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -93,10 +93,10 @@ const SERVICES = [
 ];
 
 const FEATURES = [
-  { icon: Building2, title: "Jhalawar's Biggest Complex", desc: "Darbaar Kothi Road, Anand Vihar — near Balaji Hospital, easy to reach from anywhere in Jhalawar." },
+  { icon: Building2, title: "Kota's Biggest Complex", desc: "Darbaar Kothi Road, Anand Vihar — near Balaji Hospital, easy to reach from anywhere in Kota." },
   { icon: Dumbbell, title: "All-New Premium Equipment", desc: "Two spacious floors of brand-new imported strength and cardio machines." },
   { icon: Users, title: "Qualified Trainers", desc: "Experienced trainers on the floor to guide your form and plan." },
-  { icon: Flame, title: `${RATING.score}★ on Google`, desc: `Rated ${RATING.score} by ${RATING.count} members across Jhalawar for the floor, staff and ambience.` },
+  { icon: Flame, title: `${RATING.score}★ on Google`, desc: `Rated ${RATING.score} by ${RATING.count} members across Kota for the floor, staff and ambience.` },
 ];
 
 
@@ -125,12 +125,12 @@ const imgCardioTreadmills = PHOTOS.treadmills;
 const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
 
 const TESTIMONIALS: { name: string; role: string; quote: string }[] = [
-  { name: "Tanmeet Singh Saluja", role: "Google Review", quote: "Best gym in Jhalawar — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
-  { name: "Vibhour Sharma", role: "Google Review", quote: "Biggest and top fitness complex in Jhalawar. Machines, cardio section and cleanliness are top class." },
+  { name: "Tanmeet Singh Saluja", role: "Google Review", quote: "Best gym in Kota — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
+  { name: "Vibhour Sharma", role: "Google Review", quote: "Biggest and top fitness complex in Kota. Machines, cardio section and cleanliness are top class." },
   { name: "Purnank Gaur", role: "Google Review", quote: "Great trainers and a very well planned setup. The Nutrihub cafe inside is a big plus." },
   { name: "Lakshay Rajpurohit", role: "Google Review", quote: "Spacious, well ventilated and every machine you need. Worth every rupee." },
   { name: "Abhishek Katariya", role: "Google Review", quote: "Amazing ambience and quality equipment. Trainers actually correct your form." },
-  { name: "Govind Dubey", role: "Google Review", quote: "Best fitness centre in Jhalawar with a proper cardio zone and free weight area." },
+  { name: "Govind Dubey", role: "Google Review", quote: "Best fitness centre in Kota with a proper cardio zone and free weight area." },
 ];
 
 
@@ -141,7 +141,7 @@ const FAQS = [
   { q: "Do you offer personal training?", a: "Yes. One-on-one personal training is available in 1-month and 3-month programmes with dedicated coaching." },
   { q: "Do you have group classes?", a: "Yes — yoga and dance fitness batches run alongside the gym floor. You can book a group class session online." },
   { q: "Is there a cafe or nutrition store?", a: "Yes — Nutrihub Cafe and a nutrition/supplement counter are right at the club entrance." },
-  { q: "Do you have another branch?", a: "Yes — apart from the Jhalawar main club, we also run Aklera's biggest gym on NH-52, Bhopal Naka." },
+  { q: "Do you have another branch?", a: "Yes — apart from the Kota main club, we also run Aklera's biggest gym on NH-52, Bhopal Naka." },
   { q: "How do I check my billing details?", a: "Use the Client Login on our member portal to view your billing and membership details anytime." },
 ];
 
@@ -187,7 +187,7 @@ function Wordmark({ className = "" }: { className?: string }) {
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
         src={logoHerculean}
-        alt="Herculean Fitness Club Jhalawar logo"
+        alt="Atmos Fitness Kota logo"
         width={160}
         height={160}
         className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
@@ -199,7 +199,7 @@ function Wordmark({ className = "" }: { className?: string }) {
         </span>
         <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em] md:text-[12px]">
           <span className="h-px w-5 bg-[color:var(--color-brand)]/70" />
-          Jhalawar
+          Kota
         </span>
       </span>
     </span>
@@ -257,7 +257,7 @@ function Header() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Herculean Fitness Club Jhalawar on Instagram"
+            aria-label="Atmos Fitness Kota on Instagram"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 transition hover:border-[color:var(--color-brand)]"
           >
             <InstagramGlyph size={22} />
@@ -271,7 +271,7 @@ function Header() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Herculean Fitness Club Jhalawar on Instagram"
+            aria-label="Atmos Fitness Kota on Instagram"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15"
           >
             <InstagramGlyph size={20} />
@@ -323,7 +323,7 @@ function VideoHero() {
           playsInline
           preload="metadata"
           disablePictureInPicture
-          aria-label="Herculean Fitness Club Jhalawar training floor"
+          aria-label="Atmos Fitness Kota training floor"
           className="absolute inset-0 h-full w-full bg-black object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/85 md:from-black/45 md:via-black/20 md:to-black/80" aria-hidden />
@@ -339,11 +339,11 @@ function VideoHero() {
             <span className="block">Success.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
-            Jhalawar's most spacious fitness club — all-new premium equipment, qualified trainers and an atmosphere that
+            Kota's most spacious fitness club — all-new premium equipment, qualified trainers and an atmosphere that
             keeps you coming back.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link to="/enquiry" className="btn-primary btn-primary-hover">
+            <Link to="/enquiry" search={{ package: undefined }} className="btn-primary btn-primary-hover">
               Enquire Now <ChevronRight size={18} />
             </Link>
             <a href="#pricing" className="btn-ghost">
@@ -378,7 +378,7 @@ function Hero() {
         <div className="relative z-10 order-2 lg:order-1">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
             <Sparkles size={14} className="text-[color:var(--color-brand)]" />
-            Fitness Centre · Jhalawar, Rajasthan
+            Fitness Centre · Kota, Rajasthan
           </p>
           <h1 className="text-hero font-black text-white">
             <span className="block text-[color:var(--color-brand)]">Train Your</span>
@@ -386,7 +386,7 @@ function Hero() {
             <span className="block text-[color:var(--color-brand)]">Your Life!</span>
           </h1>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Welcome to Herculean Fitness Club Jhalawar. Premium machines,
+            Welcome to Atmos Fitness Kota. Premium machines,
             qualified trainers, yoga & dance classes and personal training, all under one roof.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -414,7 +414,7 @@ function Hero() {
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-2xl md:blur-3xl" aria-hidden />
           <img
             src={imgHeroBranded}
-            alt="Herculean Fitness Club Jhalawar building exterior with signage on Darbaar Kothi Road"
+            alt="Atmos Fitness Kota building exterior with signage on Darbaar Kothi Road"
             width={1400}
             height={2488}
             loading="lazy"
@@ -499,7 +499,7 @@ function About() {
             <span className="block text-[color:var(--color-brand)]">Further.</span>
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.7] text-[color:var(--color-body)]">
-            Herculean Fitness Club is Jhalawar's premium fitness destination — a spacious, well-ventilated floor packed with all-new
+            Atmos Fitness is Kota's premium fitness destination — a spacious, well-ventilated floor packed with all-new
             commercial equipment. Whether your goal is fat loss, strength or simply a healthier routine, our trainers and
             personal training team build the plan around you.
           </p>
@@ -511,7 +511,7 @@ function About() {
           <div className="absolute -inset-6 rounded-[2rem] bg-[color:var(--color-brand-glow)]/20 blur-3xl" aria-hidden />
           <img
             src={imgFloorMachines}
-            alt="Inside Herculean Fitness Club Jhalawar"
+            alt="Inside Atmos Fitness Kota"
             width={1000}
             height={1200}
             loading="lazy" decoding="async"
@@ -598,7 +598,7 @@ function Pricing() {
             <h2 className="text-h2 font-black text-white">Membership Rates</h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Herculean Fitness Club membership plans. Pick the one that fits your goal and enquire
+            Atmos Fitness membership plans. Pick the one that fits your goal and enquire
             online in seconds.
           </p>
         </div>
@@ -684,7 +684,7 @@ function Pricing() {
                 </div>
               ))}
             </div>
-            <Link to="/book-pt" className="btn-primary btn-primary-hover mt-6">
+            <Link to="/book-pt" search={{ trainer: undefined }} className="btn-primary btn-primary-hover mt-6">
               Book PT Session
             </Link>
           </div>
@@ -702,7 +702,7 @@ function Trainers() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Our Team</p>
           <h2 className="text-h2 font-black text-white">Meet Our Trainers</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            The team behind every transformation at Herculean Fitness Club Jhalawar.
+            The team behind every transformation at Atmos Fitness Kota.
           </p>
         </div>
         {TRAINERS.length === 0 && (
@@ -752,7 +752,7 @@ function Gallery() {
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
             A look at our facilities — the spacious training floor, premium machines and the community that makes Herculean
-            the best gym in Jhalawar.
+            the best gym in Kota.
           </p>
         </div>
 
@@ -761,7 +761,7 @@ function Gallery() {
             <div key={i} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#141210]">
               <img
                 src={src}
-                alt={`Herculean Fitness Club Jhalawar facility photo ${i + 1}`}
+                alt={`Atmos Fitness Kota facility photo ${i + 1}`}
                 loading="lazy" decoding="async"
                 className="aspect-square h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
@@ -795,7 +795,7 @@ function Testimonials() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Testimonials</p>
           <h2 className="text-h2 font-black text-white">Real Google Reviews</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Genuine Google reviews from members of Herculean Fitness Club Jhalawar.
+            Genuine Google reviews from members of Atmos Fitness Kota.
           </p>
         </div>
         {TESTIMONIALS.length === 0 && (
@@ -838,10 +838,10 @@ function BigCta() {
         <div className="max-w-2xl">
           <h2 className="text-hero font-black uppercase text-white">
             Ready to Join <br />
-            <span className="text-[color:var(--color-brand)]">Herculean Fitness Club</span> Jhalawar?
+            <span className="text-[color:var(--color-brand)]">Atmos Fitness</span> Kota?
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Walk in for a trial session today. Meet the trainers, tour the floor and see why Herculean is Jhalawar's
+            Walk in for a trial session today. Meet the trainers, tour the floor and see why Herculean is Kota's
             highest-rated fitness club.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -896,7 +896,7 @@ function Contact() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[color:var(--color-brand)]">Contact</p>
           <h2 className="text-h2 font-black text-white">Get In Touch</h2>
           <p className="mt-4 text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Visit us in Jhalawar — or send an enquiry and we'll call you back.
+            Visit us in Kota — or send an enquiry and we'll call you back.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -924,7 +924,7 @@ function Contact() {
                 </li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/enquiry" className="btn-primary btn-primary-hover">
+                <Link to="/enquiry" search={{ package: undefined }} className="btn-primary btn-primary-hover">
                   Send Enquiry
                 </Link>
                 <a onClick={openExt} href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="btn-ghost">
@@ -944,8 +944,8 @@ function Contact() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-white/10">
             <iframe
-              title="Herculean Fitness Club Jhalawar location"
-              src="https://www.google.com/maps?q=Herculean+Fitness+Club+Jhalawar&ll=24.5864193,76.1587019&z=17&output=embed"
+              title="Atmos Fitness Kota location"
+              src="https://www.google.com/maps?q=Herculean+Fitness+Club+Kota&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -964,7 +964,7 @@ function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Wordmark />
           <p className="mt-4 max-w-xs text-sm leading-[1.7] text-[color:var(--color-body)]">
-            Herculean Fitness Club — Jhalawar's premium gym on Darbaar Kothi Road, Anand Vihar. Train hard. Live strong.
+            Atmos Fitness — Kota's premium gym on Darbaar Kothi Road, Anand Vihar. Train hard. Live strong.
           </p>
         </div>
         <div>
@@ -1017,7 +1017,7 @@ function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-white/50 md:flex-row md:px-8">
-          <div>© {new Date().getFullYear()} Herculean Fitness Club Jhalawar — All Rights Reserved.</div>
+          <div>© {new Date().getFullYear()} Atmos Fitness Kota — All Rights Reserved.</div>
           <div className="flex gap-6">
             <Link to="/feedback" className="hover:text-white">Feedback</Link>
             <Link to="/enquiry" className="hover:text-white">Enquiry</Link>
