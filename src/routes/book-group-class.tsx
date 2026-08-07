@@ -26,11 +26,12 @@ export const Route = createFileRoute("/book-group-class")({
 const SLOTS = ["06:00 AM", "07:00 AM", "08:00 AM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"];
 
 function BookGroupClassPage() {
+  const { class: presetClass } = Route.useSearch();
   const s = useSubmitState();
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    class_name: GROUP_CLASSES[0]?.name ?? "Yoga",
+    class_name: presetClass ?? GROUP_CLASSES[0]?.name ?? "Yoga",
     preferred_date: "",
     preferred_time: SLOTS[0],
     notes: "",
