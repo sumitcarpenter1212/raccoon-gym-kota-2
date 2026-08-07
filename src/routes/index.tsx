@@ -335,9 +335,9 @@ function VideoHero() {
         />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-8">
           <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
-            <span className="block">Sweat.</span>
-            <span className="block text-[color:var(--color-brand)]">Strength.</span>
-            <span className="block">Success.</span>
+            <span className="block">Train Your Body,</span>
+            <span className="block text-[color:var(--color-brand)]">Transform</span>
+            <span className="block">Your Life.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
             Kota's most spacious fitness club — all-new premium equipment, qualified trainers and an atmosphere that
