@@ -337,7 +337,7 @@ function VideoHero() {
           <h1 className="text-hero font-black text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]">
             <span className="block">Train Your Body,</span>
             <span className="block text-[color:var(--color-brand)]">Transform</span>
-            <span className="block">Your Life.</span>
+            <span className="block">Your Life!</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/85 md:text-lg">
             Kota's most spacious fitness club — all-new premium equipment, qualified trainers and an atmosphere that
@@ -414,8 +414,8 @@ function Hero() {
         <div className="relative order-1 lg:order-2 lg:-mr-6">
           <div className="absolute -inset-10 rounded-[2.5rem] bg-[color:var(--color-brand)]/25 blur-2xl md:blur-3xl" aria-hidden />
           <img
-            src={imgHeroBranded}
-            alt="Atmos Fitness Kota building exterior with signage on Darbaar Kothi Road"
+            src={heroImage}
+            alt="Atmos Fitness Kota interior training hall with modern equipment"
             width={1400}
             height={2488}
             loading="lazy"
