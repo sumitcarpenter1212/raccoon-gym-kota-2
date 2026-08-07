@@ -9,9 +9,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/par-q")({
   head: () => ({
     meta: [
-      { title: "PAR-Q Form — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Complete the Physical Activity Readiness Questionnaire (PAR-Q) online before starting training at Herculean Fitness Club Jhalawar." },
-      { property: "og:title", content: "PAR-Q Form — Herculean Fitness Club Jhalawar" },
+      { title: "PAR-Q Form — Atmos Fitness Kota" },
+      { name: "description", content: "Complete the Physical Activity Readiness Questionnaire (PAR-Q) online before starting training at Atmos Fitness Kota." },
+      { property: "og:title", content: "PAR-Q Form — Atmos Fitness Kota" },
       { property: "og:description", content: "A short health-readiness questionnaire required before your first session." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

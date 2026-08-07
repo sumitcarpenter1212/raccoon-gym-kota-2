@@ -7,11 +7,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { GROUP_CLASSES, IMAGES } from "@/data/site";
 
 export const Route = createFileRoute("/book-group-class")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    class: typeof search.class === "string" ? search.class : undefined,
+  }),
   head: () => ({
     meta: [
-      { title: "Book A Group Class — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Reserve your spot in yoga, dance fitness or functional group classes at Herculean Fitness Club Jhalawar." },
-      { property: "og:title", content: "Book A Group Class — Herculean Fitness Club Jhalawar" },
+      { title: "Book A Group Class — Atmos Fitness Kota" },
+      { name: "description", content: "Reserve your spot in yoga, dance fitness or functional group classes at Atmos Fitness Kota." },
+      { property: "og:title", content: "Book A Group Class — Atmos Fitness Kota" },
       { property: "og:description", content: "Pick a class, date and time slot and we'll confirm your seat." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -23,11 +26,12 @@ export const Route = createFileRoute("/book-group-class")({
 const SLOTS = ["06:00 AM", "07:00 AM", "08:00 AM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM"];
 
 function BookGroupClassPage() {
+  const { class: presetClass } = Route.useSearch();
   const s = useSubmitState();
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    class_name: GROUP_CLASSES[0]?.name ?? "Yoga",
+    class_name: presetClass ?? GROUP_CLASSES[0]?.name ?? "Yoga",
     preferred_date: "",
     preferred_time: SLOTS[0],
     notes: "",

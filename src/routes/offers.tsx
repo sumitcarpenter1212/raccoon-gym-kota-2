@@ -6,9 +6,9 @@ import { OFFERS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/offers")({
   head: () => ({
     meta: [
-      { title: "Latest Offers & Discounts — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Running offers at Herculean Fitness Club Jhalawar: 3+1 and 6+1 bonus month gym packages, free trial session and yoga combo deals." },
-      { property: "og:title", content: "Latest Offers — Herculean Fitness Club Jhalawar" },
+      { title: "Latest Offers & Discounts — Atmos Fitness Kota" },
+      { name: "description", content: "Running offers at Atmos Fitness Kota: 3+1 and 6+1 bonus month gym packages, free trial session and yoga combo deals." },
+      { property: "og:title", content: "Latest Offers — Atmos Fitness Kota" },
       { property: "og:description", content: "Bonus months, free trial session and combo deals on gym membership." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -22,7 +22,7 @@ function OffersPage() {
     <PageShell
       eyebrow="Offers"
       title="Latest Offers"
-      intro="Current deals running at Herculean Fitness Club Jhalawar. Offers can change monthly — enquire to lock in today's rate."
+      intro="Current deals running at Atmos Fitness Kota. Offers can change monthly — enquire to lock in today's rate."
       image={IMAGES.cardioTreadmills}
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">

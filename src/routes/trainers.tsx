@@ -6,9 +6,9 @@ import { TRAINERS, IMAGES } from "@/data/site";
 export const Route = createFileRoute("/trainers")({
   head: () => ({
     meta: [
-      { title: "Our Trainers — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Meet the coaching team at Herculean Fitness Club Jhalawar — experienced trainers guiding every member on the floor." },
-      { property: "og:title", content: "Our Trainers — Herculean Fitness Club Jhalawar" },
+      { title: "Our Trainers — Atmos Fitness Kota" },
+      { name: "description", content: "Meet the coaching team at Atmos Fitness Kota — experienced trainers guiding every member on the floor." },
+      { property: "og:title", content: "Our Trainers — Atmos Fitness Kota" },
       { property: "og:description", content: "Qualified, experienced trainers guiding every member on the floor." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

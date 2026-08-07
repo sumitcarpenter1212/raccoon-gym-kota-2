@@ -1,4 +1,4 @@
-// Real photos of Herculean Fitness Club Jhalawar (Google Business Profile), CDN-hosted.
+// Real photos of Atmos Fitness Kota (Google Business Profile), CDN-hosted.
 import { assetUrl } from "@/lib/asset-url";
 import aBenchRack from "@/assets/gm/bench-rack.jpg.asset.json";
 import aCardioOpen from "@/assets/gm/cardio-open.jpg.asset.json";
@@ -66,9 +66,9 @@ export const GALLERY_PHOTOS: { src: string; caption: string }[] = [
   { src: PHOTOS.floorWide, caption: "Spacious wooden-floor training hall" },
   { src: PHOTOS.cardioOpen, caption: "Open cardio and stretching space" },
   { src: PHOTOS.studioRoom, caption: "Dedicated studio room for group classes" },
-  { src: PHOTOS.exteriorSign, caption: "Herculean Fitness Club signage on Kothi Road" },
+  { src: PHOTOS.exteriorSign, caption: "Atmos Fitness signage on Kothi Road" },
   { src: PHOTOS.exteriorCafe, caption: "Nutrihub Cafe at the gym entrance" },
-  { src: PHOTOS.exteriorFacade, caption: "Club facade, Anand Vihar, Jhalawar" },
+  { src: PHOTOS.exteriorFacade, caption: "Club facade, Anand Vihar, Kota" },
   { src: PHOTOS.exteriorBuilding, caption: "The HFC building on Darbaar Kothi Road" },
   { src: PHOTOS.exteriorSign2, caption: "Street view of the club entrance" },
 ];

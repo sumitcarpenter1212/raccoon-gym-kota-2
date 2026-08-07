@@ -10,9 +10,9 @@ import { IMAGES } from "@/data/site";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Member Login — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Log in to your Herculean Fitness Club Jhalawar member account to view your bookings, enquiries and submitted forms." },
-      { property: "og:title", content: "Member Login — Herculean Fitness Club Jhalawar" },
+      { title: "Member Login — Atmos Fitness Kota" },
+      { name: "description", content: "Log in to your Atmos Fitness Kota member account to view your bookings, enquiries and submitted forms." },
+      { property: "og:title", content: "Member Login — Atmos Fitness Kota" },
       { property: "og:description", content: "Access your membership dashboard and booking history." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -117,7 +117,7 @@ function LoginPage() {
       </FormCard>
 
       <div className="mt-8 text-center">
-        <Link to="/enquiry" className="btn-ghost">
+        <Link to="/enquiry" search={{ package: undefined }} className="btn-ghost">
           Not a member yet? Send an enquiry <ChevronRight size={16} />
         </Link>
       </div>

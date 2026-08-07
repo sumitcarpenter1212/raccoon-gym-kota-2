@@ -12,9 +12,9 @@ export const Route = createFileRoute("/enquiry")({
   }),
   head: () => ({
     meta: [
-      { title: "Enquiry — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Send an enquiry to Herculean Fitness Club Jhalawar about gym memberships, group classes and personal training packages." },
-      { property: "og:title", content: "Enquiry — Herculean Fitness Club Jhalawar" },
+      { title: "Enquiry — Atmos Fitness Kota" },
+      { name: "description", content: "Send an enquiry to Atmos Fitness Kota about gym memberships, group classes and personal training packages." },
+      { property: "og:title", content: "Enquiry — Atmos Fitness Kota" },
       { property: "og:description", content: "Tell us your goal and we'll suggest the right package for you." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -66,7 +66,7 @@ function EnquiryPage() {
       image={IMAGES.floorWide}
     >
       {s.done ? (
-        <SuccessCard title="Enquiry Received" message="Thank you! Our team at Herculean Fitness Club Jhalawar will contact you shortly on the number you provided.">
+        <SuccessCard title="Enquiry Received" message="Thank you! Our team at Atmos Fitness Kota will contact you shortly on the number you provided.">
           <Link to="/packages" className="btn-ghost">View Packages</Link>
           <Link to="/" className="btn-primary btn-primary-hover">Back Home <ChevronRight size={16} /></Link>
         </SuccessCard>

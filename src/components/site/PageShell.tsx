@@ -8,19 +8,19 @@ export function Wordmark() {
     <span className="inline-flex items-center gap-3">
       <img
         src={IMAGES.logo}
-        alt="Herculean Fitness Club Jhalawar logo"
+        alt="Atmos Fitness Kota logo"
         width={128}
         height={128}
         className="h-12 w-12 rounded-full object-cover drop-shadow-[0_0_18px_rgba(245,115,14,0.55)]"
       />
       <span className="flex flex-col leading-none">
         <span className="wordmark-3d whitespace-nowrap text-[20px] tracking-[0.06em] md:text-[23px]">
-          <span className="text-[color:var(--color-brand)]">Herculean</span>
+          <span className="text-[color:var(--color-brand)]">Atmos</span>
           <span className="ml-1.5 text-white">Club</span>
         </span>
         <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em]">
           <span className="h-px w-5 bg-[color:var(--color-brand)]/70" />
-          Jhalawar
+          Kota
         </span>
       </span>
     </span>
@@ -105,7 +105,7 @@ export function PageShell({
           </div>
         </div>
         <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-white/45 md:px-8">
-          © {new Date().getFullYear()} Herculean Fitness Club Jhalawar. All rights reserved.
+          © {new Date().getFullYear()} Atmos Fitness Kota. All rights reserved.
         </div>
       </footer>
     </div>

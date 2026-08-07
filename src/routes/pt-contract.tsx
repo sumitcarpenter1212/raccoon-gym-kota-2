@@ -9,9 +9,9 @@ import { PT_PLANS, IMAGES, PHONE_DISPLAY } from "@/data/site";
 export const Route = createFileRoute("/pt-contract")({
   head: () => ({
     meta: [
-      { title: "Personal Training Contract — Herculean Fitness Club Jhalawar" },
-      { name: "description", content: "Read and sign the personal training agreement of Herculean Fitness Club Jhalawar online — sessions, validity, cancellation and conduct terms." },
-      { property: "og:title", content: "PT Contract — Herculean Fitness Club Jhalawar" },
+      { title: "Personal Training Contract — Atmos Fitness Kota" },
+      { name: "description", content: "Read and sign the personal training agreement of Atmos Fitness Kota online — sessions, validity, cancellation and conduct terms." },
+      { property: "og:title", content: "PT Contract — Atmos Fitness Kota" },
       { property: "og:description", content: "Sign your personal training agreement digitally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -27,7 +27,7 @@ const TERMS = [
   "Fees once paid are non-refundable. Packages may be paused only for medical reasons with proof.",
   "The client confirms they have completed the PAR-Q and disclosed all medical conditions and injuries.",
   "The client trains at their own risk and follows the trainer's instructions on form, load and technique.",
-  "Herculean Fitness Club Jhalawar is not liable for personal belongings or for injury caused by ignoring trainer guidance.",
+  "Atmos Fitness Kota is not liable for personal belongings or for injury caused by ignoring trainer guidance.",
   "Club rules on timing, dress code, hygiene and equipment handling apply at all times.",
 ];
 
@@ -74,7 +74,7 @@ function PtContractPage() {
 
       {s.done ? (
         <SuccessCard title="Contract Signed" message="Your signed personal training agreement has been recorded. Our team will reach out to schedule your first session.">
-          <Link to="/book-pt" className="btn-ghost">Book A Session</Link>
+          <Link to="/book-pt" search={{ trainer: undefined }} className="btn-ghost">Book A Session</Link>
           <Link to="/" className="btn-primary btn-primary-hover">Back Home <ChevronRight size={16} /></Link>
         </SuccessCard>
       ) : (
