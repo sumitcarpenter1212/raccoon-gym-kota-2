@@ -90,16 +90,10 @@ export const GALLERY = GALLERY_PHOTOS.map((g) => g.src);
 export { GALLERY_PHOTOS };
 
 export const TESTIMONIALS: { name: string; role: string; rating: number; quote: string }[] = [
-  { name: "Tanmeet Singh Saluja", role: "Google Review", rating: 5, quote: "Best gym in Kota — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
-  { name: "Vibhour Sharma", role: "Google Review", rating: 5, quote: "Biggest and top fitness complex in Kota. Machines, cardio section and cleanliness are top class." },
-  { name: "Purnank Gaur", role: "Google Review", rating: 5, quote: "Great trainers and a very well planned setup. The Nutrihub cafe inside is a big plus." },
-  { name: "Lakshay Rajpurohit", role: "Google Review", rating: 5, quote: "Spacious, well ventilated and every machine you need. Worth every rupee." },
-  { name: "Abhishek Katariya", role: "Google Review", rating: 5, quote: "Amazing ambience and quality equipment. Trainers actually correct your form." },
-  { name: "Govind Dubey", role: "Google Review", rating: 5, quote: "Best fitness centre in Kota with a proper cardio zone and free weight area." },
-  { name: "Ramniwas Gurjar", role: "Google Review", rating: 5, quote: "Clean, premium and friendly staff. Highly recommended for beginners too." },
-  { name: "Sandeep Kulhari", role: "Google Review", rating: 5, quote: "Superb gym, great atmosphere and very supportive trainers." },
-  { name: "Bharat Meena", role: "Google Review", rating: 5, quote: "Top level gym for Kota. Equipment quality is excellent." },
-  { name: "Prem Meena", role: "Google Review", rating: 5, quote: "Nice environment, good music and everything is well maintained." },
+  { name: "Rohit Mehra", role: "Student, Kota", rating: 5, quote: "Joining Atmos Fitness was the best decision I made for my health. The trainers are extremely professional and motivating. In just 3 months, I feel more energetic, stronger, and confident. The gym environment is very positive and well-maintained. Highly recommended!" },
+  { name: "Neha Sharma", role: "Working Professional, Kota", rating: 5, quote: "Atmos Fitness is not just a gym, it's a complete transformation center! I enrolled in their body transformation program and the results have been amazing. The diet guidance, customized workouts, and regular follow-ups helped me stay focused. Great place for serious fitness goals!" },
+  { name: "Vijay Singh", role: "Google Review", rating: 5, quote: "Best gym in Kota — brand new equipment, huge floor and a really good vibe. Staff guide you properly." },
+  { name: "Amit Kumar", role: "Google Review", rating: 5, quote: "Biggest and top fitness complex in Kota. Machines, cardio section and cleanliness are top class." },
 ];
 
 
