@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "32a8f48a-c941-4113-a142-da9b87491fad",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/32a8f48a-c941-4113-a142-da9b87491fad/bench-rack.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/32a8f48a-c941-4113-a142-da9b87491fad/bench-rack.jpg",
-  "original_filename": "bench-rack.jpg",
-  "size": 479934,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-03T05:38:57Z"
+  "created_at": "2026-08-03T05:38:57Z",
+  "original_filename": "bench-rack.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/32a8f48a-c941-4113-a142-da9b87491fad/bench-rack.jpg",
+  "size": 479934,
+  "url": "/__l5e/assets-v1/32a8f48a-c941-4113-a142-da9b87491fad/bench-rack.jpg",
+  "version": 1
 }

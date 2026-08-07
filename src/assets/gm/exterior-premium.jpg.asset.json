@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "943f594c-f08b-405f-8082-5cb9a5d5baa8",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/943f594c-f08b-405f-8082-5cb9a5d5baa8/exterior-premium.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/943f594c-f08b-405f-8082-5cb9a5d5baa8/exterior-premium.jpg",
-  "original_filename": "exterior-premium.jpg",
-  "size": 473535,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-07T02:32:39Z"
+  "created_at": "2026-08-07T02:32:39Z",
+  "original_filename": "exterior-premium.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/943f594c-f08b-405f-8082-5cb9a5d5baa8/exterior-premium.jpg",
+  "size": 473535,
+  "url": "/__l5e/assets-v1/943f594c-f08b-405f-8082-5cb9a5d5baa8/exterior-premium.jpg",
+  "version": 1
 }

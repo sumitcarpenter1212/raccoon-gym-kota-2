@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "42aa1f9f-5542-4ee0-9b1c-784dd766ad5e",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/42aa1f9f-5542-4ee0-9b1c-784dd766ad5e/squat-racks.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/42aa1f9f-5542-4ee0-9b1c-784dd766ad5e/squat-racks.jpg",
-  "original_filename": "squat-racks.jpg",
-  "size": 768086,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-03T05:39:41Z"
+  "created_at": "2026-08-03T05:39:41Z",
+  "original_filename": "squat-racks.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/42aa1f9f-5542-4ee0-9b1c-784dd766ad5e/squat-racks.jpg",
+  "size": 768086,
+  "url": "/__l5e/assets-v1/42aa1f9f-5542-4ee0-9b1c-784dd766ad5e/squat-racks.jpg",
+  "version": 1
 }

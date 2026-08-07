@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "4670a092-84fb-44f1-83c2-d64fe68c3aa8",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/4670a092-84fb-44f1-83c2-d64fe68c3aa8/exterior-facade.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/4670a092-84fb-44f1-83c2-d64fe68c3aa8/exterior-facade.jpg",
-  "original_filename": "exterior-facade.jpg",
-  "size": 658068,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-03T05:39:13Z"
+  "created_at": "2026-08-03T05:39:13Z",
+  "original_filename": "exterior-facade.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/4670a092-84fb-44f1-83c2-d64fe68c3aa8/exterior-facade.jpg",
+  "size": 658068,
+  "url": "/__l5e/assets-v1/4670a092-84fb-44f1-83c2-d64fe68c3aa8/exterior-facade.jpg",
+  "version": 1
 }

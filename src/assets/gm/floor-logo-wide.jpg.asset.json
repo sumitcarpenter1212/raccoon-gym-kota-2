@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "ca63f31d-f773-4182-a400-5bb8cd33b70e",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/ca63f31d-f773-4182-a400-5bb8cd33b70e/floor-logo-wide.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/ca63f31d-f773-4182-a400-5bb8cd33b70e/floor-logo-wide.jpg",
-  "original_filename": "floor-logo-wide.jpg",
-  "size": 868908,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-03T05:39:21Z"
+  "created_at": "2026-08-03T05:39:21Z",
+  "original_filename": "floor-logo-wide.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/ca63f31d-f773-4182-a400-5bb8cd33b70e/floor-logo-wide.jpg",
+  "size": 868908,
+  "url": "/__l5e/assets-v1/ca63f31d-f773-4182-a400-5bb8cd33b70e/floor-logo-wide.jpg",
+  "version": 1
 }

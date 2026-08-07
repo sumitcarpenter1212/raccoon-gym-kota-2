@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "1e6688c8-1b69-4084-8b40-bec2d2df91a9",
-  "project_id": "03d3e4a2-a2d2-4348-8bba-4c33283c3c3b",
-  "url": "/__l5e/assets-v1/1e6688c8-1b69-4084-8b40-bec2d2df91a9/exterior-building.jpg",
-  "r2_key": "a/v1/03d3e4a2-a2d2-4348-8bba-4c33283c3c3b/1e6688c8-1b69-4084-8b40-bec2d2df91a9/exterior-building.jpg",
-  "original_filename": "exterior-building.jpg",
-  "size": 579653,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-03T05:39:08Z"
+  "created_at": "2026-08-03T05:39:08Z",
+  "original_filename": "exterior-building.jpg",
+  "project_id": "7dde4cd4-7cd1-4c9d-a161-3dc2149607e4",
+  "r2_key": "a/v1/7dde4cd4-7cd1-4c9d-a161-3dc2149607e4/1e6688c8-1b69-4084-8b40-bec2d2df91a9/exterior-building.jpg",
+  "size": 579653,
+  "url": "/__l5e/assets-v1/1e6688c8-1b69-4084-8b40-bec2d2df91a9/exterior-building.jpg",
+  "version": 1
 }
