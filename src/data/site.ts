@@ -1,8 +1,8 @@
-import logoHerculean from "@/assets/herculean-logo.png";
+import logoAtmos from "@/assets/herculean-logo.png";
 import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
 
 export const IMAGES = {
-  logo: logoHerculean,
+  logo: logoAtmos,
   floorWide: PHOTOS.floorWide,
   floorMachines: PHOTOS.strengthMachines,
   floorOpen: PHOTOS.floorLogoWide,

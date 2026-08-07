@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { MEMBER_LINKS } from "@/data/member-links";
 
-import logoHerculean from "@/assets/herculean-logo.png";
+import logoAtmos from "@/assets/herculean-logo.png";
 import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
 import {
   PHONE as SITE_PHONE,
@@ -186,7 +186,7 @@ function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <img
-        src={logoHerculean}
+        src={logoAtmos}
         alt="Atmos Fitness Kota logo"
         width={160}
         height={160}
@@ -194,7 +194,7 @@ function Wordmark({ className = "" }: { className?: string }) {
       />
       <span className="flex flex-col leading-none">
         <span className="wordmark-3d whitespace-nowrap text-[22px] tracking-[0.06em] md:text-[26px]">
-          <span className="text-[color:var(--color-brand)]">Herculean</span>
+          <span className="text-[color:var(--color-brand)]">Atmos</span>
           <span className="ml-1.5 text-white">Club</span>
         </span>
         <span className="wordmark-sub mt-[7px] flex items-center gap-2 text-[11px] tracking-[0.34em] md:text-[12px]">
@@ -355,7 +355,7 @@ function VideoHero() {
             <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
             <span>Live Strong</span>
             <span className="h-1 w-1 rounded-full bg-[color:var(--color-brand)]" />
-            <span>Herculean</span>
+            <span>Atmos</span>
           </div>
         </div>
       </div>
@@ -751,7 +751,7 @@ function Gallery() {
             </h2>
           </div>
           <p className="text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            A look at our facilities — the spacious training floor, premium machines and the community that makes Herculean
+            A look at our facilities — the spacious training floor, premium machines and the community that makes Atmos
             the best gym in Kota.
           </p>
         </div>
@@ -841,7 +841,7 @@ function BigCta() {
             <span className="text-[color:var(--color-brand)]">Atmos Fitness</span> Kota?
           </h2>
           <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-[color:var(--color-body)]">
-            Walk in for a trial session today. Meet the trainers, tour the floor and see why Herculean is Kota's
+            Walk in for a trial session today. Meet the trainers, tour the floor and see why Atmos is Kota's
             highest-rated fitness club.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -945,7 +945,7 @@ function Contact() {
           <div className="overflow-hidden rounded-3xl border border-white/10">
             <iframe
               title="Atmos Fitness Kota location"
-              src="https://www.google.com/maps?q=Herculean+Fitness+Club+Kota&ll=24.5864193,76.1587019&z=17&output=embed"
+              src="https://www.google.com/maps?q=Atmos+Fitness+Club+Kota&ll=24.5864193,76.1587019&z=17&output=embed"
               className="h-full min-h-[420px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
