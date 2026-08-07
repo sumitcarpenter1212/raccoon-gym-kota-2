@@ -1,8 +1,8 @@
-import logoAtmos from "@/assets/herculean-logo.png";
+import raccoonLogo from "@/assets/raccoon-logo.png.asset.json";
 import { PHOTOS, GALLERY_PHOTOS } from "@/data/photos";
 
 export const IMAGES = {
-  logo: logoAtmos,
+  logo: raccoonLogo.url,
   floorWide: PHOTOS.hero,
   floorMachines: PHOTOS.machines,
   floorOpen: PHOTOS.strengthArea,
