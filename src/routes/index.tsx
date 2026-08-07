@@ -85,12 +85,12 @@ const NAV = [
 ];
 
 const SERVICES = [
-  { title: "Strength & Muscle", img: imgDumbbells, desc: "Premium plate-loaded machines and a full free-weight zone." },
-  { title: "Personal Training", img: imgPtSession, desc: "1-on-1 coaching for fat loss, strength and body recomposition." },
-  { title: "Yoga Class", img: imgYogaClass, desc: "Daily yoga batches for mobility, flexibility and recovery." },
-  { title: "Dance Class", img: imgDanceClass, desc: "High-energy dance fitness sessions for all levels." },
-  { title: "Cardio Zone", img: imgCardioBikes, desc: "Treadmills, cycles and conditioning circuits for endurance." },
-  { title: "Functional Training", img: imgFloorWide, desc: "Cables, kettlebells and athletic conditioning space." },
+  { title: "Strength Training", img: PHOTOS.interior11, desc: "Premium plate-loaded machines and a high-performance strength zone." },
+  { title: "Functional Area", img: PHOTOS.functionalArea, desc: "Cables, kettlebells and athletic conditioning space for peak performance." },
+  { title: "Cardio Zone", img: PHOTOS.interior5, desc: "Treadmills, cycles and conditioning circuits for maximum endurance." },
+  { title: "Personal Training", img: PHOTOS.interior8, desc: "Dedicated space for 1-on-1 coaching and body transformations." },
+  { title: "Yoga & Mobility", img: PHOTOS.interior2, desc: "Peaceful environment for daily yoga batches and recovery." },
+  { title: "Dance Fitness", img: PHOTOS.interior1, desc: "High-energy dance fitness sessions in a vibrant studio setting." },
 ];
 
 const FEATURES = [
