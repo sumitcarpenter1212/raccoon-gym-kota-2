@@ -20,12 +20,13 @@ import a16 from "@/assets/atmos/atmos_16.jpg.asset.json";
 import a17 from "@/assets/atmos/atmos_17.jpg.asset.json";
 import a18 from "@/assets/atmos/atmos_18.jpg.asset.json";
 import a19 from "@/assets/atmos/atmos_19.jpg.asset.json";
+import aHeroNew from "@/assets/atmos/hero_new_hd.jpg.asset.json";
 
 // Preserve important previous photo
 import aExteriorPremium from "@/assets/gm/exterior-premium.jpg.asset.json";
 
 export const PHOTOS = {
-  hero: assetUrl(a16.url), // Large indoor wide shot
+  hero: assetUrl(aHeroNew.url), // New High-Quality Wide Shot
   exteriorFacade: assetUrl(a17.url),
   exteriorPremium: assetUrl(aExteriorPremium.url),
   strengthArea: assetUrl(a0.url),
