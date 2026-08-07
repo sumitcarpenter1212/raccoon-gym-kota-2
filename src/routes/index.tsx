@@ -37,14 +37,14 @@ import { assetUrl } from "@/lib/asset-url";
 
 const heroImage = PHOTOS.hero;
 const heroVideo = assetUrl(heroVideoAsset.url);
-const imgFloorWide = PHOTOS.floorWide;
-const imgFloorMachines = PHOTOS.strengthMachines;
-const imgFloorOpen = PHOTOS.floorLogoWide;
+const imgFloorWide = PHOTOS.hero;
+const imgFloorMachines = PHOTOS.machines;
+const imgFloorOpen = PHOTOS.strengthArea;
 const imgCardioBikes = PHOTOS.cardioZone;
-const imgDumbbells = PHOTOS.dumbbellRacks;
+const imgDumbbells = PHOTOS.dumbbells;
 const imgPtSession = PHOTOS.functionalArea;
-const imgYogaClass = PHOTOS.studioRoom;
-const imgDanceClass = PHOTOS.benchRack;
+const imgYogaClass = PHOTOS.interior2;
+const imgDanceClass = PHOTOS.interior1;
 
 
 export const Route = createFileRoute("/")({
