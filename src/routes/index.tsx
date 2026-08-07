@@ -663,7 +663,7 @@ function Pricing() {
                 </div>
               ))}
             </div>
-            <Link to="/book-group-class" className="btn-primary btn-primary-hover mt-6">
+            <Link to="/book-group-class" search={{ class: undefined }} className="btn-primary btn-primary-hover mt-6">
               Book Group Class
             </Link>
           </div>
